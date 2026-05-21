@@ -1,0 +1,6912 @@
+[
+  {
+    "_id": {
+      "$oid": "csvaccent0001"
+    },
+    "word": "accent",
+    "phonetics": {
+      "uk": "/ˈæksent/",
+      "us": "/ˈæksent/"
+    },
+    "audio": {
+      "uk": "",
+      "us": ""
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A distinctive way of pronouncing a language associated with a particular country, area, or social class; a distinct emphasis given to a syllable or word.",
+      "Verb": "A distinctive way of pronouncing a language associated with a particular country, area, or social class; a distinct emphasis given to a syllable or word."
+    },
+    "vietnamese": {
+      "Noun": "Giọng, trọng âm, dấu.",
+      "Verb": "Giọng, trọng âm, dấu."
+    },
+    "synonyms": [
+      "Pronunciation",
+      "intonation",
+      "enunciation",
+      "articulation",
+      "inflection",
+      "stress",
+      "emphasis."
+    ],
+    "antonyms": [
+      "Triviality",
+      "unimportance",
+      "de-emphasis."
+    ],
+    "collocations": [
+      "Heavy accent",
+      "strong accent",
+      "slight accent",
+      "foreign accent",
+      "regional accent",
+      "place/lay the accent on."
+    ],
+    "examples": [
+      "He has a heavy southern accent."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvalien0002"
+    },
+    "word": "alien",
+    "phonetics": {
+      "uk": "/ˈeɪliən/",
+      "us": "/ˈeɪliən/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/alien--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/alien--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Adjective": "Relating to creatures from another planet; strange and unfamiliar; or a person who is not a citizen of the country where they live.",
+      "Noun": "Relating to creatures from another planet; strange and unfamiliar; or a person who is not a citizen of the country where they live.",
+      "Verb": "Relating to creatures from another planet; strange and unfamiliar; or a person who is not a citizen of the country where they live."
+    },
+    "vietnamese": {
+      "Adjective": "Người ngoài hành tinh, người nước ngoài, lạ lẫm.",
+      "Noun": "Người ngoài hành tinh, người nước ngoài, lạ lẫm.",
+      "Verb": "Người ngoài hành tinh, người nước ngoài, lạ lẫm."
+    },
+    "synonyms": [
+      "Extraterrestrial",
+      "foreign",
+      "strange",
+      "outsider",
+      "immigrant."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Alien environment",
+      "alien culture",
+      "illegal alien",
+      "alien species",
+      "be alien to."
+    ],
+    "examples": [
+      "The spacecraft was designed to survive in an alien environment."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvankle0003"
+    },
+    "word": "ankle",
+    "phonetics": {
+      "uk": "/ˈæŋkəl/",
+      "us": "/ˈæŋkəl/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/ankle--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/ankle--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The joint connecting the foot with the leg, or the thin part of the leg just above the foot."
+    },
+    "vietnamese": {
+      "Noun": "Mắt cá chân."
+    },
+    "synonyms": [
+      "Ankle joint",
+      "mortise joint",
+      "talus."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Ankle injury",
+      "ankle sprain",
+      "twisted ankle",
+      "ankle monitor",
+      "ankle support."
+    ],
+    "examples": [
+      "I fell down and twisted my ankle.",
+      "He could not put any weight on his injured ankle."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvantiquity0004"
+    },
+    "word": "antiquity",
+    "phonetics": {
+      "uk": "/ænˈtɪk.wə.ti/",
+      "us": "/ænˈtɪk.wə.ti/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/antiquity--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/antiquity--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The ancient past, especially the period before the Middle Ages; great age; or objects from ancient times."
+    },
+    "vietnamese": {
+      "Noun": "Thời cổ đại, tình trạng cổ xưa, đồ cổ."
+    },
+    "synonyms": [
+      "Ancient times",
+      "ancientness",
+      "relic",
+      "artifact",
+      "hoariness."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Classical antiquity",
+      "great antiquity",
+      "late antiquity",
+      "antiquities market",
+      "dates from antiquity."
+    ],
+    "examples": [
+      "Many artifacts from antiquity can be found in museums around the world."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvarchaeological0005"
+    },
+    "word": "archaeological",
+    "phonetics": {
+      "uk": "/ˌɑːkiəˈlɒdʒɪkl/",
+      "us": "/ˌɑːkiəˈlɒdʒɪkl/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/archaeological--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/archaeological--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Relating to the study of human history and prehistory through the excavation of sites and the analysis of artifacts and other physical remains."
+    },
+    "vietnamese": {
+      "Adjective": "Thuộc về khảo cổ học."
+    },
+    "synonyms": [
+      "Archaeologic",
+      "archeological",
+      "prehistoric",
+      "antiquarian."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Archaeological dig",
+      "archaeological site",
+      "archaeological evidence",
+      "archaeological discovery",
+      "archaeological excavation."
+    ],
+    "examples": [
+      "The team conducted an archaeological survey of the ancient city."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcenterpiece0006"
+    },
+    "word": "centerpiece",
+    "phonetics": {
+      "uk": "/ˈsentəpiːs/",
+      "us": "/ˈsentəpiːs/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/centerpiece--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/centerpiece--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The most important item, feature, or part of something; or a decorative object intended to be placed in the center of a table."
+    },
+    "vietnamese": {
+      "Noun": "Phần quan trọng nhất, trọng tâm, vật trang trí giữa bàn."
+    },
+    "synonyms": [
+      "Highlight",
+      "focal point",
+      "core",
+      "heart",
+      "centerpiece",
+      "feature",
+      "centerpiece."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Table centerpiece",
+      "floral centerpiece",
+      "centerpiece of a collection",
+      "centerpiece of a policy",
+      "decorative centerpiece."
+    ],
+    "examples": [
+      "This treaty is the centerpiece of the government's foreign policy."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvchaos0007"
+    },
+    "word": "chaos",
+    "phonetics": {
+      "uk": "/ˈkeɪ.ɑːs/",
+      "us": "/ˈkeɪ.ɑːs/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/chaos--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/chaos--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A state of total confusion and disorder with no organization or predictability."
+    },
+    "vietnamese": {
+      "Noun": "Sự hỗn loạn, tình trạng lộn xộn, vô chính phủ."
+    },
+    "synonyms": [
+      "Disorder",
+      "confusion",
+      "pandemonium",
+      "turmoil",
+      "havoc",
+      "mess."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Absolute chaos",
+      "complete chaos",
+      "economic chaos",
+      "cause chaos",
+      "in chaos",
+      "order out of chaos."
+    ],
+    "examples": [
+      "The loss of electricity caused chaos throughout the city.",
+      "The house was in total chaos after the birthday party."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcomfortable0008"
+    },
+    "word": "comfortable",
+    "phonetics": {
+      "uk": "/ˈkʌmftərbəl/",
+      "us": "/ˈkʌmftərbəl/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/comfortable--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/comfortable--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Providing physical ease and relaxation; feeling relaxed and free from pain or constraint; or having enough money to live well."
+    },
+    "vietnamese": {
+      "Adjective": "Thoải mái, dễ chịu, tiện nghi, đủ đầy."
+    },
+    "synonyms": [
+      "Cozy",
+      "snug",
+      "restful",
+      "easy",
+      "pleasant",
+      "affluent",
+      "prosperous."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Comfortable position",
+      "feel comfortable",
+      "make yourself comfortable",
+      "comfortable clothes",
+      "comfortable lifestyle",
+      "comfortable lead."
+    ],
+    "examples": [
+      "These new shoes are not very comfortable for walking long distances."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvconcrete0009"
+    },
+    "word": "concrete",
+    "phonetics": {
+      "uk": "/ˈkɑːŋkriːt/",
+      "us": "/ˈkɑːŋkriːt/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/concrete--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/concrete--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Adjective": "Existing in a material or physical form; real or solid; not abstract. Also refers to a heavy, hard building material made from a mixture of broken stone or gravel, sand, cement, and water.",
+      "Noun": "Existing in a material or physical form; real or solid; not abstract. Also refers to a heavy, hard building material made from a mixture of broken stone or gravel, sand, cement, and water.",
+      "Verb": "Existing in a material or physical form; real or solid; not abstract. Also refers to a heavy, hard building material made from a mixture of broken stone or gravel, sand, cement, and water."
+    },
+    "vietnamese": {
+      "Adjective": "Cụ thể, bằng bê tông; bê tông.",
+      "Noun": "Cụ thể, bằng bê tông; bê tông.",
+      "Verb": "Cụ thể, bằng bê tông; bê tông."
+    },
+    "synonyms": [
+      "Specific",
+      "definite",
+      "tangible",
+      "solid",
+      "real."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Concrete evidence",
+      "concrete examples",
+      "concrete walls",
+      "reinforced concrete",
+      "set in concrete."
+    ],
+    "examples": [
+      "The police have no concrete evidence linking him to the crime."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcostly0010"
+    },
+    "word": "costly",
+    "phonetics": {
+      "uk": "/ˈkɒstli/",
+      "us": "/ˈkɒstli/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/costly--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/costly--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Costing a lot of money; expensive; or resulting in great loss or sacrifice."
+    },
+    "vietnamese": {
+      "Adjective": "Đắt đỏ, tốn kém, tổn thất lớn."
+    },
+    "synonyms": [
+      "Expensive",
+      "dear",
+      "high-priced",
+      "pricey",
+      "disastrous",
+      "ruinous."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Costly mistake",
+      "costly repair",
+      "costly delay",
+      "costly project",
+      "prove costly."
+    ],
+    "examples": [
+      "Buying new furniture may prove too costly for the young couple."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcoupledwith0011"
+    },
+    "word": "coupled with",
+    "phonetics": {
+      "uk": "/ˈkʌpəld wɪð/",
+      "us": "/ˈkʌpəld wɪð/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/coupled--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/coupled--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Phrasal verb (usually passive)"
+    ],
+    "definitions": {
+      "Phrasal verb (usually passive)": "To be linked or combined with something else, often resulting in a specific effect or situation."
+    },
+    "vietnamese": {
+      "Phrasal verb (usually passive)": "Kết hợp với, cùng với."
+    },
+    "synonyms": [
+      "Combined with",
+      "linked to",
+      "together with",
+      "joined with",
+      "accompanied by."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Be coupled with",
+      "coupled with the fact that",
+      "coupled with rising",
+      "coupled with falling."
+    ],
+    "examples": [
+      "Overproduction, coupled with falling sales, has led to huge losses for the company."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdanshari0012"
+    },
+    "word": "danshari",
+    "phonetics": {
+      "uk": "/dànshárí/",
+      "us": "/dànshárí/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/danshari--_jp_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/danshari--_jp_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A Japanese philosophy of decluttering and mindful living consisting of refusing unnecessary items, disposing of unused possessions, and separating oneself from material attachments.",
+      "Verb": "A Japanese philosophy of decluttering and mindful living consisting of refusing unnecessary items, disposing of unused possessions, and separating oneself from material attachments."
+    },
+    "vietnamese": {
+      "Noun": "Triết lý tối giản của Nhật Bản về việc từ chối, vứt bỏ và tách biệt khỏi sự lệ thuộc vào vật chất để đạt được sự thanh thản trong tâm hồn.",
+      "Verb": "Triết lý tối giản của Nhật Bản về việc từ chối, vứt bỏ và tách biệt khỏi sự lệ thuộc vào vật chất để đạt được sự thanh thản trong tâm hồn."
+    },
+    "synonyms": [
+      "Decluttering",
+      "minimalism",
+      "clearing out",
+      "simplification."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Danshari method",
+      "practice danshari",
+      "danshari philosophy",
+      "danshari lifestyle."
+    ],
+    "examples": [
+      "She decided to practice danshari to create a more breathable and focused living space."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdeducesomethin0013"
+    },
+    "word": "deduce something",
+    "phonetics": {
+      "uk": "/dɪˈdjuːs/",
+      "us": "/dɪˈdjuːs/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deduce--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deduce--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To reach a conclusion or decision by thinking carefully about known facts or evidence."
+    },
+    "vietnamese": {
+      "Verb": "Suy luận, luận ra, khấu trừ."
+    },
+    "synonyms": [
+      "Infer",
+      "conclude",
+      "gather",
+      "reason out",
+      "work out."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Logically deduce",
+      "deduce the cause",
+      "deduce the meaning",
+      "deduce from."
+    ],
+    "examples": [
+      "From the footprints, the detective could deduce who had been in the room."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdeliberately0014"
+    },
+    "word": "deliberately",
+    "phonetics": {
+      "uk": "/dɪˈlɪb.ər.ət.li/",
+      "us": "/dɪˈlɪb.ər.ət.li/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deliberately--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deliberately--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adverb"
+    ],
+    "definitions": {
+      "Adverb": "Done consciously and intentionally; on purpose. Also means in a slow, careful, and unhurried manner."
+    },
+    "vietnamese": {
+      "Adverb": "Cố ý, chủ tâm, thong thả, thận trọng."
+    },
+    "synonyms": [
+      "Intentionally",
+      "on purpose",
+      "knowingly",
+      "willfully",
+      "purposely",
+      "cautiously",
+      "slowly."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Deliberately ignore",
+      "deliberately mislead",
+      "deliberately target",
+      "act deliberately",
+      "move deliberately."
+    ],
+    "examples": [
+      "I am sure he says these things deliberately to annoy me."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvconscious0015"
+    },
+    "word": "conscious",
+    "phonetics": {
+      "uk": "/ˈkɑːnʃəs/",
+      "us": "/ˈkɑːnʃəs/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/conscious--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/conscious--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Awake, alert, and able to understand what is happening around you; aware of something; or done in a deliberate way."
+    },
+    "vietnamese": {
+      "Adjective": "Tỉnh táo, có ý thức, biết rõ, cố ý."
+    },
+    "synonyms": [
+      "Aware",
+      "awake",
+      "alert",
+      "cognizant",
+      "intentional",
+      "deliberate",
+      "sensible."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Conscious effort",
+      "conscious decision",
+      "conscious of the fact",
+      "environmentally conscious",
+      "health-conscious",
+      "stay conscious."
+    ],
+    "examples": [
+      "The patient remained conscious throughout the entire surgical procedure."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdeliverables0016"
+    },
+    "word": "deliverables",
+    "phonetics": {
+      "uk": "/dɪˈlɪv.ɚ.ə.bəl/",
+      "us": "/dɪˈlɪv.ɚ.ə.bəl/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deliverable--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/deliverable--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "Something that can be provided or achieved as a result of a process, such as a report or product; or the quality of being able to be delivered.",
+      "Adjective": "Something that can be provided or achieved as a result of a process, such as a report or product; or the quality of being able to be delivered."
+    },
+    "vietnamese": {
+      "Noun": "Sản phẩm bàn giao, kết quả có thể thực hiện được.",
+      "Adjective": "Sản phẩm bàn giao, kết quả có thể thực hiện được."
+    },
+    "synonyms": [
+      "Product",
+      "output",
+      "result",
+      "solution",
+      "merchandise",
+      "goods."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Key deliverable",
+      "project deliverable",
+      "final deliverable",
+      "deliverable deadline",
+      "public deliverables."
+    ],
+    "examples": [
+      "The key deliverable for this phase of the project is a detailed market analysis report."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdestemize0017"
+    },
+    "word": "destemize",
+    "phonetics": {
+      "uk": "/diːˈstɛmaɪz/",
+      "us": "/diːˈstɛmaɪz/"
+    },
+    "audio": {
+      "uk": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/destem--_gb_1.mp3",
+      "us": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/destem--_gb_1.mp3"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To remove the stems from fruit, particularly grapes, often as a preliminary step in winemaking or food preparation."
+    },
+    "vietnamese": {
+      "Verb": "Tách hoặc loại bỏ cuống (thường là cuống nho hoặc các loại quả)."
+    },
+    "synonyms": [
+      "Destem",
+      "stem",
+      "strip."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Destemize grapes",
+      "destemize fruit",
+      "destemize by hand",
+      "destemize mechanically."
+    ],
+    "examples": [
+      "The grapes must be destemized carefully before they are crushed for winemaking."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcompound0019"
+    },
+    "word": "compound",
+    "phonetics": {
+      "uk": "/ˈkɒm paʊnd/ (noun/adj) or /kəmˈpaʊnd/ (verb)",
+      "us": "/ˈkɒm paʊnd/ (noun/adj) or /kəmˈpaʊnd/ (verb)"
+    },
+    "audio": {
+      "uk": "[kom-pound, kom-pound, kom-pound, kuhm-pound, kom-pound]",
+      "us": "[kom-pound, kom-pound, kom-pound, kuhm-pound, kom-pound]"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A thing that is composed of two or more separate elements; a mixture. To make something bad worse; to intensify.",
+      "Verb": "A thing that is composed of two or more separate elements; a mixture. To make something bad worse; to intensify.",
+      "Adjective": "A thing that is composed of two or more separate elements; a mixture. To make something bad worse; to intensify."
+    },
+    "vietnamese": {
+      "Noun": "Hợp chất, phức hợp; pha trộn, hòa lẫn; làm trầm trọng thêm.",
+      "Verb": "Hợp chất, phức hợp; pha trộn, hòa lẫn; làm trầm trọng thêm.",
+      "Adjective": "Hợp chất, phức hợp; pha trộn, hòa lẫn; làm trầm trọng thêm."
+    },
+    "synonyms": [
+      "Mixture",
+      "blend",
+      "amalgam",
+      "combination",
+      "intensify",
+      "worsen",
+      "exacerbate",
+      "aggravate."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Compound a problem",
+      "chemical compound",
+      "organic compound",
+      "residential compound",
+      "compound interest."
+    ],
+    "examples": [
+      "Salt is a chemical compound of sodium and chlorine."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdilemma0020"
+    },
+    "word": "dilemma",
+    "phonetics": {
+      "uk": "/dɪˈlem.ə/ or /daɪˈlem.ə/",
+      "us": "/dɪˈlem.ə/ or /daɪˈlem.ə/"
+    },
+    "audio": {
+      "uk": "[dih-lem-uh, dahy-lem-uh]",
+      "us": "[dih-lem-uh, dahy-lem-uh]"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A situation in which a difficult choice has to be made between two or more alternatives, especially equally undesirable ones."
+    },
+    "vietnamese": {
+      "Noun": "Tình trạng tiến thoái lưỡng nan, thế bí, khó khăn."
+    },
+    "synonyms": [
+      "Quandary",
+      "predicament",
+      "plight",
+      "impasse",
+      "problem",
+      "difficulty",
+      "jam",
+      "pickle."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Moral dilemma",
+      "ethical dilemma",
+      "face a dilemma",
+      "pose a dilemma",
+      "resolve a dilemma",
+      "classic dilemma",
+      "agonizing dilemma."
+    ],
+    "examples": [
+      "The president is clearly in a dilemma over how to tackle the crisis."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdiscardsomethi0021"
+    },
+    "word": "discard something",
+    "phonetics": {
+      "uk": "/dɪˈskɑːrd/ (verb) or /ˈdɪskɑːrd/ (noun)",
+      "us": "/dɪˈskɑːrd/ (verb) or /ˈdɪskɑːrd/ (noun)"
+    },
+    "audio": {
+      "uk": "[dih-skahrd, dis-kahrd]",
+      "us": "[dih-skahrd, dis-kahrd]"
+    },
+    "partOfSpeech": [
+      "Verb",
+      "Noun"
+    ],
+    "definitions": {
+      "Verb": "To throw something away or get rid of it because it is no longer wanted or needed; in card games, to get rid of a card from one's hand.",
+      "Noun": "To throw something away or get rid of it because it is no longer wanted or needed; in card games, to get rid of a card from one's hand."
+    },
+    "vietnamese": {
+      "Verb": "Loại bỏ, vứt bỏ, thải hồi; (đánh bài) đánh chui, dập bài.",
+      "Noun": "Loại bỏ, vứt bỏ, thải hồi; (đánh bài) đánh chui, dập bài."
+    },
+    "synonyms": [
+      "Get rid of",
+      "throw away",
+      "abandon",
+      "reject",
+      "eliminate",
+      "dump",
+      "scrap",
+      "jettison."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Discard an idea",
+      "discard old clothes",
+      "discard a card",
+      "discard waste",
+      "discard as useless."
+    ],
+    "examples": [
+      "Remove and discard the stems before cooking the vegetables."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdismantle0022"
+    },
+    "word": "dismantle",
+    "phonetics": {
+      "uk": "/dɪsˈmæntl/",
+      "us": "/dɪsˈmæntl/"
+    },
+    "audio": {
+      "uk": "[dis-man-tl]",
+      "us": "[dis-man-tl]"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To take a machine or structure apart into separate pieces; to gradually cause an organization or system to stop functioning."
+    },
+    "vietnamese": {
+      "Verb": "Tháo dỡ (máy móc, cấu trúc); hủy bỏ, giải tán (hệ thống, tổ chức)."
+    },
+    "synonyms": [
+      "Disassemble",
+      "take apart",
+      "demolish",
+      "raze",
+      "abolish",
+      "deconstruct",
+      "strip",
+      "break up."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Dismantle a machine",
+      "dismantle a system",
+      "dismantle an organization",
+      "dismantle a structure",
+      "dismantle a tent."
+    ],
+    "examples": [
+      "The mechanic dismantled the engine to repair the faulty part."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdistract0023"
+    },
+    "word": "distract",
+    "phonetics": {
+      "uk": "/dɪˈstrækt/",
+      "us": "/dɪˈstrækt/"
+    },
+    "audio": {
+      "uk": "[dih-strakt]",
+      "us": "[dih-strakt]"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To prevent someone from giving their full attention to something; to divert or draw attention away; to disturb or trouble greatly in mind."
+    },
+    "vietnamese": {
+      "Verb": "Làm xao lãng, gây mất tập trung; làm bối rối, làm quẫn trí."
+    },
+    "synonyms": [
+      "Divert",
+      "sidetrack",
+      "deflect",
+      "confuse",
+      "disturb",
+      "bewilder",
+      "amuse",
+      "entertain."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Distract attention",
+      "distract a driver",
+      "distract from",
+      "easily distracted",
+      "distract someone from something."
+    ],
+    "examples": [
+      "The loud music distracts me from completing my homework."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csventitlesomethi0024"
+    },
+    "word": "entitle something",
+    "phonetics": {
+      "uk": "/ɪnˈtaɪ.təl/",
+      "us": "/ɪnˈtaɪ.təl/"
+    },
+    "audio": {
+      "uk": "[en-tahy-tl]",
+      "us": "[en-tahy-tl]"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To give someone the right to do or have something; to give a title to a book, movie, or other work."
+    },
+    "vietnamese": {
+      "Verb": "Cho phép, trao quyền; đặt tên, đặt tiêu đề."
+    },
+    "synonyms": [
+      "Allow",
+      "authorize",
+      "permit",
+      "warrant",
+      "empower",
+      "name",
+      "call",
+      "label."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Entitle someone to something",
+      "be entitled to",
+      "entitle a book",
+      "entitle a poem."
+    ],
+    "examples": [
+      "This ticket entitles you to a free meal."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvexcavation0025"
+    },
+    "word": "excavation",
+    "phonetics": {
+      "uk": "/ˌeks.kəˈveɪ.ʃən/",
+      "us": "/ˌeks.kəˈveɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "[eks-kuh-vey-shuhn]",
+      "us": "[eks-kuh-vey-shuhn]"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The action of excavating, or of making hollow, by cutting, scooping, or digging; the act of removing earth that is covering very old objects buried in the ground in order to discover things about the past."
+    },
+    "vietnamese": {
+      "Noun": "Sự khai quật, sự đào bới; hố đào, công trường khai quật."
+    },
+    "synonyms": [
+      "Dig",
+      "digging",
+      "removal",
+      "mining",
+      "hollow",
+      "cavity",
+      "trench",
+      "ditch",
+      "pit",
+      "quarry."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Archaeological excavation",
+      "excavation site",
+      "begin excavation",
+      "carry out excavation",
+      "excavation work."
+    ],
+    "examples": [
+      "The team began the excavation of the ancient ruins to discover what secrets lay beneath the ground."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvextravagance0026"
+    },
+    "word": "extravagance",
+    "phonetics": {
+      "uk": "/ɪkˈstrævəɡəns/",
+      "us": "/ɪkˈstrævəɡəns/"
+    },
+    "audio": {
+      "uk": "[ik-strav-uh-guhns]",
+      "us": "[ik-strav-uh-guhns]"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The quality of exceeding the appropriate limits of decorum, probability, or truth; the trait of spending more money than is reasonable or than you can afford."
+    },
+    "vietnamese": {
+      "Noun": "Sự phung phí, sự hoang phí; sự quá mức, sự ngông cuồng."
+    },
+    "synonyms": [
+      "Lavishness",
+      "wastefulness",
+      "prodigality",
+      "excess",
+      "indulgence",
+      "luxury",
+      "squandering",
+      "profligacy."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Gross extravagance",
+      "financial extravagance",
+      "reckless extravagance",
+      "sheer extravagance",
+      "commit an extravagance."
+    ],
+    "examples": [
+      "Her biggest extravagance is buying designer clothes that she rarely wears."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvfraud0027"
+    },
+    "word": "fraud",
+    "phonetics": {
+      "uk": "/frɔːd/",
+      "us": "/frɔːd/"
+    },
+    "audio": {
+      "uk": "[frawd, frohd, frohd, frawd]",
+      "us": "[frawd, frohd, frohd, frawd]"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The crime of getting money by deceiving people; a person or thing that is not what it claims or pretends to be."
+    },
+    "vietnamese": {
+      "Noun": "Sự lừa đảo, vụ gian lận; kẻ lừa đảo, người giả mạo."
+    },
+    "synonyms": [
+      "Deception",
+      "deceit",
+      "swindling",
+      "hoax",
+      "scam",
+      "impostor",
+      "fake",
+      "sham",
+      "charlatan."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Credit card fraud",
+      "tax fraud",
+      "bank fraud",
+      "insurance fraud",
+      "commit fraud",
+      "fraud investigation",
+      "victim of fraud."
+    ],
+    "examples": [
+      "He was sentenced to prison for his involvement in a massive bank fraud."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvimitate0028"
+    },
+    "word": "imitate",
+    "phonetics": {
+      "uk": "/ˈɪmɪteɪt/",
+      "us": "/ˈɪmɪteɪt/"
+    },
+    "audio": {
+      "uk": "[im-i-teyt]",
+      "us": "[im-i-teyt]"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To follow as a model or example; to copy the way a person speaks or behaves, especially to entertain or ridicule; to make a copy of something."
+    },
+    "vietnamese": {
+      "Verb": "Bắt chước, mô phỏng, sao chép."
+    },
+    "synonyms": [
+      "Copy",
+      "mimic",
+      "emulate",
+      "impersonate",
+      "mock",
+      "simulate",
+      "replicate",
+      "ape."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Imitate a style",
+      "imitate a voice",
+      "imitate a sound",
+      "try to imitate",
+      "learn by imitating."
+    ],
+    "examples": [
+      "Teachers provide a model for children to imitate."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvinjuries0029"
+    },
+    "word": "injuries",
+    "phonetics": {
+      "uk": "/ˈɪndʒəriz/",
+      "us": "/ˈɪndʒəriz/"
+    },
+    "audio": {
+      "uk": "[in-juh-reez]",
+      "us": "[in-juh-reez]"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "Physical harm or damage to someone's body caused by an accident or an attack; an instance of being physically hurt."
+    },
+    "vietnamese": {
+      "Noun": "Các vết thương, sự tổn thương."
+    },
+    "synonyms": [
+      "Wounds",
+      "harms",
+      "hurts",
+      "damages",
+      "lacerations",
+      "traumas",
+      "impairments",
+      "injustices",
+      "wrongs."
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Serious injuries",
+      "minor injuries",
+      "fatal injuries",
+      "sustain injuries",
+      "cause injuries",
+      "internal injuries",
+      "head injuries."
+    ],
+    "examples": [
+      "The team has been weakened by illness and injury."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvinnate0030"
+    },
+    "word": "innate",
+    "phonetics": {
+      "uk": "/ɪˈneɪt/",
+      "us": "/ɪˈneɪt/"
+    },
+    "audio": {
+      "uk": "ih-neyt",
+      "us": "ih-neyt"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Existing in, belonging to, or determined by factors present in an individual from birth; inherent in the essential character of something."
+    },
+    "vietnamese": {
+      "Adjective": "Bẩm sinh, bản hữu, sẵn có."
+    },
+    "synonyms": [
+      "Inborn",
+      "natural",
+      "inherent",
+      "intrinsic",
+      "congenital",
+      "hereditary",
+      "instinctive."
+    ],
+    "antonyms": [
+      "Acquired",
+      "learned",
+      "external",
+      "superficial",
+      "extrinsic."
+    ],
+    "collocations": [
+      "Innate ability",
+      "innate talent",
+      "innate sense",
+      "innate skill",
+      "innate desire",
+      "innate immunity."
+    ],
+    "examples": [
+      "He has an innate desire to win."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvinsurmountable0031"
+    },
+    "word": "insurmountable",
+    "phonetics": {
+      "uk": "/ˌɪnsərˈmaʊntəbəl/",
+      "us": "/ˌɪnsərˈmaʊntəbəl/"
+    },
+    "audio": {
+      "uk": "in-ser-moun-tuh-buhl",
+      "us": "in-ser-moun-tuh-buhl"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Incapable of being surmounted, passed over, or overcome; impossible to solve or get control of."
+    },
+    "vietnamese": {
+      "Adjective": "Không thể vượt qua được, không thể khắc phục được."
+    },
+    "synonyms": [
+      "Insuperable",
+      "unconquerable",
+      "invincible",
+      "unbeatable",
+      "impossible",
+      "overwhelming",
+      "indomitable."
+    ],
+    "antonyms": [
+      "Surmountable",
+      "beatable",
+      "conquerable",
+      "attainable",
+      "possible",
+      "superable."
+    ],
+    "collocations": [
+      "Insurmountable obstacle",
+      "insurmountable difficulties",
+      "insurmountable problem",
+      "insurmountable barrier",
+      "insurmountable lead",
+      "insurmountable odds."
+    ],
+    "examples": [
+      "The team faced insurmountable difficulties during the expedition."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csviterate0032"
+    },
+    "word": "iterate",
+    "phonetics": {
+      "uk": "/ˈɪtəreɪt/",
+      "us": "/ˈɪtəreɪt/"
+    },
+    "audio": {
+      "uk": "ih-tuh-reyt",
+      "us": "ih-tuh-reyt"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To say or do something again or repeatedly; to perform or repeat an action on each item in a set or on the results of a prior action."
+    },
+    "vietnamese": {
+      "Verb": "Lặp lại, nhắc lại, làm lại."
+    },
+    "synonyms": [
+      "Repeat",
+      "reiterate",
+      "restate",
+      "recapitulate",
+      "rehearse",
+      "retell",
+      "go over."
+    ],
+    "antonyms": [
+      "Play down",
+      "equalize",
+      "balance."
+    ],
+    "collocations": [
+      "Iterate a process",
+      "iterate a design",
+      "iterate rapidly",
+      "iterate a performance",
+      "iterate a point."
+    ],
+    "examples": [
+      "The designer will iterate the prototype based on user feedback."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvinterchangeabl0033"
+    },
+    "word": "interchangeably",
+    "phonetics": {
+      "uk": "/ˌɪntərˈtʃeɪndʒəbli/",
+      "us": "/ˌɪntərˈtʃeɪndʒəbli/"
+    },
+    "audio": {
+      "uk": "in-ter-cheyn-juh-blee",
+      "us": "in-ter-cheyn-juh-blee"
+    },
+    "partOfSpeech": [
+      "Adverb"
+    ],
+    "definitions": {
+      "Adverb": "In a way that allows two or more things to be exchanged or used in place of each other without changing the meaning or result."
+    },
+    "vietnamese": {
+      "Adverb": "Thay thế cho nhau, có thể hoán đổi cho nhau."
+    },
+    "synonyms": [
+      "Exchangeably",
+      "reciprocally",
+      "equivalently",
+      "identically",
+      "synonymously",
+      "substitutably."
+    ],
+    "antonyms": [
+      "Differently",
+      "uniquely",
+      "distinctly",
+      "non-interchangeably."
+    ],
+    "collocations": [
+      "Used interchangeably",
+      "treat interchangeably",
+      "apply interchangeably",
+      "used almost interchangeably."
+    ],
+    "examples": [
+      "The terms \"internet\" and \"World Wide Web\" are often used interchangeably, though they are not the same."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvintricately0034"
+    },
+    "word": "intricately",
+    "phonetics": {
+      "uk": "/ˈɪntrɪkətli/",
+      "us": "/ˈɪntrɪkətli/"
+    },
+    "audio": {
+      "uk": "in-tri-kut-lee",
+      "us": "in-tri-kut-lee"
+    },
+    "partOfSpeech": [
+      "Adverb"
+    ],
+    "definitions": {
+      "Adverb": "In a very detailed and complicated way; in a manner that is difficult to understand or disentangle."
+    },
+    "vietnamese": {
+      "Adverb": "Phức tạp, rắc rối, tỉ mỉ."
+    },
+    "synonyms": [
+      "Elaborately",
+      "complexly",
+      "detailedly",
+      "inextricably",
+      "painstakingly",
+      "sophisticatedly."
+    ],
+    "antonyms": [
+      "Simply",
+      "plainly",
+      "easily",
+      "crudely."
+    ],
+    "collocations": [
+      "Intricately carved",
+      "intricately designed",
+      "intricately woven",
+      "intricately planned",
+      "intricately detailed."
+    ],
+    "examples": [
+      "The dress was intricately designed with thousands of tiny beads."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvhumble0035"
+    },
+    "word": "humble",
+    "phonetics": {
+      "uk": "/ˈhʌmbəl/",
+      "us": "/ˈhʌmbəl/"
+    },
+    "audio": {
+      "uk": "huhm-buhl",
+      "us": "huhm-buhl"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Verb"
+    ],
+    "definitions": {
+      "Adjective": "Having or showing a modest or low estimate of one's own importance; of low social, administrative, or political rank.",
+      "Verb": "Having or showing a modest or low estimate of one's own importance; of low social, administrative, or political rank."
+    },
+    "vietnamese": {
+      "Adjective": "Khiêm tốn, nhún nhường, thấp kém, hèn mọn.",
+      "Verb": "Khiêm tốn, nhún nhường, thấp kém, hèn mọn."
+    },
+    "synonyms": [
+      "Modest",
+      "unassuming",
+      "meek",
+      "unpretentious",
+      "lowly",
+      "ordinary."
+    ],
+    "antonyms": [
+      "Proud",
+      "arrogant",
+      "boastful",
+      "haughty",
+      "pretentious",
+      "noble."
+    ],
+    "collocations": [
+      "Humble beginnings",
+      "humble origins",
+      "humble apology",
+      "humble opinion",
+      "humble abode."
+    ],
+    "examples": [
+      "Despite his enormous success, he remained a humble man."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvleisure0036"
+    },
+    "word": "leisure",
+    "phonetics": {
+      "uk": "/ˈliː.ʒɚ/ (US), /ˈleʒ.ər/ (UK)",
+      "us": "/ˈliː.ʒɚ/ (US), /ˈleʒ.ər/ (UK)"
+    },
+    "audio": {
+      "uk": "lee-zher (US), lezh-er (UK)",
+      "us": "lee-zher (US), lezh-er (UK)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "Time when one is not working or occupied; free time; use of free time for enjoyment.",
+      "Adjective": "Time when one is not working or occupied; free time; use of free time for enjoyment."
+    },
+    "vietnamese": {
+      "Noun": "Thời gian rảnh rỗi, lúc thư nhàn.",
+      "Adjective": "Thời gian rảnh rỗi, lúc thư nhàn."
+    },
+    "synonyms": [
+      "Spare time",
+      "free time",
+      "recreation",
+      "relaxation",
+      "ease."
+    ],
+    "antonyms": [
+      "Work",
+      "labor",
+      "business",
+      "chore",
+      "obligation."
+    ],
+    "collocations": [
+      "Leisure time",
+      "leisure activities",
+      "leisure pursuits",
+      "leisure industry",
+      "life of leisure",
+      "at leisure."
+    ],
+    "examples": [
+      "Most people only have a limited amount of leisure time."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvlikewise0037"
+    },
+    "word": "likewise",
+    "phonetics": {
+      "uk": "/ˈlaɪk.waɪz/",
+      "us": "/ˈlaɪk.waɪz/"
+    },
+    "audio": {
+      "uk": "lahyk-wahyz",
+      "us": "lahyk-wahyz"
+    },
+    "partOfSpeech": [
+      "Adverb"
+    ],
+    "definitions": {
+      "Adverb": "In the same way or manner; similarly; in addition; also."
+    },
+    "vietnamese": {
+      "Adverb": "Cũng vậy, tương tự như vậy, cũng thế."
+    },
+    "synonyms": [
+      "Similarly",
+      "also",
+      "too",
+      "as well",
+      "besides",
+      "moreover",
+      "likewise",
+      "alike",
+      "correspondingly."
+    ],
+    "antonyms": [
+      "Differently",
+      "contrariwise",
+      "opposing",
+      "opposite",
+      "reverse."
+    ],
+    "collocations": [
+      "Do likewise",
+      "feel likewise",
+      "think likewise",
+      "react likewise",
+      "likewise important."
+    ],
+    "examples": [
+      "He lent money, made donations and encouraged others to do likewise."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvlinnerthinking0038"
+    },
+    "word": "linner thinking",
+    "phonetics": {
+      "uk": "/ˈlɪniər ˈθɪŋkɪŋ/",
+      "us": "/ˈlɪniər ˈθɪŋkɪŋ/"
+    },
+    "audio": {
+      "uk": "lin-ee-er thing-king",
+      "us": "lin-ee-er thing-king"
+    },
+    "partOfSpeech": [
+      "Noun Phrase"
+    ],
+    "definitions": {
+      "Noun Phrase": "A systematic and analytical thought process that follows a known step-by-step progression where a response to a step must be elicited before another step is taken; often associated with logic and sequential reasoning."
+    },
+    "vietnamese": {
+      "Noun Phrase": "Tư duy tuyến tính."
+    },
+    "synonyms": [
+      "Sequential thinking",
+      "vertical thinking",
+      "convergent thinking",
+      "step-by-step reasoning",
+      "analytical thinking."
+    ],
+    "antonyms": [
+      "Non-linear thinking",
+      "lateral thinking",
+      "divergent thinking",
+      "holistic thinking",
+      "circular thinking."
+    ],
+    "collocations": [
+      "Linear thinking process",
+      "linear thinking style",
+      "apply linear thinking",
+      "trap of linear thinking."
+    ],
+    "examples": [
+      "Linear thinking is highly effective for solving mathematical problems and following technical procedures."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvlottery0039"
+    },
+    "word": "lottery",
+    "phonetics": {
+      "uk": "/ˈlɒtəri/",
+      "us": "/ˈlɒtəri/"
+    },
+    "audio": {
+      "uk": "lot-uh-ree",
+      "us": "lot-uh-ree"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A way of raising money by selling tickets with numbers on them that are then chosen by chance to award prizes to the winners; a situation whose success or result is based on luck rather than effort."
+    },
+    "vietnamese": {
+      "Noun": "Xổ số, sự may rủi."
+    },
+    "synonyms": [
+      "Raffle",
+      "draw",
+      "sweepstake",
+      "lotto",
+      "gamble",
+      "chance",
+      "hazard."
+    ],
+    "antonyms": [
+      "Certainty",
+      "calculation",
+      "design",
+      "plan",
+      "intent."
+    ],
+    "collocations": [
+      "National lottery",
+      "state lottery",
+      "lottery ticket",
+      "lottery winner",
+      "lottery jackpot",
+      "win the lottery",
+      "play the lottery."
+    ],
+    "examples": [
+      "She won a large sum of money in the national lottery."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmainstream0040"
+    },
+    "word": "mainstream",
+    "phonetics": {
+      "uk": "/ˈmeɪnˌstrim/",
+      "us": "/ˈmeɪnˌstrim/"
+    },
+    "audio": {
+      "uk": "meyn-streem",
+      "us": "meyn-streem"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Adjective": "Representing the widespread or dominant trend, opinion, or style; what is viewed by most people in a society as normal or conventional.",
+      "Noun": "Representing the widespread or dominant trend, opinion, or style; what is viewed by most people in a society as normal or conventional.",
+      "Verb": "Representing the widespread or dominant trend, opinion, or style; what is viewed by most people in a society as normal or conventional."
+    },
+    "vietnamese": {
+      "Adjective": "Xu hướng chủ đạo, chính lưu, đại trà.",
+      "Noun": "Xu hướng chủ đạo, chính lưu, đại trà.",
+      "Verb": "Xu hướng chủ đạo, chính lưu, đại trà."
+    },
+    "synonyms": [
+      "Conventional",
+      "popular",
+      "current",
+      "dominant",
+      "general",
+      "normal",
+      "standard",
+      "widespread."
+    ],
+    "antonyms": [
+      "Alternative",
+      "unconventional",
+      "fringe",
+      "abnormal",
+      "eccentric",
+      "exceptional",
+      "rare",
+      "unusual."
+    ],
+    "collocations": [
+      "Mainstream media",
+      "mainstream culture",
+      "mainstream audience",
+      "mainstream success",
+      "mainstream publication",
+      "mainstream school."
+    ],
+    "examples": [
+      "These artists didn't quite fit into mainstream American culture."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmanifesting0041"
+    },
+    "word": "manifesting",
+    "phonetics": {
+      "uk": "/ˌmænɪˈfɛstɪŋ/",
+      "us": "/ˌmænɪˈfɛstɪŋ/"
+    },
+    "audio": {
+      "uk": "man-uh-fest-ing",
+      "us": "man-uh-fest-ing"
+    },
+    "partOfSpeech": [
+      "Verb (Present Participle)",
+      "Adjective"
+    ],
+    "definitions": {
+      "Verb (Present Participle)": "Showing something clearly through signs or actions; making something evident or certain by displaying it. In modern usage, the practice of using visualization and affirmation to help achieve a goal or desire.",
+      "Adjective": "Showing something clearly through signs or actions; making something evident or certain by displaying it. In modern usage, the practice of using visualization and affirmation to help achieve a goal or desire."
+    },
+    "vietnamese": {
+      "Verb (Present Participle)": "Biểu lộ, biểu hiện, bày tỏ rõ ràng; (hiện đại) thực hiện hóa bằng tâm linh/niềm tin.",
+      "Adjective": "Biểu lộ, biểu hiện, bày tỏ rõ ràng; (hiện đại) thực hiện hóa bằng tâm linh/niềm tin."
+    },
+    "synonyms": [
+      "Displaying",
+      "revealing",
+      "showing",
+      "demonstrating",
+      "exhibiting",
+      "materializing",
+      "actualizing."
+    ],
+    "antonyms": [
+      "Hiding",
+      "concealing",
+      "masking",
+      "obscuring",
+      "covering."
+    ],
+    "collocations": [
+      "Manifesting symptoms",
+      "manifesting signs",
+      "manifesting success",
+      "manifesting dreams."
+    ],
+    "examples": [
+      "The workers are manifesting their dissatisfaction through a series of strikes."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmantra0042"
+    },
+    "word": "mantra",
+    "phonetics": {
+      "uk": "/ˈmæntrə/",
+      "us": "/ˈmæntrə/"
+    },
+    "audio": {
+      "uk": "man-truh",
+      "us": "man-truh"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A word or sound repeated to aid concentration in meditation; a statement or slogan repeated frequently."
+    },
+    "vietnamese": {
+      "Noun": "Thần chú, câu niệm chú, khẩu hiệu."
+    },
+    "synonyms": [
+      "Chant",
+      "motto",
+      "slogan",
+      "incantation",
+      "watchword",
+      "catchword."
+    ],
+    "antonyms": [
+      "Silence",
+      "quiet."
+    ],
+    "collocations": [
+      "Personal mantra",
+      "Buddhist mantra",
+      "daily mantra",
+      "repeat a mantra",
+      "chant a mantra."
+    ],
+    "examples": [
+      "She repeated her favorite mantra to stay calm during the interview."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvminimalism0043"
+    },
+    "word": "minimalism",
+    "phonetics": {
+      "uk": "/ˌmɪn.ɪ.məl.ɪ.zəm/",
+      "us": "/ˌmɪn.ɪ.məl.ɪ.zəm/"
+    },
+    "audio": {
+      "uk": "min-uh-muh-liz-uhm",
+      "us": "min-uh-muh-liz-uhm"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A style or technique (as in music, literature, or design) that is characterized by extreme spareness and simplicity; a style of art, design, or theater that uses the smallest range of materials and colors possible."
+    },
+    "vietnamese": {
+      "Noun": "Chủ nghĩa tối giản."
+    },
+    "synonyms": [
+      "Simplicity",
+      "moderation",
+      "understatement",
+      "restraint",
+      "modesty",
+      "minimal art",
+      "reductivism."
+    ],
+    "antonyms": [
+      "Maximalism",
+      "complexity",
+      "elaboration",
+      "embellishment",
+      "extravagance."
+    ],
+    "collocations": [
+      "Sleek minimalism",
+      "chic minimalism",
+      "architectural minimalism",
+      "musical minimalism",
+      "lifestyle minimalism."
+    ],
+    "examples": [
+      "She replaced the room's austere minimalism with cozy warmth and color."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmisleading0044"
+    },
+    "word": "misleading",
+    "phonetics": {
+      "uk": "/mɪsˈliːdɪŋ/",
+      "us": "/mɪsˈliːdɪŋ/"
+    },
+    "audio": {
+      "uk": "mis-lee-ding",
+      "us": "mis-lee-ding"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Giving the wrong idea or impression; designed to deceive or cause someone to believe something that is untrue."
+    },
+    "vietnamese": {
+      "Adjective": "Gây hiểu lầm, sai lạc, lừa dối."
+    },
+    "synonyms": [
+      "Deceptive",
+      "confusing",
+      "ambiguous",
+      "false",
+      "fallacious",
+      "specious",
+      "spurious",
+      "evasive",
+      "deceitful."
+    ],
+    "antonyms": [
+      "Accurate",
+      "honest",
+      "clear",
+      "truthful",
+      "transparent",
+      "straightforward",
+      "candid."
+    ],
+    "collocations": [
+      "Misleading statement",
+      "misleading advertisement",
+      "misleading information",
+      "misleading label",
+      "misleading impression."
+    ],
+    "examples": [
+      "Statistics can be presented in ways that are misleading."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmotto0045"
+    },
+    "word": "motto",
+    "phonetics": {
+      "uk": "/ˈmɑːtoʊ/",
+      "us": "/ˈmɑːtoʊ/"
+    },
+    "audio": {
+      "uk": "mah-toh",
+      "us": "mah-toh"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A short sentence or phrase chosen as encapsulating the beliefs or ideals of an individual, family, or institution."
+    },
+    "vietnamese": {
+      "Noun": "Khẩu hiệu, châm ngôn."
+    },
+    "synonyms": [
+      "Slogan",
+      "maxim",
+      "saying",
+      "proverb",
+      "aphorism",
+      "adage",
+      "watchword",
+      "catchphrase."
+    ],
+    "antonyms": [
+      "Not applicable for this noun."
+    ],
+    "collocations": [
+      "Personal motto",
+      "school motto",
+      "official motto",
+      "family motto",
+      "national motto."
+    ],
+    "examples": [
+      "No pain, no gain\" is a common motto for athletes."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmuscle0046"
+    },
+    "word": "muscle",
+    "phonetics": {
+      "uk": "/ˈmʌs.əl/",
+      "us": "/ˈmʌs.əl/"
+    },
+    "audio": {
+      "uk": "muh-suhl",
+      "us": "muh-suhl"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A body tissue consisting of cells or fibers that contract to produce movement; physical strength or brawn; power or influence.",
+      "Verb": "A body tissue consisting of cells or fibers that contract to produce movement; physical strength or brawn; power or influence."
+    },
+    "vietnamese": {
+      "Noun": "Cơ, bắp thịt; sức mạnh thể chất; quyền lực, sự ảnh hưởng.",
+      "Verb": "Cơ, bắp thịt; sức mạnh thể chất; quyền lực, sự ảnh hưởng."
+    },
+    "synonyms": [
+      "Tissue",
+      "tendon",
+      "brawn",
+      "strength",
+      "power",
+      "clout",
+      "influence",
+      "force."
+    ],
+    "antonyms": [
+      "Weakness",
+      "impotence",
+      "powerlessness",
+      "laziness",
+      "fragility."
+    ],
+    "collocations": [
+      "Muscle mass",
+      "muscle tone",
+      "muscle memory",
+      "muscle contraction",
+      "flex one's muscles",
+      "financial muscle."
+    ],
+    "examples": [
+      "Keeping your muscles strong helps you to avoid back problems."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvnomad0047"
+    },
+    "word": "nomad",
+    "phonetics": {
+      "uk": "/ˈnoʊmæd/",
+      "us": "/ˈnoʊmæd/"
+    },
+    "audio": {
+      "uk": "noh-mad",
+      "us": "noh-mad"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A member of a people or tribe that has no permanent home but moves from place to place, usually seasonally and often following a traditional route according to the state of the pasturage or food supply; any wanderer or itinerant person.",
+      "Adjective": "A member of a people or tribe that has no permanent home but moves from place to place, usually seasonally and often following a traditional route according to the state of the pasturage or food supply; any wanderer or itinerant person."
+    },
+    "vietnamese": {
+      "Noun": "Người du mục, kẻ lữ hành, người không có nơi ở cố định.",
+      "Adjective": "Người du mục, kẻ lữ hành, người không có nơi ở cố định."
+    },
+    "synonyms": [
+      "Wanderer",
+      "itinerant",
+      "migrant",
+      "roamer",
+      "rover",
+      "wayfarer",
+      "vagabond",
+      "drifter."
+    ],
+    "antonyms": [
+      "Settler",
+      "resident",
+      "inhabitant",
+      "dweller",
+      "homebody",
+      "stationary",
+      "static."
+    ],
+    "collocations": [
+      "Digital nomad",
+      "nomadic tribe",
+      "nomadic lifestyle",
+      "nomadic herder",
+      "nomadic existence."
+    ],
+    "examples": [
+      "The nomads move their herds to new pastures every season."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvnonzerosum0049"
+    },
+    "word": "non-zero sum",
+    "phonetics": {
+      "uk": "/ˌnɒnˌzɪərəʊ ˈsʌm/",
+      "us": "/ˌnɒnˌzɪərəʊ ˈsʌm/"
+    },
+    "audio": {
+      "uk": "non-zeer-oh sum",
+      "us": "non-zeer-oh sum"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Relating to a situation, especially in game theory, where the total gains and losses of all participants are not constant and can result in a net gain or loss for the system as a whole."
+    },
+    "vietnamese": {
+      "Adjective": "Tổng không bằng không, có lợi cho cả hai bên."
+    },
+    "synonyms": [
+      "Positive-sum",
+      "win-win",
+      "cooperative",
+      "non-strictly competitive."
+    ],
+    "antonyms": [
+      "Zero-sum",
+      "constant-sum",
+      "win-lose",
+      "competitive."
+    ],
+    "collocations": [
+      "Non-zero sum game",
+      "non-zero sum situation",
+      "non-zero sum dynamics",
+      "non-zero sum outcome."
+    ],
+    "examples": [
+      "International trade is often viewed as a non-zero sum game where both nations can benefit."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvobstacles0050"
+    },
+    "word": "obstacles",
+    "phonetics": {
+      "uk": "/ˈɑːbstəkəl/",
+      "us": "/ˈɑːbstəkəl/"
+    },
+    "audio": {
+      "uk": "ob-stuh-kuhl",
+      "us": "ob-stuh-kuhl"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "Something that blocks you so that movement, going forward, or action is prevented or made more difficult; an object or situation that stands in the way of progress."
+    },
+    "vietnamese": {
+      "Noun": "Trở ngại, chướng ngại vật, vật cản."
+    },
+    "synonyms": [
+      "Barrier",
+      "hurdle",
+      "impediment",
+      "hindrance",
+      "obstruction",
+      "stumbling block",
+      "snag."
+    ],
+    "antonyms": [
+      "Aid",
+      "assistance",
+      "help",
+      "benefit",
+      "advantage",
+      "opening",
+      "promotion."
+    ],
+    "collocations": [
+      "Overcome obstacles",
+      "face obstacles",
+      "remove obstacles",
+      "major obstacle",
+      "big obstacle",
+      "bureaucratic obstacle."
+    ],
+    "examples": [
+      "So far, we have managed to overcome all the obstacles that have been placed in our path."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrecap0051"
+    },
+    "word": "recap",
+    "phonetics": {
+      "uk": "/riːˈkæp/",
+      "us": "/riːˈkæp/"
+    },
+    "audio": {
+      "uk": "ree-kap",
+      "us": "ree-kap"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A summary or brief restatement of the main points of something; to summarize or go over the main points again.",
+      "Verb": "A summary or brief restatement of the main points of something; to summarize or go over the main points again."
+    },
+    "vietnamese": {
+      "Noun": "Tóm tắt, bản tóm tắt, nhắc lại điểm chính.",
+      "Verb": "Tóm tắt, bản tóm tắt, nhắc lại điểm chính."
+    },
+    "synonyms": [
+      "Summary",
+      "recapitulation",
+      "rundown",
+      "outline",
+      "synopsize",
+      "sum up",
+      "abstract."
+    ],
+    "antonyms": [
+      "Expansion",
+      "amplification",
+      "enlargement",
+      "supplement",
+      "addendum."
+    ],
+    "collocations": [
+      "Brief recap",
+      "quick recap",
+      "weekly recap",
+      "news recap",
+      "recap the highlights."
+    ],
+    "examples": [
+      "Before we begin, let's have a quick recap of what we discussed last week."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrelapse0052"
+    },
+    "word": "relapse",
+    "phonetics": {
+      "uk": "/rɪˈlæps/",
+      "us": "/rɪˈlæps/"
+    },
+    "audio": {
+      "uk": "ri-laps",
+      "us": "ri-laps"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A return to a previous worse state or condition after a period of improvement, especially regarding health or behavior.",
+      "Verb": "A return to a previous worse state or condition after a period of improvement, especially regarding health or behavior."
+    },
+    "vietnamese": {
+      "Noun": "Sự tái phát (bệnh), sự sa ngã lại.",
+      "Verb": "Sự tái phát (bệnh), sự sa ngã lại."
+    },
+    "synonyms": [
+      "Regression",
+      "reversion",
+      "backsliding",
+      "deterioration",
+      "recurrence",
+      "lapse."
+    ],
+    "antonyms": [
+      "Recovery",
+      "improvement",
+      "progress",
+      "healing",
+      "strengthening."
+    ],
+    "collocations": [
+      "Suffer a relapse",
+      "prevent a relapse",
+      "risk of relapse",
+      "relapse into."
+    ],
+    "examples": [
+      "The patient seemed to be getting better, but then suffered a sudden relapse."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrelentless0053"
+    },
+    "word": "relentless",
+    "phonetics": {
+      "uk": "/rɪˈlɛntləs/",
+      "us": "/rɪˈlɛntləs/"
+    },
+    "audio": {
+      "uk": "ri-lent-lis",
+      "us": "ri-lent-lis"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Not easing or slackening; maintaining speed, vigor, etc.; unyieldingly severe, strict, or harsh."
+    },
+    "vietnamese": {
+      "Adjective": "Tàn nhẫn, không nao núng, gay gắt, không ngừng nghỉ."
+    },
+    "synonyms": [
+      "Unyielding",
+      "adamant",
+      "persistent",
+      "unrelenting",
+      "inexorable",
+      "ruthless",
+      "incessant."
+    ],
+    "antonyms": [
+      "Merciful",
+      "lenient",
+      "sympathetic",
+      "intermittent",
+      "yielding",
+      "kind."
+    ],
+    "collocations": [
+      "Relentless pursuit",
+      "relentless pressure",
+      "relentless focus",
+      "relentless pace",
+      "relentless heat."
+    ],
+    "examples": [
+      "The hunter was relentless in pursuit of his prey."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvresilience0054"
+    },
+    "word": "resilience",
+    "phonetics": {
+      "uk": "/rɪˈzɪliəns/",
+      "us": "/rɪˈzɪliəns/"
+    },
+    "audio": {
+      "uk": "ri-zil-yuhns",
+      "us": "ri-zil-yuhns"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The capacity to withstand or to recover quickly from difficulties; toughness; the ability of a substance or object to spring back into shape; elasticity."
+    },
+    "vietnamese": {
+      "Noun": "Sự kiên cường, khả năng phục hồi nhanh chóng, tính đàn hồi."
+    },
+    "synonyms": [
+      "Flexibility",
+      "elasticity",
+      "buoyancy",
+      "fortitude",
+      "hardiness",
+      "toughness",
+      "adaptability",
+      "strength."
+    ],
+    "antonyms": [
+      "Fragility",
+      "vulnerability",
+      "weakness",
+      "rigidity",
+      "inflexibility",
+      "helplessness."
+    ],
+    "collocations": [
+      "Remarkable resilience",
+      "emotional resilience",
+      "economic resilience",
+      "demonstrate resilience",
+      "build resilience."
+    ],
+    "examples": [
+      "The rescue workers showed remarkable resilience in dealing with the difficult conditions."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpersistence0055"
+    },
+    "word": "persistence",
+    "phonetics": {
+      "uk": "/pərˈsɪstəns/",
+      "us": "/pərˈsɪstəns/"
+    },
+    "audio": {
+      "uk": "per-sis-tuhns",
+      "us": "per-sis-tuhns"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The quality of continuing to do something despite difficulties or opposition; the state of continuing to exist for a long period of time."
+    },
+    "vietnamese": {
+      "Noun": "Sự kiên trì, sự bền bỉ, sự cố chấp, sự dai dẳng."
+    },
+    "synonyms": [
+      "Perseverance",
+      "tenacity",
+      "determination",
+      "grit",
+      "stamina",
+      "endurance",
+      "resolution",
+      "doggedness."
+    ],
+    "antonyms": [
+      "Apathy",
+      "laziness",
+      "lethargy",
+      "weakness",
+      "indifference",
+      "cessation",
+      "transience",
+      "irresolution."
+    ],
+    "collocations": [
+      "Dogged persistence",
+      "sheer persistence",
+      "reward persistence",
+      "persistence pays off",
+      "viral persistence."
+    ],
+    "examples": [
+      "His persistence at practicing paid off when he made every free throw shot during the game."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrigidity0056"
+    },
+    "word": "rigidity",
+    "phonetics": {
+      "uk": "/rɪˈdʒɪdɪti/",
+      "us": "/rɪˈdʒɪdɪti/"
+    },
+    "audio": {
+      "uk": "ri-jid-i-tee",
+      "us": "ri-jid-i-tee"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The quality of being stiff and resisting bending; the quality of being very strict and difficult to change; the attitude of refusing to change ideas or behavior."
+    },
+    "vietnamese": {
+      "Noun": "Sự cứng nhắc, tính cứng, tính không linh hoạt."
+    },
+    "synonyms": [
+      "Inflexibility",
+      "stiffness",
+      "rigidness",
+      "strictness",
+      "severity",
+      "rigor",
+      "hardness",
+      "firmness."
+    ],
+    "antonyms": [
+      "Flexibility",
+      "pliability",
+      "softness",
+      "lenience",
+      "elasticity",
+      "compliance."
+    ],
+    "collocations": [
+      "Structural rigidity",
+      "mental rigidity",
+      "muscle rigidity",
+      "extreme rigidity",
+      "absolute rigidity."
+    ],
+    "examples": [
+      "The metal bar's rigidity made it impossible to bend."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvriskappetite0057"
+    },
+    "word": "risk appetite",
+    "phonetics": {
+      "uk": "/rɪsk ˈæp.ə.taɪt/",
+      "us": "/rɪsk ˈæp.ə.taɪt/"
+    },
+    "audio": {
+      "uk": "risk ap-uh-tahyt",
+      "us": "risk ap-uh-tahyt"
+    },
+    "partOfSpeech": [
+      "Noun phrase"
+    ],
+    "definitions": {
+      "Noun phrase": "The total amount and type of risk that an organization or individual is willing to accept or retain in order to achieve its strategic objectives and value."
+    },
+    "vietnamese": {
+      "Noun phrase": "Mức độ chấp nhận rủi ro, khẩu vị rủi ro."
+    },
+    "synonyms": [
+      "Risk tolerance",
+      "risk profile",
+      "willingness to take risks",
+      "risk capacity",
+      "entrepreneurial spirit."
+    ],
+    "antonyms": [
+      "Risk aversion",
+      "risk avoidance",
+      "risk-averse",
+      "apathy",
+      "indifference."
+    ],
+    "collocations": [
+      "High risk appetite",
+      "low risk appetite",
+      "define risk appetite",
+      "risk appetite statement",
+      "risk appetite framework."
+    ],
+    "examples": [
+      "The board must define the company's risk appetite before approving the new investment strategy."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvscenery0058"
+    },
+    "word": "scenery",
+    "phonetics": {
+      "uk": "/ˈsiːnəri/",
+      "us": "/ˈsiːnəri/"
+    },
+    "audio": {
+      "uk": "see-nuh-ree",
+      "us": "see-nuh-ree"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The natural features of a landscape considered for their appearance; the painted backdrops, screens, or properties used on a stage to represent a location."
+    },
+    "vietnamese": {
+      "Noun": "Phong cảnh, cảnh vật, đồ trang trí sân khấu."
+    },
+    "synonyms": [
+      "Landscape",
+      "terrain",
+      "view",
+      "spectacle",
+      "setting",
+      "backdrop",
+      "decor",
+      "set."
+    ],
+    "antonyms": [
+      "Eyesore",
+      "interior",
+      "city (in context of natural landscape)",
+      "reality (in context of stage sets)."
+    ],
+    "collocations": [
+      "Beautiful scenery",
+      "breathtaking scenery",
+      "spectacular scenery",
+      "change of scenery",
+      "mountain scenery",
+      "stage scenery."
+    ],
+    "examples": [
+      "We stopped the car to admire the spectacular mountain scenery."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsediment0059"
+    },
+    "word": "sediment",
+    "phonetics": {
+      "uk": "/ˈsedɪmənt/",
+      "us": "/ˈsedɪmənt/"
+    },
+    "audio": {
+      "uk": "sed-uh-muhnt",
+      "us": "sed-uh-muhnt"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "Matter that settles to the bottom of a liquid; material deposited by water, wind, or glaciers.",
+      "Verb": "Matter that settles to the bottom of a liquid; material deposited by water, wind, or glaciers."
+    },
+    "vietnamese": {
+      "Noun": "Trầm tích, cặn.",
+      "Verb": "Trầm tích, cặn."
+    },
+    "synonyms": [
+      "Silt",
+      "deposit",
+      "dregs",
+      "grounds",
+      "residue",
+      "lees",
+      "precipitate."
+    ],
+    "antonyms": [
+      "Whole",
+      "surface."
+    ],
+    "collocations": [
+      "Layer of sediment",
+      "ocean sediment",
+      "sediment load",
+      "sediment transport",
+      "toxic sediment."
+    ],
+    "examples": [
+      "There was a thick layer of sediment at the bottom of the wine bottle."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsincethen0060"
+    },
+    "word": "since then",
+    "phonetics": {
+      "uk": "/sɪns ðen/",
+      "us": "/sɪns ðen/"
+    },
+    "audio": {
+      "uk": "sins-then",
+      "us": "sins-then"
+    },
+    "partOfSpeech": [
+      "Adverbial phrase"
+    ],
+    "definitions": {
+      "Adverbial phrase": "From a specific time in the past until the present time; starting from a previously mentioned point and continuing to now."
+    },
+    "vietnamese": {
+      "Adverbial phrase": "Kể từ đó, từ đó đến nay."
+    },
+    "synonyms": [
+      "Since that time",
+      "from then on",
+      "thereafter",
+      "subsequently",
+      "ever since",
+      "from that point forward."
+    ],
+    "antonyms": [
+      "Before then",
+      "previously",
+      "formerly",
+      "up until then",
+      "prior to that."
+    ],
+    "collocations": [
+      "Much has changed since then",
+      "ever since then",
+      "happened since then",
+      "improved since then",
+      "vacant since then."
+    ],
+    "examples": [
+      "I moved to this town in 2001 and I have been living here since then."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsketchnoting0061"
+    },
+    "word": "sketchnoting",
+    "phonetics": {
+      "uk": "/ˈsketʃˌnoʊ.tɪŋ/",
+      "us": "/ˈsketʃˌnoʊ.tɪŋ/"
+    },
+    "audio": {
+      "uk": "skech-noh-ting",
+      "us": "skech-noh-ting"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The creative process of recording thoughts and information by combining handwritten text with drawings, symbols, and other visual elements to improve focus and memory retention."
+    },
+    "vietnamese": {
+      "Noun": "Phương pháp ghi chép bằng hình ảnh (kết hợp chữ viết và hình vẽ)."
+    },
+    "synonyms": [
+      "Visual note-taking",
+      "graphic recording",
+      "visual thinking."
+    ],
+    "antonyms": [
+      "Traditional note-taking",
+      "verbatim recording",
+      "plain-text writing."
+    ],
+    "collocations": [
+      "Sketchnoting technique",
+      "sketchnoting skills",
+      "digital sketchnoting",
+      "sketchnoting tools",
+      "live sketchnoting."
+    ],
+    "examples": [
+      "Sketchnoting helps students process complex information more effectively than standard notes."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvstagnation0062"
+    },
+    "word": "stagnation",
+    "phonetics": {
+      "uk": "/stæɡˈneɪʃn/",
+      "us": "/stæɡˈneɪʃn/"
+    },
+    "audio": {
+      "uk": "stag-ney-shuhn",
+      "us": "stag-ney-shuhn"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A state or period of inactivity, sluggishness, or lack of development and advancement."
+    },
+    "vietnamese": {
+      "Noun": "Sự trì trệ, sự đình trệ, sự ứ đọng."
+    },
+    "synonyms": [
+      "Inactivity",
+      "stagnancy",
+      "doldrums",
+      "inertia",
+      "recession",
+      "slump",
+      "standstill",
+      "torpor."
+    ],
+    "antonyms": [
+      "Boom",
+      "growth",
+      "progress",
+      "advancement",
+      "development",
+      "recovery."
+    ],
+    "collocations": [
+      "Economic stagnation",
+      "long-term stagnation",
+      "creative stagnation",
+      "water stagnation",
+      "air stagnation."
+    ],
+    "examples": [
+      "After years of economic stagnation, employment numbers finally began to rise."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvstraddlesometh0063"
+    },
+    "word": "straddle something",
+    "phonetics": {
+      "uk": "/ˈstrædl/",
+      "us": "/ˈstrædl/"
+    },
+    "audio": {
+      "uk": "strad-l",
+      "us": "strad-l"
+    },
+    "partOfSpeech": [
+      "Verb",
+      "Noun"
+    ],
+    "definitions": {
+      "Verb": "To sit or stand with one leg on either side of something; to extend across or be on both sides of; to appear to favor both sides of an issue without committing.",
+      "Noun": "To sit or stand with one leg on either side of something; to extend across or be on both sides of; to appear to favor both sides of an issue without committing."
+    },
+    "vietnamese": {
+      "Verb": "Đứng hoặc ngồi cưỡi lên, khép nép, ở cả hai bên, thái độ nước đôi.",
+      "Noun": "Đứng hoặc ngồi cưỡi lên, khép nép, ở cả hai bên, thái độ nước đôi."
+    },
+    "synonyms": [
+      "Bestride",
+      "mount",
+      "span",
+      "bridge",
+      "cross",
+      "hedge",
+      "noncommittal."
+    ],
+    "antonyms": [
+      "Avoid",
+      "dodge",
+      "sidestep",
+      "evade",
+      "shun."
+    ],
+    "collocations": [
+      "Straddle a horse",
+      "straddle a fence",
+      "straddle the border",
+      "straddle the issue",
+      "straddle genres."
+    ],
+    "examples": [
+      "He pulled on his helmet and straddled the motorcycle."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvstunning0064"
+    },
+    "word": "stunning",
+    "phonetics": {
+      "uk": "/ˈstʌnɪŋ/",
+      "us": "/ˈstʌnɪŋ/"
+    },
+    "audio": {
+      "uk": "stuhn-ing",
+      "us": "stuhn-ing"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Extremely impressive, beautiful, or attractive; causing great astonishment or shock."
+    },
+    "vietnamese": {
+      "Adjective": "Tuyệt vời, lộng lẫy, gây kinh ngạc."
+    },
+    "synonyms": [
+      "Beautiful",
+      "gorgeous",
+      "breathtaking",
+      "amazing",
+      "striking",
+      "astounding",
+      "staggering."
+    ],
+    "antonyms": [
+      "Unimpressive",
+      "ordinary",
+      "ugly",
+      "plain",
+      "expected",
+      "unremarkable."
+    ],
+    "collocations": [
+      "Stunning view",
+      "stunning dress",
+      "stunning performance",
+      "stunning defeat",
+      "stunning comeback."
+    ],
+    "examples": [
+      "She looked absolutely stunning in her wedding dress."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtackle0065"
+    },
+    "word": "tackle",
+    "phonetics": {
+      "uk": "/ˈtækəl/",
+      "us": "/ˈtækəl/"
+    },
+    "audio": {
+      "uk": "Duration: 2 seconds. 0:02.",
+      "us": "Duration: 2 seconds. 0:02."
+    },
+    "partOfSpeech": [
+      "Verb",
+      "Noun"
+    ],
+    "definitions": {
+      "Verb": "To make a determined effort to deal with a difficult problem; to seize and throw down an opponent in sports; equipment used for a particular activity (especially fishing).",
+      "Noun": "To make a determined effort to deal with a difficult problem; to seize and throw down an opponent in sports; equipment used for a particular activity (especially fishing)."
+    },
+    "vietnamese": {
+      "Verb": "Giải quyết, xử lý (vấn đề); chặn, cướp bóng (thể thao); đồ dùng, dụng cụ (đặc biệt là đồ câu cá).Synonyms: Confront, undertake, address, handle, grapple, gear, apparatus",
+      "Noun": "Giải quyết, xử lý (vấn đề); chặn, cướp bóng (thể thao); đồ dùng, dụng cụ (đặc biệt là đồ câu cá).Synonyms: Confront, undertake, address, handle, grapple, gear, apparatus"
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [
+      "Tackle a problem",
+      "tackle a challenge",
+      "tackle crime",
+      "fishing tackle",
+      "heavy tackle",
+      "left tackle"
+    ],
+    "examples": [
+      "The government is determined to tackle inflation."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtechsavvy0066"
+    },
+    "word": "tech savvy",
+    "phonetics": {
+      "uk": "/ˌtek ˈsævi/",
+      "us": "/ˌtek ˈsævi/"
+    },
+    "audio": {
+      "uk": "Duration: 2 seconds. 0:02.",
+      "us": "Duration: 2 seconds. 0:02."
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun"
+    ],
+    "definitions": {
+      "Adjective": "Having much knowledge of or skill with current technology, especially digital technology.",
+      "Noun": "Having much knowledge of or skill with current technology, especially digital technology."
+    },
+    "vietnamese": {
+      "Adjective": "Am hiểu công nghệ, thành thạo công nghệ.",
+      "Noun": "Am hiểu công nghệ, thành thạo công nghệ."
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [
+      "The bank needs to meet the demands of today's tech-savvy consumers.",
+      "Tech-savvy teenagers often help their parents set up new electronic devices.",
+      "VPNs are no longer just for tech-savvy users—they're essential tools for everyday browsing."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtemptation0067"
+    },
+    "word": "temptation",
+    "phonetics": {
+      "uk": "/tempˈteɪʃn/",
+      "us": "/tempˈteɪʃn/"
+    },
+    "audio": {
+      "uk": "Duration: 2 seconds. 0:02.",
+      "us": "Duration: 2 seconds. 0:02."
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The desire to do or have something that you know is bad or wrong; a thing that makes somebody want to do something wrong."
+    },
+    "vietnamese": {
+      "Noun": "Sự cám dỗ, sự lôi cuốn; thứ gây ra sự ham muốn (thường là điều không tốt)."
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [
+      "I couldn't resist the temptation to open the letter.",
+      "The dessert menu has a lot of delicious temptations.",
+      "He warned them about the temptation of easy money."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtend0068"
+    },
+    "word": "tend",
+    "phonetics": {
+      "uk": "/tend/",
+      "us": "/tend/"
+    },
+    "audio": {
+      "uk": "Duration: 2 seconds. 0:02.",
+      "us": "Duration: 2 seconds. 0:02."
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To be likely to behave in a particular way or have a particular characteristic; to care for or look after someone or something; to manage or operate something like a bar or store."
+    },
+    "vietnamese": {
+      "Verb": "Có xu hướng, thường có vẻ; chăm sóc, trông nom; phục vụ, quản lý (quầy bar, cửa hàng)."
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [
+      "Women tend to live longer than men.",
+      "He carefully tended his sunflower plants throughout the summer.",
+      "She had a part-time job tending bar at a local restaurant."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvthinklinear0069"
+    },
+    "word": "think linear",
+    "phonetics": {
+      "uk": "US /ˈθɪŋk ˈlɪn.i.ɚ/, UK /ˈθɪŋk ˈlɪn.i.ər/",
+      "us": "US /ˈθɪŋk ˈlɪn.i.ɚ/, UK /ˈθɪŋk ˈlɪn.i.ər/"
+    },
+    "audio": {
+      "uk": "think (th-ing-k), linear (LIN-ee-er)",
+      "us": "think (th-ing-k), linear (LIN-ee-er)"
+    },
+    "partOfSpeech": [
+      "Verb phrase / Idiomatic expression"
+    ],
+    "definitions": {
+      "Verb phrase / Idiomatic expression": "To approach problems or information in a methodical, step-by-step, and logical sequence where each stage builds on the previous one."
+    },
+    "vietnamese": {
+      "Verb phrase / Idiomatic expression": "Tư duy tuyến tính"
+    },
+    "synonyms": [
+      "Sequential thinking",
+      "vertical thinking",
+      "systematic reasoning",
+      "logical progression"
+    ],
+    "antonyms": [
+      "Lateral thinking",
+      "non-linear thinking",
+      "holistic thinking",
+      "divergent thinking"
+    ],
+    "collocations": [
+      "Linear thinker",
+      "linear process",
+      "linear approach",
+      "think linearly"
+    ],
+    "examples": [
+      "Engineers often think linear to solve complex technical problems through a series of logical steps."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvthrive0070"
+    },
+    "word": "thrive",
+    "phonetics": {
+      "uk": "US /θraɪv/, UK /θraɪv/",
+      "us": "US /θraɪv/, UK /θraɪv/"
+    },
+    "audio": {
+      "uk": "thrive (th-rahyv)",
+      "us": "thrive (th-rahyv)"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To grow, develop, or be successful; to flourish or prosper vigorously."
+    },
+    "vietnamese": {
+      "Verb": "Phát triển mạnh mẽ, thịnh vượng"
+    },
+    "synonyms": [
+      "Flourish",
+      "prosper",
+      "burgeon",
+      "bloom",
+      "succeed"
+    ],
+    "antonyms": [
+      "Fail",
+      "decline",
+      "wither",
+      "struggle",
+      "stagnate"
+    ],
+    "collocations": [
+      "Thrive on stress",
+      "continue to thrive",
+      "fail to thrive",
+      "thrive in an environment"
+    ],
+    "examples": [
+      "Most house plants thrive in direct sunlight and regular watering."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtimber0071"
+    },
+    "word": "timber",
+    "phonetics": {
+      "uk": "US /ˈtɪm.bɚ/, UK /ˈtɪm.bər/",
+      "us": "US /ˈtɪm.bɚ/, UK /ˈtɪm.bər/"
+    },
+    "audio": {
+      "uk": "tim-ber (TIM-ber)",
+      "us": "tim-ber (TIM-ber)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "Wood prepared for use in building and carpentry, or trees grown for this purpose.",
+      "Verb": "Wood prepared for use in building and carpentry, or trees grown for this purpose."
+    },
+    "vietnamese": {
+      "Noun": "Gỗ xây dựng / Gỗ xẻ",
+      "Verb": "Gỗ xây dựng / Gỗ xẻ"
+    },
+    "synonyms": [
+      "Lumber",
+      "wood",
+      "logs",
+      "beams",
+      "woodland"
+    ],
+    "antonyms": [
+      "None"
+    ],
+    "collocations": [
+      "Timber industry",
+      "timber merchant",
+      "timber frame",
+      "standing timber",
+      "roof timbers"
+    ],
+    "examples": [
+      "The old house was built using heavy oak timbers for the roof structure."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtrauma0072"
+    },
+    "word": "trauma",
+    "phonetics": {
+      "uk": "US /ˈtraʊ.mə/, /ˈtrɔː.mə/; UK /ˈtrɔː.mə/, /ˈtraʊ.mə/",
+      "us": "US /ˈtraʊ.mə/, /ˈtrɔː.mə/; UK /ˈtrɔː.mə/, /ˈtraʊ.mə/"
+    },
+    "audio": {
+      "uk": "trauma (TRAW-muh) or (TROW-muh)",
+      "us": "trauma (TRAW-muh) or (TROW-muh)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A deeply distressing or disturbing experience that causes severe emotional shock; or a serious physical injury to the body."
+    },
+    "vietnamese": {
+      "Noun": "Chấn thương / Khủng hoảng tâm lý"
+    },
+    "synonyms": [
+      "Ordeal",
+      "anguish",
+      "suffering",
+      "injury",
+      "shock",
+      "upheaval"
+    ],
+    "antonyms": [
+      "Alleviation",
+      "healing",
+      "relief",
+      "comfort",
+      "peace"
+    ],
+    "collocations": [
+      "Emotional trauma",
+      "physical trauma",
+      "trauma center",
+      "childhood trauma",
+      "past trauma"
+    ],
+    "examples": [
+      "She is slowly recovering from the emotional trauma of the accident."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtribe0073"
+    },
+    "word": "tribe",
+    "phonetics": {
+      "uk": "US /ˈtraɪb/, UK /ˈtraɪb/",
+      "us": "US /ˈtraɪb/, UK /ˈtraɪb/"
+    },
+    "audio": {
+      "uk": "tribe (trahyb)",
+      "us": "tribe (trahyb)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A traditional social group of people, often consisting of related families or clans, who share a common language, culture, history, and territory, typically under the guidance of a recognized leader or chief."
+    },
+    "vietnamese": {
+      "Noun": "Bộ lạc"
+    },
+    "synonyms": [
+      "Clan",
+      "ethnic group",
+      "nation",
+      "people",
+      "folk",
+      "kin",
+      "lineage",
+      "society"
+    ],
+    "antonyms": [
+      "Individual",
+      "modern society",
+      "state",
+      "metropolis"
+    ],
+    "collocations": [
+      "Aboriginal tribe",
+      "nomadic tribe",
+      "indigenous tribe",
+      "tribal leader",
+      "tribal traditions"
+    ],
+    "examples": [
+      "The anthropologist spent several years living with an indigenous tribe in the Amazon rainforest to study their unique customs."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvegan0074"
+    },
+    "word": "vegan",
+    "phonetics": {
+      "uk": "US /ˈviːɡən/, UK /ˈviːɡən/",
+      "us": "US /ˈviːɡən/, UK /ˈviːɡən/"
+    },
+    "audio": {
+      "uk": "vegan (VEE-guhn)",
+      "us": "vegan (VEE-guhn)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A person who does not eat or use any animal products, such as meat, fish, eggs, cheese, or leather; (adj) eating, using, or containing no animal products.",
+      "Adjective": "A person who does not eat or use any animal products, such as meat, fish, eggs, cheese, or leather; (adj) eating, using, or containing no animal products."
+    },
+    "vietnamese": {
+      "Noun": "Người ăn chay trường (không sử dụng sản phẩm từ động vật)",
+      "Adjective": "Người ăn chay trường (không sử dụng sản phẩm từ động vật)"
+    },
+    "synonyms": [
+      "Strict vegetarian",
+      "plant-based eater"
+    ],
+    "antonyms": [
+      "Omnivore",
+      "carnivore",
+      "meat-eater"
+    ],
+    "collocations": [
+      "Vegan diet",
+      "vegan lifestyle",
+      "vegan option",
+      "go vegan",
+      "strict vegan",
+      "ethical vegan"
+    ],
+    "examples": [
+      "Many restaurants now offer a variety of vegan options to cater to plant-based diets."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvague0075"
+    },
+    "word": "vague",
+    "phonetics": {
+      "uk": "US /veɪɡ/, UK /veɪɡ/",
+      "us": "US /veɪɡ/, UK /veɪɡ/"
+    },
+    "audio": {
+      "uk": "vague (veyg)",
+      "us": "vague (veyg)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Adjective": "Not clearly expressed, described, or defined; lacking sharpness or clarity in thought, feeling, or appearance.",
+      "Noun": "Not clearly expressed, described, or defined; lacking sharpness or clarity in thought, feeling, or appearance.",
+      "Verb": "Not clearly expressed, described, or defined; lacking sharpness or clarity in thought, feeling, or appearance."
+    },
+    "vietnamese": {
+      "Adjective": "Mơ hồ, mập mờ, không rõ ràng",
+      "Noun": "Mơ hồ, mập mờ, không rõ ràng",
+      "Verb": "Mơ hồ, mập mờ, không rõ ràng"
+    },
+    "synonyms": [
+      "Unclear",
+      "indistinct",
+      "ambiguous",
+      "hazy",
+      "imprecise",
+      "indefinite",
+      "fuzzy"
+    ],
+    "antonyms": [
+      "Clear",
+      "definite",
+      "specific",
+      "distinct",
+      "precise",
+      "explicit",
+      "certain"
+    ],
+    "collocations": [
+      "Vague memory",
+      "vague idea",
+      "vague answer",
+      "vague shape",
+      "vague promise",
+      "vague impression"
+    ],
+    "examples": [
+      "The instructions were too vague for me to understand what I was supposed to do."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvalet0076"
+    },
+    "word": "valet",
+    "phonetics": {
+      "uk": "US /ˈvæl.eɪ/, UK /ˈvæl.ɪt/",
+      "us": "US /ˈvæl.eɪ/, UK /ˈvæl.ɪt/"
+    },
+    "audio": {
+      "uk": "valet (VAL-ay or VAL-it)",
+      "us": "valet (VAL-ay or VAL-it)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A male servant who attends to the personal needs of his employer, or an employee at a hotel or restaurant who performs services such as parking cars or cleaning clothes.",
+      "Verb": "A male servant who attends to the personal needs of his employer, or an employee at a hotel or restaurant who performs services such as parking cars or cleaning clothes."
+    },
+    "vietnamese": {
+      "Noun": "Người hầu riêng, nhân viên đỗ xe hoặc giặt là",
+      "Verb": "Người hầu riêng, nhân viên đỗ xe hoặc giặt là"
+    },
+    "synonyms": [
+      "Manservant",
+      "attendant",
+      "butler",
+      "steward",
+      "groom"
+    ],
+    "antonyms": [
+      "Master",
+      "employer",
+      "boss"
+    ],
+    "collocations": [
+      "Valet parking",
+      "valet service",
+      "hotel valet",
+      "call a valet"
+    ],
+    "examples": [
+      "The hotel offers a complimentary valet parking service for all guests."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvaries0077"
+    },
+    "word": "varies",
+    "phonetics": {
+      "uk": "US /ˈver.i/, UK /ˈveə.ri/",
+      "us": "US /ˈver.i/, UK /ˈveə.ri/"
+    },
+    "audio": {
+      "uk": "vary (VAIR-ee)",
+      "us": "vary (VAIR-ee)"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To be different in size, amount, degree, or nature from something else of the same general class; to change or cause something to change in form, character, or substance."
+    },
+    "vietnamese": {
+      "Verb": "Thay đổi, biến đổi, khác nhau"
+    },
+    "synonyms": [
+      "Differ",
+      "fluctuate",
+      "alter",
+      "modify",
+      "diverge",
+      "diversify"
+    ],
+    "antonyms": [
+      "Agree",
+      "conform",
+      "remain constant",
+      "stay the same",
+      "stabilize"
+    ],
+    "collocations": [
+      "Vary greatly",
+      "vary widely",
+      "vary according to",
+      "vary depending on",
+      "vary in size"
+    ],
+    "examples": [
+      "Prices vary widely from shop to shop depending on the brand."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvegetarian0078"
+    },
+    "word": "vegetarian",
+    "phonetics": {
+      "uk": "US /ˌvɛdʒ.əˈter.i.ən/, UK /ˌvedʒ.ɪˈteə.ri.ən/",
+      "us": "US /ˌvɛdʒ.əˈter.i.ən/, UK /ˌvedʒ.ɪˈteə.ri.ən/"
+    },
+    "audio": {
+      "uk": "veg-e-tar-i-an (vɛ-dʒə-ˈtɛr-i-ən)",
+      "us": "veg-e-tar-i-an (vɛ-dʒə-ˈtɛr-i-ən)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A person who does not eat meat or fish; relating to the exclusion of meat or fish from the diet.",
+      "Adjective": "A person who does not eat meat or fish; relating to the exclusion of meat or fish from the diet."
+    },
+    "vietnamese": {
+      "Noun": "Người ăn chay",
+      "Adjective": "Người ăn chay"
+    },
+    "synonyms": [
+      "Herbivore",
+      "vegan",
+      "plant-based eater"
+    ],
+    "antonyms": [
+      "Omnivore",
+      "carnivore",
+      "meat-eater"
+    ],
+    "collocations": [
+      "Vegetarian diet",
+      "vegetarian meal",
+      "become a vegetarian",
+      "vegetarian restaurant",
+      "vegetarian cooking"
+    ],
+    "examples": [
+      "My sister is a vegetarian and only eats plant-based foods."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvehicle0079"
+    },
+    "word": "vehicle",
+    "phonetics": {
+      "uk": "US /ˈviː.ɪ.kəl/, UK /ˈvɪə.kəl/",
+      "us": "US /ˈviː.ɪ.kəl/, UK /ˈvɪə.kəl/"
+    },
+    "audio": {
+      "uk": "vehicle (VEE-ih-kuhl)",
+      "us": "vehicle (VEE-ih-kuhl)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A machine with an engine or wheels used for transporting people or goods, especially on land; also, a medium used to express or achieve something."
+    },
+    "vietnamese": {
+      "Noun": "Xe cộ, phương tiện giao thông"
+    },
+    "synonyms": [
+      "Conveyance",
+      "transport",
+      "machine",
+      "medium",
+      "channel",
+      "mechanism",
+      "instrument"
+    ],
+    "antonyms": [
+      "End",
+      "goal (in the context of a means to an end)"
+    ],
+    "collocations": [
+      "Motor vehicle",
+      "commercial vehicle",
+      "emergency vehicle",
+      "launch vehicle",
+      "vehicle for expression"
+    ],
+    "examples": [
+      "The truck is a heavy vehicle used for transporting construction materials to the site."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvergetable0080"
+    },
+    "word": "vergetable",
+    "phonetics": {
+      "uk": "US /ˈvedʒ.tə.bəl/, UK /ˈvedʒ.tə.bəl/",
+      "us": "US /ˈvedʒ.tə.bəl/, UK /ˈvedʒ.tə.bəl/"
+    },
+    "audio": {
+      "uk": "veg-ta-bul (VEJ-tuh-buhl)",
+      "us": "veg-ta-bul (VEJ-tuh-buhl)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A plant or part of a plant, such as roots, stems, or leaves, that is used as food.",
+      "Adjective": "A plant or part of a plant, such as roots, stems, or leaves, that is used as food."
+    },
+    "vietnamese": {
+      "Noun": "Rau củ",
+      "Adjective": "Rau củ"
+    },
+    "synonyms": [
+      "Produce",
+      "greens",
+      "edible plant",
+      "legume",
+      "herbaceous plant"
+    ],
+    "antonyms": [
+      "Meat",
+      "animal",
+      "mineral"
+    ],
+    "collocations": [
+      "Fresh vegetables",
+      "root vegetables",
+      "organic vegetables",
+      "vegetable garden",
+      "vegetable oil",
+      "vegetable soup"
+    ],
+    "examples": [
+      "My doctor recommended that I eat more fresh vegetables to improve my health."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvviable0081"
+    },
+    "word": "viable",
+    "phonetics": {
+      "uk": "US /ˈvaɪ.ə.bəl/, UK /ˈvaɪ.ə.bəl/",
+      "us": "US /ˈvaɪ.ə.bəl/, UK /ˈvaɪ.ə.bəl/"
+    },
+    "audio": {
+      "uk": "vi-a-ble (VY-uh-bul)",
+      "us": "vi-a-ble (VY-uh-bul)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Capable of working successfully; feasible; or (in biology) capable of surviving or developing independently."
+    },
+    "vietnamese": {
+      "Adjective": "Khả thi, có thể đứng vững được"
+    },
+    "synonyms": [
+      "Feasible",
+      "workable",
+      "practicable",
+      "applicable",
+      "usable",
+      "possible"
+    ],
+    "antonyms": [
+      "Unviable",
+      "unfeasible",
+      "impractical",
+      "impossible",
+      "unworkable"
+    ],
+    "collocations": [
+      "Viable alternative",
+      "viable option",
+      "viable solution",
+      "economically viable",
+      "commercially viable",
+      "financially viable"
+    ],
+    "examples": [
+      "The committee came forward with the only viable solution to the problem."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvulnerable0082"
+    },
+    "word": "vulnerable",
+    "phonetics": {
+      "uk": "US /ˈvʌl.nɚ.ə.bəl/, UK /ˈvʌl.nər.ə.bəl/",
+      "us": "US /ˈvʌl.nɚ.ə.bəl/, UK /ˈvʌl.nər.ə.bəl/"
+    },
+    "audio": {
+      "uk": "vulnerable (VUL-ner-uh-bul)",
+      "us": "vulnerable (VUL-ner-uh-bul)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Able to be easily physically, emotionally, or mentally hurt, influenced, or attacked."
+    },
+    "vietnamese": {
+      "Adjective": "Dễ bị tổn thương"
+    },
+    "synonyms": [
+      "Defenseless",
+      "exposed",
+      "susceptible",
+      "weak",
+      "sensitive",
+      "unprotected"
+    ],
+    "antonyms": [
+      "Invulnerable",
+      "protected",
+      "secure",
+      "safe",
+      "strong",
+      "resilient"
+    ],
+    "collocations": [
+      "Vulnerable position",
+      "vulnerable group",
+      "vulnerable to attack",
+      "feel vulnerable"
+    ],
+    "examples": [
+      "Older people are especially vulnerable to cold temperatures even inside their homes."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvwaterlogged0083"
+    },
+    "word": "waterlogged",
+    "phonetics": {
+      "uk": "US /ˈwɔː.t̬ɚ.lɑːɡd/, UK /ˈwɔː.tə.lɒɡd/",
+      "us": "US /ˈwɔː.t̬ɚ.lɑːɡd/, UK /ˈwɔː.tə.lɒɡd/"
+    },
+    "audio": {
+      "uk": "water (WAW-ter), logged (lawgd)",
+      "us": "water (WAW-ter), logged (lawgd)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Saturated with or full of water, often making something heavy, unmanageable, or unable to float."
+    },
+    "vietnamese": {
+      "Adjective": "Ngập nước, úng nước"
+    },
+    "synonyms": [
+      "Saturated",
+      "soaked",
+      "sodden",
+      "soggy",
+      "drenched",
+      "water-soaked",
+      "awash"
+    ],
+    "antonyms": [
+      "Dry",
+      "dehydrated",
+      "arid"
+    ],
+    "collocations": [
+      "Waterlogged pitch",
+      "waterlogged soil",
+      "waterlogged ground",
+      "waterlogged boat",
+      "waterlogged shoes"
+    ],
+    "examples": [
+      "The football match was postponed because of a waterlogged pitch."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvwatertight0084"
+    },
+    "word": "watertight",
+    "phonetics": {
+      "uk": "US /ˈwɑː.t̬ɚ.taɪt/, UK /ˈwɔː.tə.taɪt/",
+      "us": "US /ˈwɑː.t̬ɚ.taɪt/, UK /ˈwɔː.tə.taɪt/"
+    },
+    "audio": {
+      "uk": "wa-ter-tight (WAW-ter-tite)",
+      "us": "wa-ter-tight (WAW-ter-tite)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Constructed or fitted so tightly as to be impervious to water; having no flaws, loopholes, or possibilities for error or evasion."
+    },
+    "vietnamese": {
+      "Adjective": "Chống nước / Kín kẽ (lập luận)"
+    },
+    "synonyms": [
+      "Waterproof",
+      "airtight",
+      "bulletproof",
+      "unassailable",
+      "foolproof",
+      "flawless"
+    ],
+    "antonyms": [
+      "Leaky",
+      "flawed",
+      "vulnerable",
+      "weak"
+    ],
+    "collocations": [
+      "Watertight container",
+      "watertight alibi",
+      "watertight argument",
+      "watertight compartment",
+      "watertight seal"
+    ],
+    "examples": [
+      "The divers checked that the hatch was completely watertight before descending."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvwithhindsight0085"
+    },
+    "word": "with hindsight",
+    "phonetics": {
+      "uk": "US /wɪð ˈhaɪnd.saɪt/, UK /wɪð ˈhaɪnd.saɪt/",
+      "us": "US /wɪð ˈhaɪnd.saɪt/, UK /wɪð ˈhaɪnd.saɪt/"
+    },
+    "audio": {
+      "uk": "with (with), hindsight (HYND-syte)",
+      "us": "with (with), hindsight (HYND-syte)"
+    },
+    "partOfSpeech": [
+      "Prepositional phrase / Idiomatic expression"
+    ],
+    "definitions": {
+      "Prepositional phrase / Idiomatic expression": "Understanding the nature of an event or situation only after it has happened, often implying that different decisions might have been made with that knowledge."
+    },
+    "vietnamese": {
+      "Prepositional phrase / Idiomatic expression": "Với nhận thức muộn màng / Nhìn lại mới thấy"
+    },
+    "synonyms": [
+      "In retrospect",
+      "looking back",
+      "in hindsight",
+      "with the benefit of hindsight",
+      "on reflection"
+    ],
+    "antonyms": [
+      "With foresight",
+      "in advance",
+      "beforehand",
+      "prematurely"
+    ],
+    "collocations": [
+      "Clarity of hindsight",
+      "benefit of hindsight",
+      "wisdom of hindsight",
+      "obvious with hindsight"
+    ],
+    "examples": [
+      "With hindsight, I should have taken the job offer when it was first presented."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvworkaholic0086"
+    },
+    "word": "workaholic",
+    "phonetics": {
+      "uk": "US /ˈwɜrkəˈhɔlɪk/, UK /ˌwɜːkəˈhɒlɪk/",
+      "us": "US /ˈwɜrkəˈhɔlɪk/, UK /ˌwɜːkəˈhɒlɪk/"
+    },
+    "audio": {
+      "uk": "work (WUR), a (kuh), hol (HOL), ic (ik)",
+      "us": "work (WUR), a (kuh), hol (HOL), ic (ik)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A person who works compulsively or excessively to an unhealthy degree, often neglecting other aspects of life."
+    },
+    "vietnamese": {
+      "Noun": "Người tham công tiếc việc"
+    },
+    "synonyms": [
+      "Compulsive worker",
+      "work addict",
+      "eager beaver",
+      "workhorse",
+      "busy bee"
+    ],
+    "antonyms": [
+      "Slacker",
+      "idler",
+      "loafer",
+      "couch potato",
+      "lazy person"
+    ],
+    "collocations": [
+      "Self-proclaimed workaholic",
+      "classic workaholic",
+      "confessed workaholic",
+      "recovering workaholic"
+    ],
+    "examples": [
+      "Takaichi is a self-proclaimed workaholic who vowed to work tirelessly for the Japanese people."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpoverty0087"
+    },
+    "word": "poverty",
+    "phonetics": {
+      "uk": "US /ˈpɑː.vɚ.t̬i/, UK /ˈpɒv.ə.ti/",
+      "us": "US /ˈpɑː.vɚ.t̬i/, UK /ˈpɒv.ə.ti/"
+    },
+    "audio": {
+      "uk": "poverty (POV-er-tee)",
+      "us": "poverty (POV-er-tee)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The state of being extremely poor or the condition of lacking sufficient money or resources to provide for basic needs."
+    },
+    "vietnamese": {
+      "Noun": "Sự nghèo khổ, tình trạng nghèo đói"
+    },
+    "synonyms": [
+      "Penury",
+      "destitution",
+      "indigence",
+      "pennilessness",
+      "privation",
+      "scarcity",
+      "dearth"
+    ],
+    "antonyms": [
+      "Wealth",
+      "affluence",
+      "richness",
+      "opulence",
+      "luxury",
+      "prosperity",
+      "abundance"
+    ],
+    "collocations": [
+      "Abject poverty",
+      "extreme poverty",
+      "child poverty",
+      "poverty line",
+      "live in poverty",
+      "alleviate poverty",
+      "cycle of poverty"
+    ],
+    "examples": [
+      "Many families in the region are struggling to survive in conditions of extreme poverty."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvhumiliation0088"
+    },
+    "word": "humiliation",
+    "phonetics": {
+      "uk": "US /hjuːˌmɪl.iˈeɪ.ʃən/, UK /hjuːˌmɪl.iˈeɪ.ʃən/",
+      "us": "US /hjuːˌmɪl.iˈeɪ.ʃən/, UK /hjuːˌmɪl.iˈeɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "hyoo-mil-ee-ay-shuhn",
+      "us": "hyoo-mil-ee-ay-shuhn"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The state of being humiliated, or the feeling of shame and great embarrassment caused by a loss of pride or self-respect."
+    },
+    "vietnamese": {
+      "Noun": "Sự làm nhục, sự làm bẽ mặt"
+    },
+    "synonyms": [
+      "Embarrassment",
+      "shame",
+      "mortification",
+      "disgrace",
+      "ignominy",
+      "indignity",
+      "abasement"
+    ],
+    "antonyms": [
+      "Honor",
+      "pride",
+      "exaltation",
+      "elevation",
+      "success",
+      "triumph",
+      "esteem"
+    ],
+    "collocations": [
+      "Public humiliation",
+      "ritual humiliation",
+      "national humiliation",
+      "endure humiliation",
+      "suffer humiliation",
+      "avoid humiliation"
+    ],
+    "examples": [
+      "She felt a deep sense of humiliation when she realized her mistake in front of the entire audience."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdestitute0089"
+    },
+    "word": "destitute",
+    "phonetics": {
+      "uk": "US /ˈdɛs.tə.tuːt/, UK /ˈdes.tɪ.tʃuːt/",
+      "us": "US /ˈdɛs.tə.tuːt/, UK /ˈdes.tɪ.tʃuːt/"
+    },
+    "audio": {
+      "uk": "destitute (DEST-uh-tyoot)",
+      "us": "destitute (DEST-uh-tyoot)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Transitive verb"
+    ],
+    "definitions": {
+      "Adjective": "Extremely poor and lacking the means to provide for oneself; or completely lacking in something.",
+      "Transitive verb": "Extremely poor and lacking the means to provide for oneself; or completely lacking in something."
+    },
+    "vietnamese": {
+      "Adjective": "Thiếu thốn, cơ cực",
+      "Transitive verb": "Thiếu thốn, cơ cực"
+    },
+    "synonyms": [
+      "Impoverished",
+      "indigent",
+      "penniless",
+      "needy",
+      "devoid",
+      "bereft"
+    ],
+    "antonyms": [
+      "Affluent",
+      "wealthy",
+      "rich",
+      "prosperous",
+      "abundant"
+    ],
+    "collocations": [
+      "Destitute children",
+      "destitute family",
+      "leave destitute",
+      "destitute of experience"
+    ],
+    "examples": [
+      "The charity provides food and shelter for destitute families living on the streets."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmiserable0090"
+    },
+    "word": "miserable",
+    "phonetics": {
+      "uk": "US /ˈmɪz.ɚ.ə.bəl/, UK /ˈmɪz.ər.ə.bəl/",
+      "us": "US /ˈmɪz.ɚ.ə.bəl/, UK /ˈmɪz.ər.ə.bəl/"
+    },
+    "audio": {
+      "uk": "miserable (miz-er-uh-bul)",
+      "us": "miserable (miz-er-uh-bul)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Extremely unhappy, uncomfortable, or causing a feeling of great dissatisfaction or wretchedness."
+    },
+    "vietnamese": {
+      "Adjective": "Khổ sở, khốn khổ, đáng thương"
+    },
+    "synonyms": [
+      "Wretched",
+      "unhappy",
+      "dejected",
+      "forlorn",
+      "desolate",
+      "pathetic",
+      "dreary"
+    ],
+    "antonyms": [
+      "Happy",
+      "cheerful",
+      "joyful",
+      "content",
+      "comfortable",
+      "fortunate"
+    ],
+    "collocations": [
+      "Miserable weather",
+      "miserable failure",
+      "feel miserable",
+      "miserable conditions",
+      "miserable life"
+    ],
+    "examples": [
+      "She felt lonely and miserable after her best friend moved away."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpenniless0091"
+    },
+    "word": "penniless",
+    "phonetics": {
+      "uk": "US /ˈpɛn.i.ləs/, UK /ˈpɛn.i.ləs/",
+      "us": "US /ˈpɛn.i.ləs/, UK /ˈpɛn.i.ləs/"
+    },
+    "audio": {
+      "uk": "pen-nee-less (PEN-ee-lis)",
+      "us": "pen-nee-less (PEN-ee-lis)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Having no money at all; extremely poor or destitute."
+    },
+    "vietnamese": {
+      "Adjective": "Nghèo rớt mồng tơi, không một đồng dính túi"
+    },
+    "synonyms": [
+      "Destitute",
+      "impoverished",
+      "impecunious",
+      "broke",
+      "indigent",
+      "penurious"
+    ],
+    "antonyms": [
+      "Wealthy",
+      "rich",
+      "affluent",
+      "solvent",
+      "prosperous"
+    ],
+    "collocations": [
+      "Penniless artist",
+      "penniless refugee",
+      "virtually penniless",
+      "die penniless",
+      "left penniless"
+    ],
+    "examples": [
+      "After the business failed, he was left virtually penniless and had to start over."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvlifelong0092"
+    },
+    "word": "lifelong",
+    "phonetics": {
+      "uk": "US /ˈlaɪfˌlɔŋ/, UK /ˈlaɪf.lɒŋ/",
+      "us": "US /ˈlaɪfˌlɔŋ/, UK /ˈlaɪf.lɒŋ/"
+    },
+    "audio": {
+      "uk": "life (lahyf), long (lawng)",
+      "us": "life (lahyf), long (lawng)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Lasting or continuing for the entire duration of a person's life."
+    },
+    "vietnamese": {
+      "Adjective": "Suốt đời, cả đời"
+    },
+    "synonyms": [
+      "Long-lasting",
+      "enduring",
+      "permanent",
+      "lifetime",
+      "long-standing",
+      "perennial"
+    ],
+    "antonyms": [
+      "Temporary",
+      "short-lived",
+      "transient",
+      "ephemeral",
+      "fleeting"
+    ],
+    "collocations": [
+      "Lifelong learning",
+      "lifelong friend",
+      "lifelong ambition",
+      "lifelong habit",
+      "lifelong dream"
+    ],
+    "examples": [
+      "She has maintained a lifelong interest in photography since receiving her first camera as a child."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvvegans0093"
+    },
+    "word": "vegans",
+    "phonetics": {
+      "uk": "US /ˈviː.ɡən/, UK /ˈviː.ɡən/",
+      "us": "US /ˈviː.ɡən/, UK /ˈviː.ɡən/"
+    },
+    "audio": {
+      "uk": "vegan (VEE-guhn)",
+      "us": "vegan (VEE-guhn)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Noun": "A person who does not eat or use any animal products, such as meat, fish, eggs, dairy, or leather; relating to or being a person who follows this practice.",
+      "Adjective": "A person who does not eat or use any animal products, such as meat, fish, eggs, dairy, or leather; relating to or being a person who follows this practice."
+    },
+    "vietnamese": {
+      "Noun": "Người ăn chay trường / Thuần chay",
+      "Adjective": "Người ăn chay trường / Thuần chay"
+    },
+    "synonyms": [
+      "Strict vegetarian",
+      "plant-based eater",
+      "fruitarian",
+      "herbivorous"
+    ],
+    "antonyms": [
+      "Omnivorous",
+      "carnivorous",
+      "meat-eater"
+    ],
+    "collocations": [
+      "Vegan diet",
+      "vegan lifestyle",
+      "vegan option",
+      "vegan recipe",
+      "strict vegan"
+    ],
+    "examples": [
+      "Many restaurants now offer a variety of vegan options to accommodate plant-based diets."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvaipowered0094"
+    },
+    "word": "AI-powered",
+    "phonetics": {
+      "uk": "US /ˌeɪ.aɪˈpaʊ.ɚd/, UK /ˌeɪ.aɪˈpaʊ.əd/",
+      "us": "US /ˌeɪ.aɪˈpaʊ.ɚd/, UK /ˌeɪ.aɪˈpaʊ.əd/"
+    },
+    "audio": {
+      "uk": "A-I (ay-eye), powered (POW-erd)",
+      "us": "A-I (ay-eye), powered (POW-erd)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Describing a device, system, or process that is driven or enhanced by artificial intelligence technology."
+    },
+    "vietnamese": {
+      "Adjective": "Được hỗ trợ bởi AI / Sử dụng trí tuệ nhân tạo"
+    },
+    "synonyms": [
+      "AI-driven",
+      "AI-enabled",
+      "automated",
+      "intelligent",
+      "smart"
+    ],
+    "antonyms": [
+      "Manual",
+      "human-operated",
+      "non-automated",
+      "traditional"
+    ],
+    "collocations": [
+      "AI-powered tools",
+      "AI-powered platform",
+      "AI-powered solution",
+      "AI-powered automation"
+    ],
+    "examples": [
+      "Many companies are now using AI-powered chatbots to provide instant customer support."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvhandson0095"
+    },
+    "word": "hands-on",
+    "phonetics": {
+      "uk": "US /ˈhændzɑn/, UK /ˈhændzɒn/",
+      "us": "US /ˈhændzɑn/, UK /ˈhændzɒn/"
+    },
+    "audio": {
+      "uk": "hands-on (HANDZ-on)",
+      "us": "hands-on (HANDZ-on)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Involving or offering active participation and practical experience rather than just theory or observation; directly involved in managing or making decisions."
+    },
+    "vietnamese": {
+      "Adjective": "Thực hành, trực tiếp, tham gia tích cực"
+    },
+    "synonyms": [
+      "Practical",
+      "interactive",
+      "participatory",
+      "firsthand",
+      "active",
+      "manual"
+    ],
+    "antonyms": [
+      "Theoretical",
+      "hands-off",
+      "indirect",
+      "secondhand",
+      "automatic"
+    ],
+    "collocations": [
+      "Hands-on experience",
+      "hands-on training",
+      "hands-on approach",
+      "hands-on manager",
+      "hands-on learning"
+    ],
+    "examples": [
+      "Many employers consider hands-on experience to be as valuable as academic qualifications."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsculpture0096"
+    },
+    "word": "sculpture",
+    "phonetics": {
+      "uk": "US /ˈskʌlp.tʃɚ/, UK /ˈskʌlp.tʃər/",
+      "us": "US /ˈskʌlp.tʃɚ/, UK /ˈskʌlp.tʃər/"
+    },
+    "audio": {
+      "uk": "sculp-cher (SKULP-cher)",
+      "us": "sculp-cher (SKULP-cher)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "The art of making two- or three-dimensional representative or abstract forms, especially by carving stone or wood or by casting metal or plaster.",
+      "Verb": "The art of making two- or three-dimensional representative or abstract forms, especially by carving stone or wood or by casting metal or plaster."
+    },
+    "vietnamese": {
+      "Noun": "Điêu khắc, tác phẩm điêu khắc",
+      "Verb": "Điêu khắc, tác phẩm điêu khắc"
+    },
+    "synonyms": [
+      "Statue",
+      "figure",
+      "carving",
+      "model",
+      "bust",
+      "sculpt",
+      "fashion",
+      "chisel"
+    ],
+    "antonyms": [
+      "Flatten",
+      "destroy",
+      "neglect (Note: No direct antonyms for the art form itself)"
+    ],
+    "collocations": [
+      "Abstract sculpture",
+      "bronze sculpture",
+      "stone sculpture",
+      "ice sculpture",
+      "modern sculpture",
+      "sculpture gallery"
+    ],
+    "examples": [
+      "The museum has several life-sized sculptures of people and animals."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvcontemporary0097"
+    },
+    "word": "contemporary",
+    "phonetics": {
+      "uk": "US /kənˈtɛmpəˌrɛri/, UK /kənˈtɛmpərəri/",
+      "us": "US /kənˈtɛmpəˌrɛri/, UK /kənˈtɛmpərəri/"
+    },
+    "audio": {
+      "uk": "contemporary (kuhn-TEM-puh-rer-ee)",
+      "us": "contemporary (kuhn-TEM-puh-rer-ee)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun"
+    ],
+    "definitions": {
+      "Adjective": "Belonging to or occurring in the present; living or occurring at the same time.",
+      "Noun": "Belonging to or occurring in the present; living or occurring at the same time."
+    },
+    "vietnamese": {
+      "Adjective": "Đương thời, hiện đại",
+      "Noun": "Đương thời, hiện đại"
+    },
+    "synonyms": [
+      "Modern",
+      "current",
+      "present-day",
+      "contemporaneous",
+      "simultaneous",
+      "peer"
+    ],
+    "antonyms": [
+      "Old-fashioned",
+      "antique",
+      "past",
+      "asynchronous"
+    ],
+    "collocations": [
+      "Contemporary art",
+      "contemporary music",
+      "contemporary society",
+      "contemporary issues"
+    ],
+    "examples": [
+      "She is an expert in contemporary literature."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvferocity0098"
+    },
+    "word": "ferocity",
+    "phonetics": {
+      "uk": "US /fəˈrɑː.sə.t̬i/, UK /fəˈrɒs.ə.ti/",
+      "us": "US /fəˈrɑː.sə.t̬i/, UK /fəˈrɒs.ə.ti/"
+    },
+    "audio": {
+      "uk": "ferocity (fuh-ROS-i-tee)",
+      "us": "ferocity (fuh-ROS-i-tee)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The state or quality of being ferocious, characterized by savage fierceness, cruelty, or extreme violence."
+    },
+    "vietnamese": {
+      "Noun": "Sự hung dữ, sự dữ tợn"
+    },
+    "synonyms": [
+      "Savagery",
+      "fierceness",
+      "brutality",
+      "violence",
+      "cruelty",
+      "ferociousness",
+      "barbarity"
+    ],
+    "antonyms": [
+      "Gentleness",
+      "mildness",
+      "kindness",
+      "tenderness",
+      "tameness"
+    ],
+    "collocations": [
+      "Extreme ferocity",
+      "surprising ferocity",
+      "unexpected ferocity",
+      "attack with ferocity"
+    ],
+    "examples": [
+      "The sheer ferocity of the storm caught the coastal town by surprise, causing extensive damage."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvwinding0099"
+    },
+    "word": "winding",
+    "phonetics": {
+      "uk": "US /ˈwaɪn.dɪŋ/, UK /ˈwaɪn.dɪŋ/",
+      "us": "US /ˈwaɪn.dɪŋ/, UK /ˈwaɪn.dɪŋ/"
+    },
+    "audio": {
+      "uk": "wind-ing (WAHYN-ding)",
+      "us": "wind-ing (WAHYN-ding)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun"
+    ],
+    "definitions": {
+      "Adjective": "Following a twisting or spiral course; a twisting movement or course.",
+      "Noun": "Following a twisting or spiral course; a twisting movement or course."
+    },
+    "vietnamese": {
+      "Adjective": "Cong, uốn khúc, quanh co, ngoằn ngoèo",
+      "Noun": "Cong, uốn khúc, quanh co, ngoằn ngoèo"
+    },
+    "synonyms": [
+      "Twisting",
+      "turning",
+      "meandering",
+      "sinuous",
+      "serpentine",
+      "tortuous",
+      "curving"
+    ],
+    "antonyms": [
+      "Straight",
+      "linear",
+      "direct",
+      "uncurved"
+    ],
+    "collocations": [
+      "Winding road",
+      "winding path",
+      "winding stairs",
+      "winding river",
+      "winding journey"
+    ],
+    "examples": [
+      "The car drove slowly along the narrow, winding road that led up the mountain."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpercolator0100"
+    },
+    "word": "percolator",
+    "phonetics": {
+      "uk": "US /ˈpɜːrkəˌleɪtər/, UK /ˈpɜːkəleɪtə/",
+      "us": "US /ˈpɜːrkəˌleɪtər/, UK /ˈpɜːkəleɪtə/"
+    },
+    "audio": {
+      "uk": "per-co-la-tor (PUR-kuh-ley-ter)",
+      "us": "per-co-la-tor (PUR-kuh-ley-ter)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A type of coffeepot in which boiling water is forced up through a central tube and filters down through ground coffee beans."
+    },
+    "vietnamese": {
+      "Noun": "Bình pha cà phê lọc"
+    },
+    "synonyms": [
+      "Coffeepot",
+      "coffee maker",
+      "coffee machine",
+      "coffee urn",
+      "percolating machine"
+    ],
+    "antonyms": [
+      "Instant coffee",
+      "pre-brewed coffee"
+    ],
+    "collocations": [
+      "Coffee percolator",
+      "electric percolator",
+      "stove-top percolator",
+      "percolator bubbled",
+      "vintage percolator"
+    ],
+    "examples": [
+      "On most mornings, Grant would get up first to put on the trusty percolator."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpatronage0101"
+    },
+    "word": "patronage",
+    "phonetics": {
+      "uk": "US /ˈpeɪ.trə.nɪdʒ/, UK /ˈpæt.rə.nɪdʒ/",
+      "us": "US /ˈpeɪ.trə.nɪdʒ/, UK /ˈpæt.rə.nɪdʒ/"
+    },
+    "audio": {
+      "uk": "pay-truh-nij (US), pat-ruh-nij (UK)",
+      "us": "pay-truh-nij (US), pat-ruh-nij (UK)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "The support, financial aid, or custom given by a patron; also the power to control appointments to office or the distribution of privileges.",
+      "Verb": "The support, financial aid, or custom given by a patron; also the power to control appointments to office or the distribution of privileges."
+    },
+    "vietnamese": {
+      "Noun": "Sự bảo trợ, sự lui tới của khách hàng thường xuyên, hoặc hệ thống ban ơn (trong chính trị).",
+      "Verb": "Sự bảo trợ, sự lui tới của khách hàng thường xuyên, hoặc hệ thống ban ơn (trong chính trị)."
+    },
+    "synonyms": [
+      "Sponsorship",
+      "backing",
+      "clientele",
+      "trade",
+      "custom",
+      "advocacy",
+      "championship"
+    ],
+    "antonyms": [
+      "Opposition",
+      "discouragement",
+      "boycott",
+      "antagonism",
+      "obstruction"
+    ],
+    "collocations": [
+      "Political patronage",
+      "arts patronage",
+      "patronage network",
+      "enjoy patronage",
+      "thank for patronage"
+    ],
+    "examples": [
+      "The restaurant survives thanks to the loyal patronage of the local community."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsupreme0102"
+    },
+    "word": "supreme",
+    "phonetics": {
+      "uk": "US /səˈprim/, UK /suːˈpriːm/",
+      "us": "US /səˈprim/, UK /suːˈpriːm/"
+    },
+    "audio": {
+      "uk": "supreme (suh-PREEM)",
+      "us": "supreme (suh-PREEM)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun"
+    ],
+    "definitions": {
+      "Adjective": "Being the highest in rank, power, authority, or quality; greatest in degree or importance.",
+      "Noun": "Being the highest in rank, power, authority, or quality; greatest in degree or importance."
+    },
+    "vietnamese": {
+      "Adjective": "Tối cao, thượng hạng, tột bậc",
+      "Noun": "Tối cao, thượng hạng, tột bậc"
+    },
+    "synonyms": [
+      "Paramount",
+      "sovereign",
+      "preeminent",
+      "ultimate",
+      "superlative",
+      "foremost"
+    ],
+    "antonyms": [
+      "Inferior",
+      "subordinate",
+      "lowly",
+      "minor",
+      "secondary"
+    ],
+    "collocations": [
+      "Supreme Court",
+      "supreme commander",
+      "reign supreme",
+      "supreme sacrifice",
+      "supreme confidence"
+    ],
+    "examples": [
+      "The Supreme Court is the highest judicial body in the country."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvphenomenon0103"
+    },
+    "word": "phenomenon",
+    "phonetics": {
+      "uk": "US /fəˈnɑː.mə.nɑːn/, UK /fəˈnɒm.ɪ.nən/",
+      "us": "US /fəˈnɑː.mə.nɑːn/, UK /fəˈnɒm.ɪ.nən/"
+    },
+    "audio": {
+      "uk": "phenomenon (fuh-NOM-uh-non)",
+      "us": "phenomenon (fuh-NOM-uh-non)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question; a remarkable person or thing."
+    },
+    "vietnamese": {
+      "Noun": "Hiện tượng"
+    },
+    "synonyms": [
+      "Occurrence",
+      "event",
+      "happening",
+      "marvel",
+      "wonder",
+      "sensation",
+      "prodigy"
+    ],
+    "antonyms": [
+      "Regularity",
+      "normality",
+      "usualness",
+      "non-event"
+    ],
+    "collocations": [
+      "Natural phenomenon",
+      "cultural phenomenon",
+      "global phenomenon",
+      "social phenomenon"
+    ],
+    "examples": [
+      "Gravity is a natural phenomenon that has been studied for centuries."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csventhusiast0104"
+    },
+    "word": "enthusiast",
+    "phonetics": {
+      "uk": "US /ɛnˈθu ziˌæst/, UK /ɪnˈθjuːzɪˌæst/",
+      "us": "US /ɛnˈθu ziˌæst/, UK /ɪnˈθjuːzɪˌæst/"
+    },
+    "audio": {
+      "uk": "en-THOO-zee-ast",
+      "us": "en-THOO-zee-ast"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A person who is highly interested in a particular activity or subject and spends a lot of time on it."
+    },
+    "vietnamese": {
+      "Noun": "Người nhiệt huyết, người say mê"
+    },
+    "synonyms": [
+      "Fan",
+      "devotee",
+      "aficionado",
+      "lover",
+      "admirer",
+      "zealot"
+    ],
+    "antonyms": [
+      "Critic",
+      "detractor",
+      "adversary",
+      "opponent",
+      "pessimist"
+    ],
+    "collocations": [
+      "Sports enthusiast",
+      "car enthusiast",
+      "technology enthusiast",
+      "bird enthusiast"
+    ],
+    "examples": [
+      "As a lifelong technology enthusiast, he always queues for the latest gadget releases."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvinterim0105"
+    },
+    "word": "interim",
+    "phonetics": {
+      "uk": "US /ˈɪn.t̬ɚ.ɪm/, UK /ˈɪn.tər.ɪm/",
+      "us": "US /ˈɪn.t̬ɚ.ɪm/, UK /ˈɪn.tər.ɪm/"
+    },
+    "audio": {
+      "uk": "interim (IN-ter-im)",
+      "us": "interim (IN-ter-im)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Noun",
+      "Adverb"
+    ],
+    "definitions": {
+      "Adjective": "Temporary and intended to be used until something permanent is established; an intervening time or interval.",
+      "Noun": "Temporary and intended to be used until something permanent is established; an intervening time or interval.",
+      "Adverb": "Temporary and intended to be used until something permanent is established; an intervening time or interval."
+    },
+    "vietnamese": {
+      "Adjective": "Tạm thời, lâm thời, trong khoảng thời gian giữa.",
+      "Noun": "Tạm thời, lâm thời, trong khoảng thời gian giữa.",
+      "Adverb": "Tạm thời, lâm thời, trong khoảng thời gian giữa."
+    },
+    "synonyms": [
+      "Temporary",
+      "provisional",
+      "acting",
+      "makeshift",
+      "stopgap",
+      "interval",
+      "meantime"
+    ],
+    "antonyms": [
+      "Permanent",
+      "continual",
+      "long-term",
+      "finished",
+      "persistent"
+    ],
+    "collocations": [
+      "Interim government",
+      "interim report",
+      "interim measure",
+      "interim results",
+      "interim basis",
+      "in the interim"
+    ],
+    "examples": [
+      "The vice-president took power in the interim period before the election."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvsyndicate0106"
+    },
+    "word": "syndicate",
+    "phonetics": {
+      "uk": "US /ˈsɪn.dɪ.kət/, UK /ˈsɪn.dɪ.kət/",
+      "us": "US /ˈsɪn.dɪ.kət/, UK /ˈsɪn.dɪ.kət/"
+    },
+    "audio": {
+      "uk": "syn-di-cate (SIN-dih-kut)",
+      "us": "syn-di-cate (SIN-dih-kut)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "A group of individuals or organizations combined to promote a common interest or carry out a specific business transaction; to sell content to be published or broadcast in multiple outlets simultaneously.",
+      "Verb": "A group of individuals or organizations combined to promote a common interest or carry out a specific business transaction; to sell content to be published or broadcast in multiple outlets simultaneously."
+    },
+    "vietnamese": {
+      "Noun": "Công đoàn, tập đoàn, hiệp hội",
+      "Verb": "Công đoàn, tập đoàn, hiệp hội"
+    },
+    "synonyms": [
+      "Consortium",
+      "association",
+      "alliance",
+      "union",
+      "cartel",
+      "mob",
+      "organization"
+    ],
+    "antonyms": [
+      "Individual",
+      "separation",
+      "division"
+    ],
+    "collocations": [
+      "Crime syndicate",
+      "banking syndicate",
+      "investment syndicate",
+      "syndicate a loan",
+      "syndicated show"
+    ],
+    "examples": [
+      "A powerful banking syndicate controls the majority of loans in the small country."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdialogues0107"
+    },
+    "word": "dialogues",
+    "phonetics": {
+      "uk": "US /ˈdaɪ.ə.lɑːɡz/, UK /ˈdaɪ.ə.lɒɡz/",
+      "us": "US /ˈdaɪ.ə.lɑːɡz/, UK /ˈdaɪ.ə.lɒɡz/"
+    },
+    "audio": {
+      "uk": "di-a-logues (DYE-uh-logz)",
+      "us": "di-a-logues (DYE-uh-logz)"
+    },
+    "partOfSpeech": [
+      "Noun (plural)"
+    ],
+    "definitions": {
+      "Noun (plural)": "Written or spoken conversations between two or more people, typically within a book, play, movie, or formal political discussion."
+    },
+    "vietnamese": {
+      "Noun (plural)": "Các cuộc hội thoại / Đối thoại"
+    },
+    "synonyms": [
+      "Conversations",
+      "discussions",
+      "talks",
+      "chats",
+      "exchanges",
+      "conferences",
+      "negotiations"
+    ],
+    "antonyms": [
+      "Monologues",
+      "silences",
+      "soliloquies"
+    ],
+    "collocations": [
+      "Constructive dialogues",
+      "open dialogues",
+      "political dialogues",
+      "snappy dialogue",
+      "internal dialogues"
+    ],
+    "examples": [
+      "The scriptwriter is famous for creating witty and realistic dialogues between his characters."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvconversation0108"
+    },
+    "word": "conversation",
+    "phonetics": {
+      "uk": "US /ˌkɑːn.vɚˈseɪ.ʃən/, UK /ˌkɒn.vəˈseɪ.ʃən/",
+      "us": "US /ˌkɑːn.vɚˈseɪ.ʃən/, UK /ˌkɒn.vəˈseɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "con-ver-sa-tion (kon-ver-SEY-shuhn)",
+      "us": "con-ver-sa-tion (kon-ver-SEY-shuhn)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A talk, especially an informal one, between two or more people, in which news and ideas are exchanged."
+    },
+    "vietnamese": {
+      "Noun": "Cuộc hội thoại"
+    },
+    "synonyms": [
+      "Chat",
+      "dialogue",
+      "discussion",
+      "exchange",
+      "talk"
+    ],
+    "antonyms": [
+      "Silence",
+      "quiet",
+      "listening"
+    ],
+    "collocations": [
+      "Casual conversation",
+      "hold a conversation",
+      "topic of conversation",
+      "private conversation"
+    ],
+    "examples": [
+      "The experience of that year was a major topic of conversation at a recent conference she attended."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvintonation0109"
+    },
+    "word": "intonation",
+    "phonetics": {
+      "uk": "US /ˌɪn.təˈneɪ.ʃən/, UK /ˌɪn.təˈneɪ.ʃən/",
+      "us": "US /ˌɪn.təˈneɪ.ʃən/, UK /ˌɪn.təˈneɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "in-to-NA-tion (in-tuh-ney-shun)",
+      "us": "in-to-NA-tion (in-tuh-ney-shun)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The rise and fall of the pitch of the voice in speech, used to convey meaning, emotion, or grammatical structure."
+    },
+    "vietnamese": {
+      "Noun": "Ngữ điệu"
+    },
+    "synonyms": [
+      "Tone",
+      "inflection",
+      "cadence",
+      "modulation",
+      "accent"
+    ],
+    "antonyms": [
+      "Monotone",
+      "flatness",
+      "expressionlessness"
+    ],
+    "collocations": [
+      "Rising intonation",
+      "falling intonation",
+      "flat intonation",
+      "use intonation",
+      "show intonation"
+    ],
+    "examples": [
+      "Her rising intonation at the end of the sentence indicated she was asking a question."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrealism0110"
+    },
+    "word": "realism",
+    "phonetics": {
+      "uk": "US /ˈriː.ə.lɪ.zəm/, UK /ˈrɪə.lɪ.zəm/",
+      "us": "US /ˈriː.ə.lɪ.zəm/, UK /ˈrɪə.lɪ.zəm/"
+    },
+    "audio": {
+      "uk": "ree-uh-liz-uhm (REE-uh-liz-uhm)",
+      "us": "ree-uh-liz-uhm (REE-uh-liz-uhm)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The attitude or practice of accepting a situation as it is and being prepared to deal with it accordingly; or the representation in art and literature of things as they actually are."
+    },
+    "vietnamese": {
+      "Noun": "Chủ nghĩa hiện thực / Sự thực tế"
+    },
+    "synonyms": [
+      "Pragmatism",
+      "practicality",
+      "naturalism",
+      "authenticity",
+      "verisimilitude"
+    ],
+    "antonyms": [
+      "Idealism",
+      "nominalism",
+      "antirealism",
+      "romanticism"
+    ],
+    "collocations": [
+      "Magical realism",
+      "socialist realism",
+      "gritty realism",
+      "sense of realism"
+    ],
+    "examples": [
+      "Her optimism was balanced by a strong dose of realism about the challenges ahead."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmiracle0111"
+    },
+    "word": "miracle",
+    "phonetics": {
+      "uk": "US /ˈmɪr.ə.kəl/, UK /ˈmɪr.ə.kəl/",
+      "us": "US /ˈmɪr.ə.kəl/, UK /ˈmɪr.ə.kəl/"
+    },
+    "audio": {
+      "uk": "mir-a-cle (MIR-uh-kuhl)",
+      "us": "mir-a-cle (MIR-uh-kuhl)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "An extraordinary and welcome event that is not explicable by natural or scientific laws and is therefore attributed to a divine agency; a remarkable event or development that brings very welcome consequences."
+    },
+    "vietnamese": {
+      "Noun": "Phép màu, điều kỳ diệu"
+    },
+    "synonyms": [
+      "Wonder",
+      "marvel",
+      "phenomenon",
+      "blessing",
+      "sensation",
+      "prodigy"
+    ],
+    "antonyms": [
+      "Normalcy",
+      "usualness",
+      "commonplace",
+      "disaster",
+      "catastrophe"
+    ],
+    "collocations": [
+      "Minor miracle",
+      "economic miracle",
+      "miracle cure",
+      "miracle drug",
+      "work miracles",
+      "perform miracles"
+    ],
+    "examples": [
+      "It is a miracle that no one was hurt in the accident."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdiscipline0112"
+    },
+    "word": "discipline",
+    "phonetics": {
+      "uk": "US /ˈdɪs.ə.plɪn/, UK /ˈdɪs.ə.plɪn/",
+      "us": "US /ˈdɪs.ə.plɪn/, UK /ˈdɪs.ə.plɪn/"
+    },
+    "audio": {
+      "uk": "dis-uh-plin (DIS-uh-plin)",
+      "us": "dis-uh-plin (DIS-uh-plin)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Transitive verb"
+    ],
+    "definitions": {
+      "Noun": "The practice of training people to obey rules or a code of behavior, using punishment to correct disobedience; a branch of knowledge, typically one studied in higher education.",
+      "Transitive verb": "The practice of training people to obey rules or a code of behavior, using punishment to correct disobedience; a branch of knowledge, typically one studied in higher education."
+    },
+    "vietnamese": {
+      "Noun": "Kỷ luật, môn học",
+      "Transitive verb": "Kỷ luật, môn học"
+    },
+    "synonyms": [
+      "Control",
+      "training",
+      "regulation",
+      "field of study",
+      "punishment"
+    ],
+    "antonyms": [
+      "Chaos",
+      "disorder",
+      "negligence",
+      "permissiveness",
+      "indulgence"
+    ],
+    "collocations": [
+      "Strict discipline",
+      "self-discipline",
+      "academic discipline",
+      "maintain discipline"
+    ],
+    "examples": [
+      "The school is known for its strict academic discipline and high standards of behavior."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpolish0113"
+    },
+    "word": "polish",
+    "phonetics": {
+      "uk": "US /ˈpɑː.lɪʃ/, UK /ˈpɒl.ɪʃ/",
+      "us": "US /ˈpɑː.lɪʃ/, UK /ˈpɒl.ɪʃ/"
+    },
+    "audio": {
+      "uk": "polish (PAHL-ish)",
+      "us": "polish (PAHL-ish)"
+    },
+    "partOfSpeech": [
+      "Verb",
+      "Noun",
+      "Adjective"
+    ],
+    "definitions": {
+      "Verb": "To make a surface smooth and shiny by rubbing it; a substance used for polishing; relating to Poland.",
+      "Noun": "To make a surface smooth and shiny by rubbing it; a substance used for polishing; relating to Poland.",
+      "Adjective": "To make a surface smooth and shiny by rubbing it; a substance used for polishing; relating to Poland."
+    },
+    "vietnamese": {
+      "Verb": "Đánh bóng, lớp láng; thuộc về Ba Lan",
+      "Noun": "Đánh bóng, lớp láng; thuộc về Ba Lan",
+      "Adjective": "Đánh bóng, lớp láng; thuộc về Ba Lan"
+    },
+    "synonyms": [
+      "Shine",
+      "buff",
+      "burnish",
+      "gloss",
+      "refine",
+      "perfect",
+      "elegance",
+      "cultivation"
+    ],
+    "antonyms": [
+      "Tarnish",
+      "dull",
+      "roughen",
+      "damage",
+      "crudeness",
+      "clumsiness"
+    ],
+    "collocations": [
+      "Nail polish",
+      "shoe polish",
+      "furniture polish",
+      "polish skills",
+      "lack polish"
+    ],
+    "examples": [
+      "He used a soft cloth to polish the silver until it sparkled."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmitigation0114"
+    },
+    "word": "mitigation",
+    "phonetics": {
+      "uk": "US /ˌmɪt̬.əˈɡeɪ.ʃən/, UK /ˌmɪt.ɪˈɡeɪ.ʃən/",
+      "us": "US /ˌmɪt̬.əˈɡeɪ.ʃən/, UK /ˌmɪt.ɪˈɡeɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "mitigation (mi-ti-GAY-shun)",
+      "us": "mitigation (mi-ti-GAY-shun)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The action of reducing the severity, seriousness, or painfulness of something; in law, the act of making a crime or punishment seem less severe."
+    },
+    "vietnamese": {
+      "Noun": "Sự giảm nhẹ, sự làm dịu bớt"
+    },
+    "synonyms": [
+      "Alleviation",
+      "reduction",
+      "moderation",
+      "extenuation",
+      "abatement",
+      "palliation",
+      "relief"
+    ],
+    "antonyms": [
+      "Aggravation",
+      "intensification",
+      "increase",
+      "worsening",
+      "provocation"
+    ],
+    "collocations": [
+      "Risk mitigation",
+      "climate change mitigation",
+      "mitigation measures",
+      "mitigation strategy",
+      "in mitigation"
+    ],
+    "examples": [
+      "The government implemented new flood mitigation measures to protect coastal communities from rising sea levels."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvrehearse0115"
+    },
+    "word": "rehearse",
+    "phonetics": {
+      "uk": "US /rɪˈhɝːs/, UK /rəˈhɜːs/",
+      "us": "US /rɪˈhɝːs/, UK /rəˈhɜːs/"
+    },
+    "audio": {
+      "uk": "re-hearse (rɪ-HURS)",
+      "us": "re-hearse (rɪ-HURS)"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To practice a play, piece of music, or speech in private prior to a public performance; to repeat or recount facts or details."
+    },
+    "vietnamese": {
+      "Verb": "Diễn tập, nhắc lại chi tiết"
+    },
+    "synonyms": [
+      "Practice",
+      "drill",
+      "train",
+      "go over",
+      "recount",
+      "repeat",
+      "reiterate",
+      "review"
+    ],
+    "antonyms": [
+      "Cease",
+      "stop",
+      "forget",
+      "ignore",
+      "neglect",
+      "hide"
+    ],
+    "collocations": [
+      "Rehearse a play",
+      "rehearse a scene",
+      "well rehearsed",
+      "mentally rehearse",
+      "rehearse for"
+    ],
+    "examples": [
+      "The actors gathered in the studio to rehearse the final scene of the play before opening night."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvguilt0116"
+    },
+    "word": "guilt",
+    "phonetics": {
+      "uk": "US /ɡɪlt/, UK /ɡɪlt/",
+      "us": "US /ɡɪlt/, UK /ɡɪlt/"
+    },
+    "audio": {
+      "uk": "guilt (gilt)",
+      "us": "guilt (gilt)"
+    },
+    "partOfSpeech": [
+      "Noun",
+      "Verb"
+    ],
+    "definitions": {
+      "Noun": "The fact of having committed a specified or implied offense or crime; a feeling of deserving blame for such an offense.",
+      "Verb": "The fact of having committed a specified or implied offense or crime; a feeling of deserving blame for such an offense."
+    },
+    "vietnamese": {
+      "Noun": "Tội lỗi, cảm giác tội lỗi",
+      "Verb": "Tội lỗi, cảm giác tội lỗi"
+    },
+    "synonyms": [
+      "Culpability",
+      "blame",
+      "remorse",
+      "regret",
+      "shame",
+      "contrition"
+    ],
+    "antonyms": [
+      "Innocence",
+      "pride",
+      "righteousness",
+      "satisfaction",
+      "virtue"
+    ],
+    "collocations": [
+      "Admit guilt",
+      "feel guilt",
+      "guilt trip",
+      "prove guilt",
+      "survivor guilt"
+    ],
+    "examples": [
+      "The jury reached a verdict of guilt after reviewing all the evidence."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvtractor0117"
+    },
+    "word": "tractor",
+    "phonetics": {
+      "uk": "US /ˈtræk.tɚ/, UK /ˈtræk.tər/",
+      "us": "US /ˈtræk.tɚ/, UK /ˈtræk.tər/"
+    },
+    "audio": {
+      "uk": "trac-tor (TRAK-ter)",
+      "us": "trac-tor (TRAK-ter)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A powerful motor vehicle with large, heavy treads or wheels, used for pulling farm machinery or other heavy loads."
+    },
+    "vietnamese": {
+      "Noun": "Máy kéo / Xe máy cày"
+    },
+    "synonyms": [
+      "Farm vehicle",
+      "agricultural machine",
+      "hauler",
+      "traction engine"
+    ],
+    "antonyms": [
+      "Sports car",
+      "bicycle",
+      "motorcycle"
+    ],
+    "collocations": [
+      "Agricultural tractor",
+      "farm tractor",
+      "drive a tractor",
+      "tractor trailer"
+    ],
+    "examples": [
+      "The farmer used the tractor to till the soil before planting seeds for spring."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmanipulate0118"
+    },
+    "word": "manipulate",
+    "phonetics": {
+      "uk": "US /məˈnɪp.jə.leɪt/, UK /məˈnɪp.jə.leɪt/",
+      "us": "US /məˈnɪp.jə.leɪt/, UK /məˈnɪp.jə.leɪt/"
+    },
+    "audio": {
+      "uk": "manipulate (muh-NIP-yuh-leyt)",
+      "us": "manipulate (muh-NIP-yuh-leyt)"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To control or influence a person or situation cleverly, skillfully, or unscrupulously; to handle or operate something with skill."
+    },
+    "vietnamese": {
+      "Verb": "Thao túng, điều khiển, vận dụng"
+    },
+    "synonyms": [
+      "Influence",
+      "exploit",
+      "maneuver",
+      "handle",
+      "wield",
+      "control",
+      "pull strings"
+    ],
+    "antonyms": [
+      "Leave alone",
+      "neglect",
+      "abandon",
+      "misguide",
+      "destroy"
+    ],
+    "collocations": [
+      "Manipulate public opinion",
+      "manipulate data",
+      "manipulate feelings",
+      "deftly manipulate"
+    ],
+    "examples": [
+      "As a politician, he knows how to manipulate public opinion to his advantage."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvpragmatic0119"
+    },
+    "word": "pragmatic",
+    "phonetics": {
+      "uk": "US /præɡˈmæt̬.ɪk/, UK /præɡˈmæt.ɪk/",
+      "us": "US /præɡˈmæt̬.ɪk/, UK /præɡˈmæt.ɪk/"
+    },
+    "audio": {
+      "uk": "prag-mat-ik (prag-MAT-ik)",
+      "us": "prag-mat-ik (prag-MAT-ik)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations."
+    },
+    "vietnamese": {
+      "Adjective": "Thực dụng"
+    },
+    "synonyms": [
+      "Practical",
+      "realistic",
+      "sensible",
+      "down-to-earth",
+      "businesslike",
+      "utilitarian"
+    ],
+    "antonyms": [
+      "Idealistic",
+      "impractical",
+      "unrealistic",
+      "theoretical",
+      "irrational"
+    ],
+    "collocations": [
+      "Pragmatic approach",
+      "pragmatic solution",
+      "pragmatic decision",
+      "pragmatic leader",
+      "pragmatic reasons"
+    ],
+    "examples": [
+      "She took a pragmatic approach to solving the budget issues by focusing on immediate needs rather than long-term ideals."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvabolishing0120"
+    },
+    "word": "abolishing",
+    "phonetics": {
+      "uk": "US /əˈbɑː.lɪʃ/, UK /əˈbɒl.ɪʃ/",
+      "us": "US /əˈbɑː.lɪʃ/, UK /əˈbɒl.ɪʃ/"
+    },
+    "audio": {
+      "uk": "abolish (uh-BOL-ish)",
+      "us": "abolish (uh-BOL-ish)"
+    },
+    "partOfSpeech": [
+      "Verb"
+    ],
+    "definitions": {
+      "Verb": "To formally put an end to a system, practice, or institution."
+    },
+    "vietnamese": {
+      "Verb": "Bãi bỏ, hủy bỏ"
+    },
+    "synonyms": [
+      "Annul",
+      "eradicate",
+      "nullify",
+      "repeal",
+      "rescind",
+      "eliminate"
+    ],
+    "antonyms": [
+      "Establish",
+      "create",
+      "validate",
+      "confirm",
+      "institute"
+    ],
+    "collocations": [
+      "Abolish slavery",
+      "abolish the death penalty",
+      "abolish a law",
+      "abolish taxes",
+      "formally abolish"
+    ],
+    "examples": [
+      "The government voted to abolish the outdated tax law to encourage economic growth."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvfrustration0121"
+    },
+    "word": "frustration",
+    "phonetics": {
+      "uk": "US /frʌˈstreɪ.ʃən/, UK /frʌˈstreɪ.ʃən/",
+      "us": "US /frʌˈstreɪ.ʃən/, UK /frʌˈstreɪ.ʃən/"
+    },
+    "audio": {
+      "uk": "frustration (fruhs-TREY-shuhn)",
+      "us": "frustration (fruhs-TREY-shuhn)"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "The feeling of being annoyed or less confident because you cannot achieve what you want, or the act of preventing something from being successful."
+    },
+    "vietnamese": {
+      "Noun": "Sự thất vọng, sự nản lòng, sự làm hỏng"
+    },
+    "synonyms": [
+      "Annoyance",
+      "disappointment",
+      "exasperation",
+      "irritation",
+      "dissatisfaction",
+      "thwarting"
+    ],
+    "antonyms": [
+      "Happiness",
+      "pleasure",
+      "success",
+      "encouragement",
+      "facilitation",
+      "satisfaction"
+    ],
+    "collocations": [
+      "Deep frustration",
+      "pent-up frustration",
+      "sheer frustration",
+      "vent frustration",
+      "express frustration"
+    ],
+    "examples": [
+      "He shook his head in frustration when the computer crashed again."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvobsolete0122"
+    },
+    "word": "obsolete",
+    "phonetics": {
+      "uk": "US /ˌɑːb.səlˈiːt/, UK /ˌɒb.səlˈiːt/",
+      "us": "US /ˌɑːb.səlˈiːt/, UK /ˌɒb.səlˈiːt/"
+    },
+    "audio": {
+      "uk": "ob-suh-leet (OB-suh-leet)",
+      "us": "ob-suh-leet (OB-suh-leet)"
+    },
+    "partOfSpeech": [
+      "Adjective",
+      "Transitive verb"
+    ],
+    "definitions": {
+      "Adjective": "No longer produced or used, often because it has been replaced by something newer, better, or more fashionable.",
+      "Transitive verb": "No longer produced or used, often because it has been replaced by something newer, better, or more fashionable."
+    },
+    "vietnamese": {
+      "Adjective": "Lỗi thời, không còn sử dụng",
+      "Transitive verb": "Lỗi thời, không còn sử dụng"
+    },
+    "synonyms": [
+      "Outdated",
+      "outmoded",
+      "antiquated",
+      "archaic",
+      "old-fashioned",
+      "superseded"
+    ],
+    "antonyms": [
+      "Modern",
+      "new",
+      "current",
+      "contemporary",
+      "up-to-date"
+    ],
+    "collocations": [
+      "Become obsolete",
+      "render obsolete",
+      "virtually obsolete",
+      "functionally obsolete",
+      "obsolete technology",
+      "obsolete equipment"
+    ],
+    "examples": [
+      "Gas lamps became obsolete when electric lighting was invented."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvmediocre0123"
+    },
+    "word": "mediocre",
+    "phonetics": {
+      "uk": "US /ˌmiː.diˈoʊ.kɚ/, UK /ˌmiː.diˈəʊ.kər/",
+      "us": "US /ˌmiː.diˈoʊ.kɚ/, UK /ˌmiː.diˈəʊ.kər/"
+    },
+    "audio": {
+      "uk": "me-di-o-cre (MEE-dee-OH-ker)",
+      "us": "me-di-o-cre (MEE-dee-OH-ker)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Of only moderate or ordinary quality; neither good nor bad; barely adequate."
+    },
+    "vietnamese": {
+      "Adjective": "Tầm thường"
+    },
+    "synonyms": [
+      "Average",
+      "commonplace",
+      "indifferent",
+      "ordinary",
+      "second-rate",
+      "so-so",
+      "unremarkable"
+    ],
+    "antonyms": [
+      "Excellent",
+      "exceptional",
+      "extraordinary",
+      "superior",
+      "first-rate",
+      "outstanding"
+    ],
+    "collocations": [
+      "Mediocre performance",
+      "mediocre student",
+      "mediocre results",
+      "mediocre quality"
+    ],
+    "examples": [
+      "The movie had a great cast, but the plot was mediocre and predictable."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvexplicit0124"
+    },
+    "word": "explicit",
+    "phonetics": {
+      "uk": "US /ɪkˈsplɪsɪt/, UK /ɪkˈsplɪsɪt/",
+      "us": "US /ɪkˈsplɪsɪt/, UK /ɪkˈsplɪsɪt/"
+    },
+    "audio": {
+      "uk": "explicit (ik-SPLIS-it)",
+      "us": "explicit (ik-SPLIS-it)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Stated clearly and in detail, leaving no room for confusion or doubt; also used to describe graphic depictions of nudity or violence."
+    },
+    "vietnamese": {
+      "Adjective": "Rõ ràng, dứt khoát, chi tiết"
+    },
+    "synonyms": [
+      "Clear",
+      "definite",
+      "precise",
+      "unambiguous",
+      "specific",
+      "categorical",
+      "unequivocal"
+    ],
+    "antonyms": [
+      "Implicit",
+      "vague",
+      "ambiguous",
+      "equivocal",
+      "obscure"
+    ],
+    "collocations": [
+      "Explicit instructions",
+      "explicit directions",
+      "explicit detail",
+      "explicit language",
+      "explicit consent"
+    ],
+    "examples": [
+      "The teacher gave explicit instructions on how to complete the assignment to ensure no one was confused."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvfuzzy0125"
+    },
+    "word": "fuzzy",
+    "phonetics": {
+      "uk": "US /ˈfʌz.i/, UK /ˈfʌz.i/",
+      "us": "US /ˈfʌz.i/, UK /ˈfʌz.i/"
+    },
+    "audio": {
+      "uk": "fuzzy (FUH-zee)",
+      "us": "fuzzy (FUH-zee)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Having a fluffy or soft texture; (of an image or sound) not clear, blurred, or distorted; (of a person's mind or ideas) confused or not clearly thought out."
+    },
+    "vietnamese": {
+      "Adjective": "Mờ nhạt, có lông tơ, không rõ nét"
+    },
+    "synonyms": [
+      "Fluffy",
+      "blurry",
+      "indistinct",
+      "vague",
+      "woolly",
+      "hazy",
+      "confused"
+    ],
+    "antonyms": [
+      "Clear",
+      "smooth",
+      "sharp",
+      "distinct",
+      "definite",
+      "precise"
+    ],
+    "collocations": [
+      "Fuzzy hair",
+      "fuzzy image",
+      "fuzzy thinking",
+      "warm",
+      "fuzzy",
+      "fuzzy logic"
+    ],
+    "examples": [
+      "The photograph was so fuzzy that I couldn't recognize anyone in it."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdilute0126"
+    },
+    "word": "dilute",
+    "phonetics": {
+      "uk": "US /dɪˈlut/, UK /daɪˈluːt/",
+      "us": "US /dɪˈlut/, UK /daɪˈluːt/"
+    },
+    "audio": {
+      "uk": "di-lute (dih-LOOT)",
+      "us": "di-lute (dih-LOOT)"
+    },
+    "partOfSpeech": [
+      "Verb",
+      "Adjective"
+    ],
+    "definitions": {
+      "Verb": "To make a liquid thinner or weaker by adding water or another solvent; to reduce the strength, force, or value of something by adding something else.",
+      "Adjective": "To make a liquid thinner or weaker by adding water or another solvent; to reduce the strength, force, or value of something by adding something else."
+    },
+    "vietnamese": {
+      "Verb": "Pha loãng, làm mất chất, làm giảm bớt",
+      "Adjective": "Pha loãng, làm mất chất, làm giảm bớt"
+    },
+    "synonyms": [
+      "Water down",
+      "weaken",
+      "thin",
+      "adulterate",
+      "diminish",
+      "attenuate"
+    ],
+    "antonyms": [
+      "Concentrate",
+      "strengthen",
+      "thicken",
+      "intensify"
+    ],
+    "collocations": [
+      "Dilute with",
+      "dilute the impact",
+      "dilute shares",
+      "highly dilute"
+    ],
+    "examples": [
+      "You should dilute the concentrated juice with water before drinking it."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvconcise0127"
+    },
+    "word": "concise",
+    "phonetics": {
+      "uk": "US /kənˈsaɪs/, UK /kənˈsaɪs/",
+      "us": "US /kənˈsaɪs/, UK /kənˈsaɪs/"
+    },
+    "audio": {
+      "uk": "con-cise (kuhn-SAHYS)",
+      "us": "con-cise (kuhn-SAHYS)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Giving a lot of information clearly and in a few words; brief and to the point."
+    },
+    "vietnamese": {
+      "Adjective": "Ngắn gọn, súc tích"
+    },
+    "synonyms": [
+      "Succinct",
+      "terse",
+      "pithy",
+      "brief",
+      "compact",
+      "laconic"
+    ],
+    "antonyms": [
+      "Wordy",
+      "verbose",
+      "lengthy",
+      "long-winded",
+      "rambling"
+    ],
+    "collocations": [
+      "Concise summary",
+      "concise explanation",
+      "clear",
+      "concise",
+      "concise account"
+    ],
+    "examples": [
+      "The witness gave a concise account of the accident to the police."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvdelicatessen0128"
+    },
+    "word": "delicatessen",
+    "phonetics": {
+      "uk": "US /ˌdel.ə.kəˈtes.ən/, UK /ˌdel.ɪ.kəˈtes.ən/",
+      "us": "US /ˌdel.ə.kəˈtes.ən/, UK /ˌdel.ɪ.kəˈtes.ən/"
+    },
+    "audio": {
+      "uk": "del-i-kuh-tes-uhn",
+      "us": "del-i-kuh-tes-uhn"
+    },
+    "partOfSpeech": [
+      "Noun"
+    ],
+    "definitions": {
+      "Noun": "A store that sells prepared foods such as cooked meats, cheeses, and salads, or the food items themselves."
+    },
+    "vietnamese": {
+      "Noun": "Cửa hàng thực phẩm chế biến sẵn (đồ nguội)"
+    },
+    "synonyms": [
+      "Deli",
+      "food shop",
+      "eatery",
+      "charcuterie",
+      "bodega"
+    ],
+    "antonyms": [
+      "None"
+    ],
+    "collocations": [
+      "Delicatessen counter",
+      "delicatessen store",
+      "local delicatessen",
+      "pop-up delicatessen"
+    ],
+    "examples": [
+      "Your morning routine might include a stop at the delicatessen for a toasted bagel."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "csvscenic0129"
+    },
+    "word": "scenic",
+    "phonetics": {
+      "uk": "US /ˈsiː.nɪk/, UK /ˈsiː.nɪk/",
+      "us": "US /ˈsiː.nɪk/, UK /ˈsiː.nɪk/"
+    },
+    "audio": {
+      "uk": "sce-nic (SEE-nik)",
+      "us": "sce-nic (SEE-nik)"
+    },
+    "partOfSpeech": [
+      "Adjective"
+    ],
+    "definitions": {
+      "Adjective": "Providing or relating to views of impressive or beautiful natural scenery; also relating to stage scenery or theatrical representation."
+    },
+    "vietnamese": {
+      "Adjective": "Thuộc về phong cảnh, có phong cảnh đẹp"
+    },
+    "synonyms": [
+      "Picturesque",
+      "breathtaking",
+      "spectacular",
+      "panoramic",
+      "beautiful",
+      "striking"
+    ],
+    "antonyms": [
+      "Ugly",
+      "dreary",
+      "dull",
+      "ordinary",
+      "unattractive",
+      "gloomy"
+    ],
+    "collocations": [
+      "Scenic route",
+      "scenic view",
+      "scenic drive",
+      "scenic beauty",
+      "scenic design"
+    ],
+    "examples": [
+      "The train ride through the Swiss Alps offers some of the most scenic views in the world."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T10:04:56.378Z"
+    },
+    "__v": 0
+  }
+]

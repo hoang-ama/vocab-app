@@ -1,0 +1,665 @@
+[
+  {
+    "_id": {
+      "$oid": "mpfbjyz7mw9tb21lzr"
+    },
+    "word": "hypothesis",
+    "phonetics": {
+      "uk": "/haɪˈpɑː.θə.sɪs/",
+      "us": "/haɪˈpɑː.θə.sɪs/"
+    },
+    "audio": {
+      "uk": "https://api.dictionaryapi.dev/media/pronunciations/en/hypothesis-us.mp3",
+      "us": "https://api.dictionaryapi.dev/media/pronunciations/en/hypothesis-us.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "Used loosely, a tentative conjecture explaining an observation, phenomenon or scientific problem that can be tested by further observation, investigation and/or experimentation. As a scientific term of art, see the attached quotation. Compare to theory, and quotation given there."
+    },
+    "vietnamese": {
+      "noun": "Được sử dụng một cách lỏng lẻo, một phỏng đoán dự kiến giải thích một quan sát, hiện tượng hoặc vấn đề khoa học có thể được kiểm tra bằng cách quan sát, điều tra và/hoặc thử nghiệm thêm. Là một thuật ngữ khoa học của nghệ thuật, xem báo giá đính kèm. So sánh với lý thuyết và trích dẫn được đưa ra ở đó."
+    },
+    "synonyms": [
+      "educated guess",
+      "guess",
+      "supposition",
+      "theory",
+      "thesis",
+      "surmise",
+      "conjecture",
+      "speculation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "the hypothesis",
+      "this hypothesis",
+      "null hypothesis",
+      "a hypothesis",
+      "an hypothesis",
+      "alternative hypothesis",
+      "hypothesis that",
+      "hypothesis ."
+    ],
+    "examples": [
+      "I learned a new word today: \"hypothesis\"."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T09:59:28.723Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:59:28.723Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfbipqej8yqlgqv9p"
+    },
+    "word": "embrace",
+    "phonetics": {
+      "uk": "/ɛmˈbɹeɪs/",
+      "us": "/ɛmˈbɹeɪs/"
+    },
+    "audio": {
+      "uk": "https://api.dictionaryapi.dev/media/pronunciations/en/embrace-uk.mp3",
+      "us": "https://api.dictionaryapi.dev/media/pronunciations/en/embrace-uk.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "An act of putting arms around someone and bringing the person close to the chest; a hug."
+    },
+    "vietnamese": {
+      "noun": "Một hành động vòng tay quanh ai đó và đưa người đó đến gần ngực; một cái ôm."
+    },
+    "synonyms": [
+      "bosom",
+      "comprehend",
+      "encompass",
+      "cover",
+      "squeeze",
+      "espouse",
+      "adapt",
+      "hug"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "to embrace",
+      "and embrace",
+      "the embrace",
+      "his embrace",
+      "not embrace",
+      "an embrace",
+      "embrace the",
+      "embrace ."
+    ],
+    "examples": [
+      "I wholeheartedly embrace the new legislation."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T09:58:30.086Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:58:30.086Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfbgx4mm4mqetkqxoc"
+    },
+    "word": "fallback",
+    "phonetics": {
+      "uk": "/ˈfɔːl.bæk/",
+      "us": "/ˈfɔːl.bæk/"
+    },
+    "audio": {
+      "uk": "",
+      "us": ""
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "An act of falling back."
+    },
+    "vietnamese": {
+      "noun": ""
+    },
+    "synonyms": [
+      "ebbing",
+      "recession",
+      "retreat",
+      "back-up",
+      "backup"
+    ],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [],
+    "createdAt": {
+      "$date": "2026-05-21T09:57:06.358Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:57:06.358Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfb2vqpx5f4j5mvthj"
+    },
+    "word": "dilute",
+    "phonetics": {
+      "uk": "/daɪˈljuːt/",
+      "us": "/daɪˈljuːt/"
+    },
+    "audio": {
+      "uk": "https://api.dictionaryapi.dev/media/pronunciations/en/dilute-uk.mp3",
+      "us": "https://api.dictionaryapi.dev/media/pronunciations/en/dilute-uk.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "An animal having a lighter-coloured coat than is usual."
+    },
+    "vietnamese": {
+      "noun": ""
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [],
+    "createdAt": {
+      "$date": "2026-05-21T09:46:11.377Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:46:11.377Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfb1xhyadv3opprwp"
+    },
+    "word": "concise",
+    "phonetics": {
+      "uk": "/kənˈsaɪs/",
+      "us": "/kənˈsaɪs/"
+    },
+    "audio": {
+      "uk": "https://api.dictionaryapi.dev/media/pronunciations/en/concise-us.mp3",
+      "us": "https://api.dictionaryapi.dev/media/pronunciations/en/concise-us.mp3"
+    },
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definitions": {
+      "verb": "To make concise; to abridge or summarize."
+    },
+    "vietnamese": {
+      "verb": ""
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [],
+    "createdAt": {
+      "$date": "2026-05-21T09:45:26.998Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:45:26.998Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfb0egpi0xuec44n5m"
+    },
+    "word": "misleading",
+    "phonetics": {
+      "uk": "",
+      "us": ""
+    },
+    "audio": {
+      "uk": "",
+      "us": ""
+    },
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definitions": {
+      "verb": "To lead astray, in a false direction."
+    },
+    "vietnamese": {
+      "verb": ""
+    },
+    "synonyms": [
+      "beguile",
+      "cheat",
+      "deceive",
+      "delude",
+      "forlead"
+    ],
+    "antonyms": [
+      "direct",
+      "guide",
+      "lead"
+    ],
+    "collocations": [],
+    "examples": [],
+    "createdAt": {
+      "$date": "2026-05-21T09:44:15.673Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:44:15.673Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "mpfay5nt7h1svs50wq9"
+    },
+    "word": "scenic",
+    "phonetics": {
+      "uk": "/ˈsiːnɪk/",
+      "us": "/ˈsiːnɪk/"
+    },
+    "audio": {
+      "uk": "",
+      "us": ""
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "A depiction of scenery"
+    },
+    "vietnamese": {
+      "noun": ""
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [],
+    "createdAt": {
+      "$date": "2026-05-21T09:42:30.953Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:42:30.953Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664636b225f00d94099e7a"
+    },
+    "word": "concrete",
+    "phonetics": {
+      "uk": "/ˈkɑːn.kriːt/",
+      "us": "/ˈkɑːn.kriːt/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/c/con/concr/concrete.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/c/con/concr/concrete.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "A hard, strong building material..."
+    },
+    "vietnamese": {
+      "noun": "bê tông"
+    },
+    "synonyms": [
+      "specific",
+      "definite",
+      "tangible"
+    ],
+    "antonyms": [
+      "abstract",
+      "vague"
+    ],
+    "collocations": [
+      "concrete evidence",
+      "concrete plan"
+    ],
+    "examples": [
+      "We need concrete proof before taking legal action."
+    ],
+    "createdAt": {
+      "$date": "2026-05-21T09:41:10.169Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-21T09:41:10.169Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664d3a904367e67948b141"
+    },
+    "word": "vague",
+    "phonetics": {
+      "uk": "/veɪɡ/",
+      "us": "/veɪɡ/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/v/vag/vague/vague.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/v/vag/vague/vague.mp3"
+    },
+    "partOfSpeech": [
+      "adjective"
+    ],
+    "definitions": {
+      "adjective": "Not clearly expressed, known, described, or decided."
+    },
+    "vietnamese": {
+      "adjective": "mơ hồ, không rõ ràng"
+    },
+    "synonyms": [
+      "unclear",
+      "ambiguous",
+      "fuzzy"
+    ],
+    "antonyms": [
+      "clear",
+      "definite",
+      "explicit"
+    ],
+    "collocations": [
+      "vague idea",
+      "vague answer"
+    ],
+    "examples": [
+      "She had only a vague idea where the place was."
+    ],
+    "createdAt": {
+      "$date": "2025-07-03T09:28:26.431Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-03T09:28:26.431Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664e3e904367e67948b144"
+    },
+    "word": "chaos",
+    "phonetics": {
+      "uk": "/ˈkeɪ.ɑːs/",
+      "us": "/ˈkeɪ.ɑːs/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/c/cha/chaos/chaos.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/c/cha/chaos/chaos.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "A state of complete disorder and confusion."
+    },
+    "vietnamese": {
+      "noun": "hỗn loạn, lộn xộn"
+    },
+    "synonyms": [
+      "disorder",
+      "turmoil",
+      "confusion"
+    ],
+    "antonyms": [
+      "order",
+      "harmony",
+      "structure"
+    ],
+    "collocations": [
+      "total chaos",
+      "in chaos"
+    ],
+    "examples": [
+      "The country was in chaos after the war."
+    ],
+    "createdAt": {
+      "$date": "2025-07-03T09:32:46.025Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-03T09:32:46.025Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664e4e904367e67948b146"
+    },
+    "word": "obstacles",
+    "phonetics": {
+      "uk": "/ˈɑːb.stə.kəlz/",
+      "us": "/ˈɑːb.stə.kəlz/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/o/obs/obsta/obstacle.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/o/obs/obsta/obstacle.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "Things that block your way or make it difficult to progress."
+    },
+    "vietnamese": {
+      "noun": "chướng ngại vật, trở ngại"
+    },
+    "synonyms": [
+      "barriers",
+      "hurdles",
+      "difficulties"
+    ],
+    "antonyms": [
+      "assistance",
+      "aid",
+      "support"
+    ],
+    "collocations": [
+      "face obstacles",
+      "overcome obstacles"
+    ],
+    "examples": [
+      "She overcame many obstacles to become a doctor."
+    ],
+    "createdAt": {
+      "$date": "2025-07-03T09:33:02.037Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-03T09:33:02.037Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664e59904367e67948b148"
+    },
+    "word": "mantra",
+    "phonetics": {
+      "uk": "/ˈmæn.trə/",
+      "us": "/ˈmæn.trə/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/m/man/mantr/mantra.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/m/man/mantr/mantra.mp3"
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "A word or phrase repeated often to express belief or motivation."
+    },
+    "vietnamese": {
+      "noun": "câu thần chú, phương châm"
+    },
+    "synonyms": [
+      "chant",
+      "slogan",
+      "affirmation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "repeat a mantra",
+      "daily mantra"
+    ],
+    "examples": [
+      "‘I can do this’ became her daily mantra."
+    ],
+    "createdAt": {
+      "$date": "2025-07-03T09:33:13.945Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-03T09:33:13.945Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68664e71904367e67948b14a"
+    },
+    "word": "manifesting",
+    "phonetics": {
+      "uk": "/ˈmæn.ə.fest.ɪŋ/",
+      "us": "/ˈmæn.ə.fest.ɪŋ/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/media/english/us_pron/m/man/manif/manifest.mp3",
+      "us": "https://dictionary.cambridge.org/media/english/us_pron/m/man/manif/manifest.mp3"
+    },
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definitions": {
+      "verb": "To show something clearly through signs or actions; to bring something into reality through belief and intention."
+    },
+    "vietnamese": {
+      "verb": "biểu hiện, hiện thực hóa"
+    },
+    "synonyms": [
+      "materializing",
+      "attracting",
+      "demonstrating"
+    ],
+    "antonyms": [
+      "concealing",
+      "ignoring"
+    ],
+    "collocations": [
+      "manifesting dreams",
+      "manifesting abundance"
+    ],
+    "examples": [
+      "She is manifesting her dream life through positive thinking."
+    ],
+    "createdAt": {
+      "$date": "2025-07-03T09:33:37.210Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-03T09:33:37.210Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6868b1ef380b3a9308d90737"
+    },
+    "word": "imitate",
+    "phonetics": {
+      "uk": "/ˈɪm.ə.teɪt/",
+      "us": "/ˈɪm.ə.teɪt/"
+    },
+    "audio": {
+      "uk": "https://dictionary.cambridge.org/pronunciation/english/imitate",
+      "us": "https://dictionary.cambridge.org/pronunciation/english/imitate"
+    },
+    "partOfSpeech": [
+      "verb"
+    ],
+    "definitions": {
+      "verb": "To behave in a similar way to someone or something else, or to copy the speech or behaviour, etc., of someone or something; to follow as a pattern, model, or example; to mimic, counterfeit."
+    },
+    "vietnamese": {
+      "verb": "bắt chước, mô phỏng, nhái theo"
+    },
+    "synonyms": [
+      "copy",
+      "mimic",
+      "emulate",
+      "ape",
+      "reproduce",
+      "simulate",
+      "duplicate",
+      "echo"
+    ],
+    "antonyms": [
+      "differ",
+      "oppose",
+      "originate",
+      "create",
+      "be original"
+    ],
+    "collocations": [
+      "imitate a sound",
+      "imitate a style",
+      "imitate a voice",
+      "imitate nature",
+      "imitate human movements"
+    ],
+    "examples": [
+      "She can **imitate** the calls of many different birds."
+    ],
+    "createdAt": {
+      "$date": "2025-07-05T05:02:39.467Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-05T05:02:39.467Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6868d4e0380b3a9308d90740"
+    },
+    "word": "obstacle",
+    "phonetics": {
+      "uk": "/ˈɑːb.stə.kəl/",
+      "us": "/ˈɑːb.stə.kəl/"
+    },
+    "audio": {
+      "uk": "",
+      "us": ""
+    },
+    "partOfSpeech": [
+      "noun"
+    ],
+    "definitions": {
+      "noun": "something that blocks you so that movement, going forward, or action is prevented or made more difficult"
+    },
+    "vietnamese": {
+      "noun": "(n): Trở ngại"
+    },
+    "synonyms": [],
+    "antonyms": [],
+    "collocations": [],
+    "examples": [
+      "The biggest obstacle in our way was a tree trunk in the road."
+    ],
+    "createdAt": {
+      "$date": "2025-07-05T07:31:44.533Z"
+    },
+    "updatedAt": {
+      "$date": "2025-07-05T07:31:44.533Z"
+    },
+    "__v": 0
+  }
+]

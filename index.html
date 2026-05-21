@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .speaker-icon {
+            cursor: pointer;
+            color: #4B5563; /* Gray-600 */
+            transition: color 0.2s ease;
+        }
+        .speaker-icon:hover {
+            color: #2563EB; /* Blue-600 */
+        }
+        .action-btn {
+            opacity: 0.6;
+            transition: opacity 0.2s;
+            cursor: pointer;
+        }
+        .action-btn:hover {
+            opacity: 1;
+        }
+        .add-word-fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #3B82F6; /* Blue-500 */
+            color: white;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 40;
+        }
+        .add-word-fab:hover {
+             background-color: #2563EB; /* Blue-600 */
+        }
+        /* Custom scrollbar for modal */
+        .modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .modal-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto max-w-2xl p-4 sm:p-6 lg:p-8 pb-24">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">My Vocabulary</h1>
+            <p class="text-gray-600 mt-2">Your personal dictionary</p>
+        </header>
+        <div class="mb-6 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <p id="storageStatus" class="text-sm text-gray-600">Storage: loading...</p>
+                <div class="flex flex-wrap gap-2">
+                    <button id="connectStorageBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                        <i class="fas fa-link mr-1"></i> Connect JSON
+                    </button>
+                    <button id="importJsonBtn" class="px-3 py-2 text-sm rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-file-import mr-1"></i> Import JSON
+                    </button>
+                    <button id="exportJsonBtn" class="px-3 py-2 text-sm rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-file-export mr-1"></i> Export JSON
+                    </button>
+                </div>
+            </div>
+            <input id="jsonFileInput" type="file" accept="application/json,.json" class="hidden">
+        </div>
+        
+        <!-- Search Input -->
+        <div class="mb-8">
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="Search for a word..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="mb-6 flex gap-2">
+            <button id="allWordsTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white">
+                All Words
+            </button>
+            <button id="favoritesTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
+                Favorites (<span id="favoritesCount">0</span>)
+            </button>
+        </div>
+
+        <!-- Vocabulary List -->
+        <div id="vocabularyList">
+            <!-- Vocabulary cards will be inserted here by JavaScript -->
+        </div>
+
+    </div>
+    
+    <!-- Add Word Floating Action Button -->
+    <div id="addWordBtn" class="add-word-fab">
+        <i class="fas fa-plus fa-lg"></i>
+    </div>
+
+    <!-- Add/Edit Word Modal -->
+    <div id="wordModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-lg flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-lg">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800">Add a New Word</h2>
+                <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-6 overflow-y-auto modal-scroll">
+                <form id="wordForm">
+                    <input type="hidden" id="wordId">
+                    <input type="hidden" id="audioUrl">
+
+                    <!-- Word & Fetch -->
+                    <div class="mb-4">
+                        <label for="wordInput" class="block text-gray-700 font-medium mb-1">Word <span class="text-red-500">*</span></label>
+                        <div class="flex gap-2">
+                            <input type="text" id="wordInput" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="e.g., Serendipity">
+                            <button type="button" id="fetchWordDataBtn" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition-colors flex items-center gap-2">
+                                <i class="fas fa-cloud-download-alt"></i> Fetch
+                            </button>
+                        </div>
+                        <p id="fetchStatus" class="text-sm text-gray-500 mt-1 h-5"></p>
+                    </div>
+
+                    <!-- Phonetics & POS -->
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="phonetics" class="block text-gray-700 font-medium mb-1">Phonetics</label>
+                            <input type="text" id="phonetics" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="/.../">
+                        </div>
+                        <div>
+                            <label for="partOfSpeech" class="block text-gray-700 font-medium mb-1">Part of Speech</label>
+                            <input type="text" id="partOfSpeech" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="noun, verb...">
+                        </div>
+                    </div>
+
+                    <!-- Meanings -->
+                    <div class="mb-4">
+                        <label for="englishMeaning" class="block text-gray-700 font-medium mb-1">English Meaning <span class="text-red-500">*</span></label>
+                        <input type="text" id="englishMeaning" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="Definition...">
+                    </div>
+                     <div class="mb-4">
+                        <label for="vietnameseMeaning" class="block text-gray-700 font-medium mb-1">Vietnamese Meaning</label>
+                        <input type="text" id="vietnameseMeaning" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Nghĩa tiếng Việt...">
+                    </div>
+
+                    <!-- Extras: Synonyms, Antonyms, Collocations -->
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="synonyms" class="block text-gray-700 font-medium mb-1">Synonyms</label>
+                            <input type="text" id="synonyms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="happy, joyful...">
+                        </div>
+                        <div>
+                            <label for="antonyms" class="block text-gray-700 font-medium mb-1">Antonyms</label>
+                            <input type="text" id="antonyms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="sad, upset...">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="collocations" class="block text-gray-700 font-medium mb-1">Collocations</label>
+                        <input type="text" id="collocations" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="go to school, make a decision...">
+                    </div>
+
+                    <!-- Example -->
+                    <div class="mb-4">
+                        <label for="exampleSentence" class="block text-gray-700 font-medium mb-1">Example Sentence</label>
+                        <textarea id="exampleSentence" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Use the word in a sentence..."></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg flex justify-end gap-3">
+                <button type="button" id="cancelBtn" class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
+                <button type="submit" form="wordForm" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors shadow-lg shadow-blue-500/30">Save Word</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Elements ---
+            const vocabularyList = document.getElementById('vocabularyList');
+            const searchInput = document.getElementById('searchInput');
+            const addWordBtn = document.getElementById('addWordBtn');
+            const modal = document.getElementById('wordModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const wordForm = document.getElementById('wordForm');
+            const fetchWordDataBtn = document.getElementById('fetchWordDataBtn');
+            const fetchStatus = document.getElementById('fetchStatus');
+            const modalTitle = document.getElementById('modalTitle');
+            const connectStorageBtn = document.getElementById('connectStorageBtn');
+            const importJsonBtn = document.getElementById('importJsonBtn');
+            const exportJsonBtn = document.getElementById('exportJsonBtn');
+            const jsonFileInput = document.getElementById('jsonFileInput');
+            const storageStatus = document.getElementById('storageStatus');
+            const allWordsTab = document.getElementById('allWordsTab');
+            const favoritesTab = document.getElementById('favoritesTab');
+            const favoritesCount = document.getElementById('favoritesCount');
+
+            // --- State ---
+            let words = [];
+            let currentView = 'all';
+            const STORAGE_KEY = 'vocab_app_data_v1';
+            const JSON_SOURCE_PATH = './vocabApp.words.json';
+            let jsonFileHandle = null;
+
+            // --- Default Data (if storage empty) ---
+            const defaultWords = [
+                {
+                    id: '1',
+                    word: 'attend',
+                    phonetic: "/əˈtend/",
+                    partOfSpeech: 'verb',
+                    englishMeaning: 'to be present at an event',
+                    vietnameseMeaning: 'tham gia',
+                    example: 'No one attended the football game yesterday.',
+                    synonyms: 'appear, show up',
+                    antonyms: 'miss, be absent',
+                    collocations: 'attend a meeting, attend school',
+                    audioUrl: 'https://api.dictionaryapi.dev/media/pronunciations/en/attend-us.mp3',
+                    favorite: false
+                },
+                {
+                    id: '2',
+                    word: 'announce',
+                    phonetic: "/əˈnaʊns/",
+                    partOfSpeech: 'verb',
+                    englishMeaning: 'to make a public statement',
+                    vietnameseMeaning: 'công bố',
+                    example: 'They announced their engagement.',
+                    synonyms: 'declare, proclaim',
+                    antonyms: 'conceal, hide',
+                    collocations: 'announce a plan, officially announce',
+                    audioUrl: 'https://api.dictionaryapi.dev/media/pronunciations/en/announce-us.mp3',
+                    favorite: false
+                }
+            ];
+
+            // --- Helper Functions ---
+
+            const setStorageStatus = (message, type = 'neutral') => {
+                const colorMap = {
+                    neutral: 'text-gray-600',
+                    ok: 'text-green-700',
+                    warn: 'text-amber-700',
+                    error: 'text-red-600'
+                };
+
+                storageStatus.className = `text-sm ${colorMap[type] || colorMap.neutral}`;
+                storageStatus.textContent = message;
+            };
+
+            const safeReadString = (value) => (typeof value === 'string' ? value : '');
+
+            const ensureArray = (value) => {
+                if (Array.isArray(value)) return value;
+                if (typeof value === 'string' && value.trim()) {
+                    return value.split(',').map(item => item.trim()).filter(Boolean);
+                }
+                return [];
+            };
+
+            const pickFirstNonEmpty = (items = []) => items.find(item => typeof item === 'string' && item.trim()) || '';
+
+            const toAppWord = (entry) => {
+                const posFromArray = Array.isArray(entry.partOfSpeech) ? entry.partOfSpeech[0] : safeReadString(entry.partOfSpeech);
+                const partOfSpeech = (posFromArray || 'noun').trim();
+
+                const englishMeaning =
+                    (entry.definitions && typeof entry.definitions === 'object' && safeReadString(entry.definitions[partOfSpeech])) ||
+                    safeReadString(entry.englishMeaning);
+
+                const vietnameseMeaning =
+                    (entry.vietnamese && typeof entry.vietnamese === 'object' && safeReadString(entry.vietnamese[partOfSpeech])) ||
+                    safeReadString(entry.vietnameseMeaning);
+
+                const phonetic =
+                    (entry.phonetics && typeof entry.phonetics === 'object' && (safeReadString(entry.phonetics.us) || safeReadString(entry.phonetics.uk))) ||
+                    safeReadString(entry.phonetic);
+
+                const audioUrl =
+                    (entry.audio && typeof entry.audio === 'object' && (safeReadString(entry.audio.us) || safeReadString(entry.audio.uk))) ||
+                    safeReadString(entry.audioUrl);
+
+                const synonyms = ensureArray(entry.synonyms).join(', ');
+                const antonyms = ensureArray(entry.antonyms).join(', ');
+                const collocations = ensureArray(entry.collocations).join(', ');
+                const example = pickFirstNonEmpty(ensureArray(entry.examples)) || safeReadString(entry.example);
+
+                const rawId = entry.id || (entry._id && entry._id.$oid) || generateId();
+                const createdAtRaw = entry.createdAt && entry.createdAt.$date ? entry.createdAt.$date : entry.createdAt;
+                const updatedAtRaw = entry.updatedAt && entry.updatedAt.$date ? entry.updatedAt.$date : entry.updatedAt;
+                const favorite = Boolean(entry.favorite ?? entry.isFavorite);
+
+                return {
+                    id: String(rawId),
+                    word: safeReadString(entry.word).trim(),
+                    phonetic: phonetic.trim(),
+                    partOfSpeech,
+                    englishMeaning: englishMeaning.trim(),
+                    vietnameseMeaning: vietnameseMeaning.trim(),
+                    example: example.trim(),
+                    synonyms: synonyms.trim(),
+                    antonyms: antonyms.trim(),
+                    collocations: collocations.trim(),
+                    audioUrl: audioUrl.trim(),
+                    createdAt: createdAtRaw || new Date().toISOString(),
+                    updatedAt: updatedAtRaw || new Date().toISOString(),
+                    favorite
+                };
+            };
+
+            const toStorageWord = (item) => {
+                const pos = item.partOfSpeech || 'noun';
+                const now = new Date().toISOString();
+                return {
+                    _id: { $oid: item.id || generateId() },
+                    word: item.word,
+                    phonetics: {
+                        uk: item.phonetic || '',
+                        us: item.phonetic || ''
+                    },
+                    audio: {
+                        uk: item.audioUrl || '',
+                        us: item.audioUrl || ''
+                    },
+                    partOfSpeech: [pos],
+                    definitions: {
+                        [pos]: item.englishMeaning || ''
+                    },
+                    vietnamese: {
+                        [pos]: item.vietnameseMeaning || ''
+                    },
+                    synonyms: ensureArray(item.synonyms),
+                    antonyms: ensureArray(item.antonyms),
+                    collocations: ensureArray(item.collocations),
+                    examples: ensureArray(item.example || ''),
+                    favorite: Boolean(item.favorite),
+                    createdAt: { $date: item.createdAt || now },
+                    updatedAt: { $date: item.updatedAt || now },
+                    __v: 0
+                };
+            };
+
+            const parseWordsFromJson = (jsonPayload) => {
+                const parsed = JSON.parse(jsonPayload);
+                if (!Array.isArray(parsed)) throw new Error('JSON root must be an array of words.');
+                const mapped = parsed.map(toAppWord).filter(item => item.word && item.englishMeaning);
+                if (!mapped.length) throw new Error('JSON does not contain valid vocabulary entries.');
+                return mapped;
+            };
+
+            const persistLocal = () => {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(words));
+            };
+
+            const writeJsonToConnectedFile = async () => {
+                if (!jsonFileHandle) return false;
+
+                try {
+                    const writable = await jsonFileHandle.createWritable();
+                    await writable.write(JSON.stringify(words.map(toStorageWord), null, 2));
+                    await writable.close();
+                    return true;
+                } catch (error) {
+                    console.error(error);
+                    setStorageStatus('Could not write JSON file. Reconnect storage and try again.', 'error');
+                    return false;
+                }
+            };
+
+            /** Save app data to local + JSON file (if connected) */
+            const saveData = async () => {
+                persistLocal();
+                const wroteFile = await writeJsonToConnectedFile();
+                if (wroteFile) {
+                    setStorageStatus('Storage: synced to connected JSON file.', 'ok');
+                } else if (!jsonFileHandle) {
+                    setStorageStatus('Storage: local only. Connect JSON for direct file save.', 'warn');
+                }
+            };
+
+            /** Load from JSON file path, localStorage, or defaults */
+            const loadData = async () => {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                if (stored) {
+                    try {
+                        const parsedLocal = JSON.parse(stored);
+                        words = Array.isArray(parsedLocal)
+                            ? parsedLocal.map(item => ({ ...item, favorite: Boolean(item.favorite) }))
+                            : [];
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+
+                try {
+                    const response = await fetch(JSON_SOURCE_PATH, { cache: 'no-store' });
+                    if (!response.ok) throw new Error('JSON source not found');
+                    const jsonText = await response.text();
+                    words = parseWordsFromJson(jsonText);
+                    persistLocal();
+                    setStorageStatus('Storage: loaded from vocabApp.words.json', 'ok');
+                } catch (error) {
+                    if (!words.length) {
+                        words = [...defaultWords];
+                        persistLocal();
+                        setStorageStatus('Storage: using default list (JSON not available).', 'warn');
+                    } else {
+                        setStorageStatus('Storage: loaded from local cache (JSON not reachable).', 'warn');
+                    }
+                }
+
+                applyFilters();
+            };
+
+            /** Generate Unique ID */
+            const generateId = () => {
+                return Date.now().toString(36) + Math.random().toString(36).substr(2);
+            };
+
+            const escapeHtml = (unsafe = '') => {
+                return String(unsafe)
+                    .replaceAll('&', '&amp;')
+                    .replaceAll('<', '&lt;')
+                    .replaceAll('>', '&gt;')
+                    .replaceAll('"', '&quot;')
+                    .replaceAll("'", '&#039;');
+            };
+
+            const escapeForSingleQuoteJs = (unsafe = '') => {
+                return String(unsafe)
+                    .replaceAll('\\', '\\\\')
+                    .replaceAll("'", "\\'");
+            };
+
+            const uniqueNormalizedList = (items = [], max = 8) => {
+                const seen = new Set();
+                const cleaned = [];
+
+                for (const raw of items) {
+                    const value = safeReadString(raw).trim();
+                    if (!value) continue;
+                    const key = value.toLowerCase();
+                    if (seen.has(key)) continue;
+                    seen.add(key);
+                    cleaned.push(value);
+                    if (cleaned.length >= max) break;
+                }
+
+                return cleaned;
+            };
+
+            const buildFallbackExample = (word, partOfSpeech) => {
+                if (!word) return '';
+                if (partOfSpeech === 'verb') return `I try to ${word} every day to improve my English.`;
+                if (partOfSpeech === 'adjective') return `The teacher gave us a very ${word} explanation.`;
+                return `I learned a new word today: "${word}".`;
+            };
+
+            const fetchDatamuseWords = async (query) => {
+                const response = await fetch(`https://api.datamuse.com/words?${query}`);
+                if (!response.ok) throw new Error('Datamuse request failed');
+                const data = await response.json();
+                return Array.isArray(data) ? data.map(item => item.word).filter(Boolean) : [];
+            };
+
+            const fetchVietnameseMeaning = async (englishText) => {
+                if (!englishText) return '';
+
+                const response = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(englishText)}&langpair=en|vi`);
+                if (!response.ok) throw new Error('Translation request failed');
+
+                const data = await response.json();
+                const translated = safeReadString(data?.responseData?.translatedText).trim();
+                if (!translated) return '';
+                return translated.replace(/\s+/g, ' ');
+            };
+
+            /** Play Audio */
+            window.playAudio = (url, textFallback) => {
+                if (url && url !== "undefined") {
+                    const audio = new Audio(url);
+                    audio.play().catch(e => {
+                        console.warn("Audio play failed, falling back to TTS", e);
+                        speak(textFallback);
+                    });
+                } else {
+                    speak(textFallback);
+                }
+            };
+
+            /** TTS Fallback */
+            const speak = (text) => {
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel(); // Stop any current speech
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'en-US';
+                    window.speechSynthesis.speak(utterance);
+                }
+            };
+
+            // --- Rendering ---
+
+            const renderWords = (list) => {
+                vocabularyList.innerHTML = '';
+                if (list.length === 0) {
+                    const emptyMessage = currentView === 'favorites'
+                        ? 'No favorite words yet. Tap the star icon on any word.'
+                        : 'No words found. Add some to get started!';
+                    vocabularyList.innerHTML = `<div class="text-center py-10 text-gray-500"><i class="fas fa-book-open text-4xl mb-3 opacity-30"></i><p>${emptyMessage}</p></div>`;
+                    return;
+                }
+
+                list.forEach(item => {
+                    // Create tags for extras
+                    const safeWord = escapeHtml(item.word);
+                    const safePhonetic = escapeHtml(item.phonetic || '');
+                    const safePos = escapeHtml(item.partOfSpeech || 'unknown');
+                    const safeEnglishMeaning = escapeHtml(item.englishMeaning || '');
+                    const safeVietnameseMeaning = escapeHtml(item.vietnameseMeaning || '');
+                    const safeSynonyms = escapeHtml(item.synonyms || '');
+                    const safeAntonyms = escapeHtml(item.antonyms || '');
+                    const safeCollocations = escapeHtml(item.collocations || '');
+                    const safeExample = escapeHtml(item.example || '');
+                    const escapedId = encodeURIComponent(item.id);
+                    const safeAudioUrl = escapeForSingleQuoteJs(item.audioUrl || '');
+                    const wordForJs = escapeForSingleQuoteJs(item.word || '');
+                    const exampleForJs = escapeForSingleQuoteJs(item.example || '');
+                    const favoriteIconClass = item.favorite ? 'fas fa-star text-yellow-400' : 'far fa-star text-gray-400 hover:text-yellow-400';
+
+                    const synonymsHtml = item.synonyms ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-green-600">Syn:</span> ${safeSynonyms}</p>` : '';
+                    const antonymsHtml = item.antonyms ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-red-500">Ant:</span> ${safeAntonyms}</p>` : '';
+                    const collocationsHtml = item.collocations ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-blue-600">Col:</span> ${safeCollocations}</p>` : '';
+                    
+                    const card = document.createElement('div');
+                    card.className = 'card group';
+                    card.innerHTML = `
+                        <!-- Favorite Star -->
+                        <button onclick="toggleFavorite(decodeURIComponent('${escapedId}'))" class="absolute top-4 left-4 focus:outline-none" title="Favorite">
+                            <i class="${favoriteIconClass} text-xl transition-colors"></i>
+                        </button>
+
+                        <!-- Action Buttons (Edit/Delete) -->
+                        <div class="absolute top-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-pen action-btn text-blue-500 hover:text-blue-700" onclick="openEditModal(decodeURIComponent('${escapedId}'))" title="Edit"></i>
+                            <i class="fas fa-trash action-btn text-red-500 hover:text-red-700" onclick="deleteWord(decodeURIComponent('${escapedId}'))" title="Delete"></i>
+                        </div>
+
+                        <!-- Header -->
+                        <div class="flex items-center mb-1 ml-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mr-3">${safeWord}</h2>
+                            <button onclick="playAudio('${safeAudioUrl}', '${wordForJs}')" class="focus:outline-none">
+                                <i class="fas fa-volume-up speaker-icon text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Sub-header -->
+                        <div class="flex flex-wrap items-baseline gap-2 mb-3">
+                            <span class="text-lg text-gray-600 font-serif italic">${safePhonetic}</span>
+                            <span class="text-sm font-semibold bg-gray-200 text-gray-700 px-2 py-0.5 rounded">${safePos}</span>
+                        </div>
+
+                        <!-- Meanings -->
+                        <div class="mb-4 space-y-1">
+                            <p class="text-gray-800"><span class="font-bold text-blue-900">Eng:</span> ${safeEnglishMeaning}</p>
+                            ${item.vietnameseMeaning ? `<p class="text-gray-800"><span class="font-bold text-red-900">Vie:</span> ${safeVietnameseMeaning}</p>` : ''}
+                        </div>
+
+                        <!-- Extra Details Grid -->
+                        <div class="mb-4 bg-gray-50 p-2 rounded-md ${(!item.synonyms && !item.antonyms && !item.collocations) ? 'hidden' : ''}">
+                            ${synonymsHtml}
+                            ${antonymsHtml}
+                            ${collocationsHtml}
+                        </div>
+
+                        <!-- Example -->
+                        ${item.example ? `
+                        <div class="text-gray-700 italic border-l-4 border-blue-200 pl-3">
+                            "${safeExample}"
+                            <button onclick="playAudio(null, '${exampleForJs}')" class="ml-2 text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-volume-up text-sm"></i>
+                            </button>
+                        </div>` : ''}
+                    `;
+                    vocabularyList.appendChild(card);
+                });
+            };
+
+            const updateViewTabs = () => {
+                const favoriteTotal = words.filter(item => item.favorite).length;
+                favoritesCount.textContent = String(favoriteTotal);
+
+                if (currentView === 'favorites') {
+                    favoritesTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-yellow-400 text-gray-900';
+                    allWordsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700';
+                } else {
+                    allWordsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white';
+                    favoritesTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700';
+                }
+            };
+
+            const applyFilters = () => {
+                const term = searchInput.value.toLowerCase().trim();
+                const filtered = words.filter(w => {
+                    const matchesSearch =
+                        safeReadString(w.word).toLowerCase().includes(term) ||
+                        safeReadString(w.vietnameseMeaning).toLowerCase().includes(term) ||
+                        safeReadString(w.englishMeaning).toLowerCase().includes(term);
+                    const matchesView = currentView === 'all' ? true : Boolean(w.favorite);
+                    return matchesSearch && matchesView;
+                });
+                updateViewTabs();
+                renderWords(filtered);
+            };
+
+            // --- CRUD Operations ---
+
+            // 1. OPEN MODAL (ADD)
+            addWordBtn.addEventListener('click', () => {
+                wordForm.reset();
+                document.getElementById('wordId').value = '';
+                document.getElementById('audioUrl').value = '';
+                modalTitle.textContent = "Add a New Word";
+                fetchStatus.textContent = '';
+                modal.classList.remove('hidden');
+            });
+
+            // 2. OPEN MODAL (EDIT) - Global function to be called from HTML
+            window.openEditModal = (id) => {
+                const wordToEdit = words.find(w => w.id === id);
+                if (!wordToEdit) return;
+
+                document.getElementById('wordId').value = wordToEdit.id;
+                document.getElementById('wordInput').value = wordToEdit.word;
+                document.getElementById('phonetics').value = wordToEdit.phonetic || '';
+                document.getElementById('partOfSpeech').value = wordToEdit.partOfSpeech || '';
+                document.getElementById('englishMeaning').value = wordToEdit.englishMeaning || '';
+                document.getElementById('vietnameseMeaning').value = wordToEdit.vietnameseMeaning || '';
+                document.getElementById('synonyms').value = wordToEdit.synonyms || '';
+                document.getElementById('antonyms').value = wordToEdit.antonyms || '';
+                document.getElementById('collocations').value = wordToEdit.collocations || '';
+                document.getElementById('exampleSentence').value = wordToEdit.example || '';
+                document.getElementById('audioUrl').value = wordToEdit.audioUrl || '';
+
+                modalTitle.textContent = "Edit Word";
+                fetchStatus.textContent = '';
+                modal.classList.remove('hidden');
+            };
+
+            // 3. DELETE
+            window.deleteWord = (id) => {
+                if (confirm('Are you sure you want to delete this word?')) {
+                    words = words.filter(w => w.id !== id);
+                    saveData();
+                    applyFilters();
+                }
+            };
+
+            window.toggleFavorite = (id) => {
+                const index = words.findIndex(w => w.id === id);
+                if (index === -1) return;
+                words[index].favorite = !words[index].favorite;
+                words[index].updatedAt = new Date().toISOString();
+                saveData();
+                applyFilters();
+            };
+
+            // 4. SAVE (CREATE or UPDATE)
+            wordForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const id = document.getElementById('wordId').value;
+                const newWordData = {
+                    id: id || generateId(),
+                    word: document.getElementById('wordInput').value.trim(),
+                    phonetic: document.getElementById('phonetics').value.trim(),
+                    partOfSpeech: document.getElementById('partOfSpeech').value.trim(),
+                    englishMeaning: document.getElementById('englishMeaning').value.trim(),
+                    vietnameseMeaning: document.getElementById('vietnameseMeaning').value.trim(),
+                    synonyms: document.getElementById('synonyms').value.trim(),
+                    antonyms: document.getElementById('antonyms').value.trim(),
+                    collocations: document.getElementById('collocations').value.trim(),
+                    example: document.getElementById('exampleSentence').value.trim(),
+                    audioUrl: document.getElementById('audioUrl').value,
+                    createdAt: id ? undefined : new Date().toISOString(),
+                    updatedAt: new Date().toISOString(),
+                    favorite: false
+                };
+
+                if (id) {
+                    // Update
+                    const index = words.findIndex(w => w.id === id);
+                    if (index !== -1) {
+                        // Keep creation date
+                        newWordData.createdAt = words[index].createdAt;
+                        newWordData.favorite = Boolean(words[index].favorite);
+                        words[index] = newWordData;
+                    }
+                } else {
+                    // Create (Add to top)
+                    words.unshift(newWordData);
+                }
+
+                saveData();
+                applyFilters();
+                closeModal();
+            });
+
+
+            // --- Fetching from API ---
+            fetchWordDataBtn.addEventListener('click', async () => {
+                const word = document.getElementById('wordInput').value.trim();
+                if (!word) {
+                    fetchStatus.textContent = "Please enter a word first.";
+                    return;
+                }
+
+                fetchStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching dictionary + synonyms + antonyms + collocations + Vietnamese...';
+                
+                try {
+                    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+                    if (!response.ok) throw new Error('Not found');
+                    
+                    const data = await response.json();
+                    const entry = data[0];
+                    const meanings = Array.isArray(entry.meanings) ? entry.meanings : [];
+                    const primaryMeaning = meanings.find(m => Array.isArray(m.definitions) && m.definitions.length) || meanings[0] || {};
+                    const primaryDefinition = Array.isArray(primaryMeaning.definitions) ? primaryMeaning.definitions[0] : null;
+
+                    const phonetics = Array.isArray(entry.phonetics) ? entry.phonetics : [];
+                    const validPhonetic = phonetics.find(p => p.audio && p.text) || phonetics.find(p => p.audio) || phonetics.find(p => p.text) || {};
+
+                    const partOfSpeech = safeReadString(primaryMeaning.partOfSpeech) || 'noun';
+                    const englishMeaning = safeReadString(primaryDefinition?.definition);
+
+                    const apiSynonyms = uniqueNormalizedList([
+                        ...(primaryMeaning.synonyms || []),
+                        ...(primaryDefinition?.synonyms || [])
+                    ], 10);
+                    const apiAntonyms = uniqueNormalizedList([
+                        ...(primaryMeaning.antonyms || []),
+                        ...(primaryDefinition?.antonyms || [])
+                    ], 10);
+
+                    const dictionaryExamples = uniqueNormalizedList(
+                        meanings.flatMap(m => (m.definitions || []).map(d => d.example)),
+                        5
+                    );
+                    const exampleSentence = dictionaryExamples[0] || buildFallbackExample(word, partOfSpeech);
+
+                    const [
+                        datamuseSynonymsResult,
+                        datamuseAntonymsResult,
+                        previousCollocationsResult,
+                        nextCollocationsResult,
+                        vietnameseResult
+                    ] = await Promise.allSettled([
+                        fetchDatamuseWords(`rel_syn=${encodeURIComponent(word)}&max=10`),
+                        fetchDatamuseWords(`rel_ant=${encodeURIComponent(word)}&max=10`),
+                        fetchDatamuseWords(`rel_bgb=${encodeURIComponent(word)}&max=6`),
+                        fetchDatamuseWords(`rel_bga=${encodeURIComponent(word)}&max=6`),
+                        fetchVietnameseMeaning(englishMeaning || word)
+                    ]);
+
+                    const datamuseSynonyms = datamuseSynonymsResult.status === 'fulfilled' ? datamuseSynonymsResult.value : [];
+                    const datamuseAntonyms = datamuseAntonymsResult.status === 'fulfilled' ? datamuseAntonymsResult.value : [];
+                    const previousCollocations = previousCollocationsResult.status === 'fulfilled' ? previousCollocationsResult.value : [];
+                    const nextCollocations = nextCollocationsResult.status === 'fulfilled' ? nextCollocationsResult.value : [];
+                    const vietnameseMeaning = vietnameseResult.status === 'fulfilled' ? vietnameseResult.value : '';
+
+                    const mergedSynonyms = uniqueNormalizedList([...apiSynonyms, ...datamuseSynonyms], 8);
+                    const mergedAntonyms = uniqueNormalizedList([...apiAntonyms, ...datamuseAntonyms], 8);
+                    const mergedCollocations = uniqueNormalizedList([
+                        ...previousCollocations.map(item => `${item} ${word}`),
+                        ...nextCollocations.map(item => `${word} ${item}`)
+                    ], 8);
+
+                    document.getElementById('phonetics').value = safeReadString(validPhonetic.text);
+                    document.getElementById('audioUrl').value = safeReadString(validPhonetic.audio);
+                    document.getElementById('partOfSpeech').value = partOfSpeech;
+                    document.getElementById('englishMeaning').value = englishMeaning;
+                    document.getElementById('vietnameseMeaning').value = vietnameseMeaning;
+                    document.getElementById('synonyms').value = mergedSynonyms.join(', ');
+                    document.getElementById('antonyms').value = mergedAntonyms.join(', ');
+                    document.getElementById('collocations').value = mergedCollocations.join(', ');
+                    document.getElementById('exampleSentence').value = exampleSentence;
+
+                    const missingFields = [];
+                    if (!document.getElementById('vietnameseMeaning').value.trim()) missingFields.push('Vietnamese');
+                    if (!document.getElementById('synonyms').value.trim()) missingFields.push('synonyms');
+                    if (!document.getElementById('antonyms').value.trim()) missingFields.push('antonyms');
+                    if (!document.getElementById('collocations').value.trim()) missingFields.push('collocations');
+                    if (!document.getElementById('exampleSentence').value.trim()) missingFields.push('example');
+
+                    if (missingFields.length) {
+                        fetchStatus.innerHTML = `<span class="text-amber-600"><i class="fas fa-info-circle"></i> Partial result. Missing: ${missingFields.join(', ')}.</span>`;
+                    } else {
+                        fetchStatus.innerHTML = '<span class="text-green-600"><i class="fas fa-check"></i> Great! All main fields were auto-filled.</span>';
+                    }
+                } catch (err) {
+                    console.error(err);
+                    fetchStatus.innerHTML = '<span class="text-red-500"><i class="fas fa-exclamation-circle"></i> Word not found on online dictionary.</span>';
+                }
+            });
+
+
+            // --- UI Handlers ---
+            const closeModal = () => {
+                modal.classList.add('hidden');
+            };
+
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Search
+            searchInput.addEventListener('input', (e) => {
+                applyFilters();
+            });
+
+            allWordsTab.addEventListener('click', () => {
+                currentView = 'all';
+                applyFilters();
+            });
+
+            favoritesTab.addEventListener('click', () => {
+                currentView = 'favorites';
+                applyFilters();
+            });
+
+            // Connect JSON file for direct write-back
+            connectStorageBtn.addEventListener('click', async () => {
+                if (!window.showOpenFilePicker) {
+                    setStorageStatus('Browser does not support direct file save. Use Import/Export JSON.', 'warn');
+                    return;
+                }
+
+                try {
+                    const [handle] = await window.showOpenFilePicker({
+                        multiple: false,
+                        types: [{ description: 'JSON files', accept: { 'application/json': ['.json'] } }]
+                    });
+                    if (!handle) return;
+
+                    jsonFileHandle = handle;
+                    const file = await handle.getFile();
+                    const text = await file.text();
+                    words = parseWordsFromJson(text);
+                    await saveData();
+                    applyFilters();
+                    setStorageStatus(`Storage: connected to ${file.name}. CRUD now writes into this file.`, 'ok');
+                } catch (error) {
+                    if (error && error.name === 'AbortError') return;
+                    console.error(error);
+                    setStorageStatus('Failed to connect JSON file.', 'error');
+                }
+            });
+
+            // Import JSON list from user-selected file
+            importJsonBtn.addEventListener('click', () => jsonFileInput.click());
+            jsonFileInput.addEventListener('change', async (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    words = parseWordsFromJson(text);
+                    await saveData();
+                    applyFilters();
+                    setStorageStatus(`Storage: imported ${file.name}.`, 'ok');
+                } catch (error) {
+                    console.error(error);
+                    setStorageStatus(`Import failed: ${error.message}`, 'error');
+                } finally {
+                    jsonFileInput.value = '';
+                }
+            });
+
+            // Export current list as JSON file
+            exportJsonBtn.addEventListener('click', () => {
+                const jsonData = JSON.stringify(words.map(toStorageWord), null, 2);
+                const blob = new Blob([jsonData], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const anchor = document.createElement('a');
+                anchor.href = url;
+                anchor.download = 'vocabApp.words.json';
+                document.body.appendChild(anchor);
+                anchor.click();
+                document.body.removeChild(anchor);
+                URL.revokeObjectURL(url);
+                setStorageStatus('Exported updated JSON file.', 'ok');
+            });
+
+            // Initialize
+            loadData();
+        });
+    </script>
+</body>
+</html>
