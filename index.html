@@ -88,7 +88,7 @@
         </header>
         <div class="mb-6 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <p id="storageStatus" class="text-sm text-gray-600">Database: connecting...</p>
+                <p id="databaseStatus" class="text-sm text-gray-600">Database: connecting...</p>
                 <div class="flex flex-wrap gap-2">
                     <button id="refreshDbBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
                         <i class="fas fa-rotate mr-1"></i> Refresh
@@ -225,7 +225,7 @@
             const fetchStatus = document.getElementById('fetchStatus');
             const modalTitle = document.getElementById('modalTitle');
             const refreshDbBtn = document.getElementById('refreshDbBtn');
-            const storageStatus = document.getElementById('storageStatus');
+            const databaseStatus = document.getElementById('databaseStatus');
             const allWordsTab = document.getElementById('allWordsTab');
             const favoritesTab = document.getElementById('favoritesTab');
             const favoritesCount = document.getElementById('favoritesCount');
@@ -245,7 +245,7 @@
 
             // --- Helper Functions ---
 
-            const setStorageStatus = (message, type = 'neutral') => {
+            const setDatabaseStatus = (message, type = 'neutral') => {
                 const colorMap = {
                     neutral: 'text-gray-600',
                     ok: 'text-green-700',
@@ -253,8 +253,8 @@
                     error: 'text-red-600'
                 };
 
-                storageStatus.className = `text-sm ${colorMap[type] || colorMap.neutral}`;
-                storageStatus.textContent = message;
+                databaseStatus.className = `text-sm ${colorMap[type] || colorMap.neutral}`;
+                databaseStatus.textContent = message;
             };
 
             const safeReadString = (value) => (typeof value === 'string' ? value : '');
@@ -305,7 +305,7 @@
 
             const loadData = async () => {
                 if (!supabaseClient) {
-                    setStorageStatus('Database not configured. Set Supabase URL and anon key in index.html.', 'error');
+                    setDatabaseStatus('Database not configured. Set Supabase URL and anon key in index.html.', 'error');
                     words = [];
                     applyFilters();
                     return;
@@ -318,12 +318,12 @@
 
                 if (error) {
                     console.error(error);
-                    setStorageStatus(`Database error: ${error.message}`, 'error');
+                    setDatabaseStatus(`Database error: ${error.message}`, 'error');
                     return;
                 }
 
                 words = (data || []).map(dbRowToAppWord);
-                setStorageStatus(`Database connected. ${words.length} words loaded.`, 'ok');
+                setDatabaseStatus(`Database connected. ${words.length} words loaded.`, 'ok');
                 applyFilters();
             };
 
@@ -566,7 +566,7 @@
                         .eq('id', id);
                     if (error) {
                         console.error(error);
-                        setStorageStatus(`Delete failed: ${error.message}`, 'error');
+                        setDatabaseStatus(`Delete failed: ${error.message}`, 'error');
                         return;
                     }
                     await loadData();
@@ -587,7 +587,7 @@
                     .eq('id', id);
                 if (error) {
                     console.error(error);
-                    setStorageStatus(`Favorite update failed: ${error.message}`, 'error');
+                    setDatabaseStatus(`Favorite update failed: ${error.message}`, 'error');
                     return;
                 }
                 words[index].favorite = nextFavorite;
@@ -631,7 +631,7 @@
                         .eq('id', id);
                     if (error) {
                         console.error(error);
-                        setStorageStatus(`Update failed: ${error.message}`, 'error');
+                        setDatabaseStatus(`Update failed: ${error.message}`, 'error');
                         return;
                     }
                 } else {
@@ -643,7 +643,7 @@
                         });
                     if (error) {
                         console.error(error);
-                        setStorageStatus(`Create failed: ${error.message}`, 'error');
+                        setDatabaseStatus(`Create failed: ${error.message}`, 'error');
                         return;
                     }
                 }
