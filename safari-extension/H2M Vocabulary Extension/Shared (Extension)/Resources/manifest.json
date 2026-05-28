@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "H2M Vocabulary Quick Access",
+  "version": "1.0.0",
+  "description": "Quickly open H2M Vocabulary Builder from Safari.",
+  "action": {
+    "default_title": "H2M Vocabulary",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://h2mvocab.vercel.app/*",
+    "https://*.vercel.app/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ]
+}

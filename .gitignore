@@ -3,3 +3,6 @@ config.js
 .DS_Store
 **/.DS_Store
 ._*
+**/*.xcuserdata/
+**/*.xcuserdatad/
+DerivedData/

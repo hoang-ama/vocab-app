@@ -1,0 +1,1000 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C46CCACC2FC5858C0055DB37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCACB2FC5858C0055DB37 /* AppDelegate.swift */; };
+		C46CCACE2FC5858C0055DB37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCACD2FC5858C0055DB37 /* SceneDelegate.swift */; };
+		C46CCAD12FC5858C0055DB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46CCACF2FC5858C0055DB37 /* LaunchScreen.storyboard */; };
+		C46CCAD42FC5858C0055DB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46CCAD22FC5858C0055DB37 /* Main.storyboard */; };
+		C46CCADD2FC5858C0055DB37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCADC2FC5858C0055DB37 /* AppDelegate.swift */; };
+		C46CCAE02FC5858C0055DB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46CCADE2FC5858C0055DB37 /* Main.storyboard */; };
+		C46CCAE72FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C46CCAE62FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C46CCAF12FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C46CCAF02FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C46CCAF62FC5858C0055DB37 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABB2FC5858C0055DB37 /* Main.html */; };
+		C46CCAF72FC5858C0055DB37 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABB2FC5858C0055DB37 /* Main.html */; };
+		C46CCAF82FC5858C0055DB37 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABD2FC5858C0055DB37 /* Icon.png */; };
+		C46CCAF92FC5858C0055DB37 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABD2FC5858C0055DB37 /* Icon.png */; };
+		C46CCAFA2FC5858C0055DB37 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABE2FC5858C0055DB37 /* Style.css */; };
+		C46CCAFB2FC5858C0055DB37 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABE2FC5858C0055DB37 /* Style.css */; };
+		C46CCAFC2FC5858C0055DB37 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABF2FC5858C0055DB37 /* Script.js */; };
+		C46CCAFD2FC5858C0055DB37 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCABF2FC5858C0055DB37 /* Script.js */; };
+		C46CCAFE2FC5858C0055DB37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCAC02FC5858C0055DB37 /* ViewController.swift */; };
+		C46CCAFF2FC5858C0055DB37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCAC02FC5858C0055DB37 /* ViewController.swift */; };
+		C46CCB002FC5858C0055DB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46CCAC12FC5858C0055DB37 /* Assets.xcassets */; };
+		C46CCB012FC5858C0055DB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46CCAC12FC5858C0055DB37 /* Assets.xcassets */; };
+		C46CCB022FC5858C0055DB37 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCAC32FC5858C0055DB37 /* SafariWebExtensionHandler.swift */; };
+		C46CCB032FC5858C0055DB37 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46CCAC32FC5858C0055DB37 /* SafariWebExtensionHandler.swift */; };
+		C46CCB1A2FC5858D0055DB37 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB152FC5858D0055DB37 /* popup.js */; };
+		C46CCB1B2FC5858D0055DB37 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB162FC5858D0055DB37 /* background.js */; };
+		C46CCB1C2FC5858D0055DB37 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB172FC5858D0055DB37 /* popup.html */; };
+		C46CCB1D2FC5858D0055DB37 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB182FC5858D0055DB37 /* manifest.json */; };
+		C46CCB1E2FC5858D0055DB37 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB192FC5858D0055DB37 /* popup.css */; };
+		C46CCB1F2FC5858D0055DB37 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB152FC5858D0055DB37 /* popup.js */; };
+		C46CCB202FC5858D0055DB37 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB162FC5858D0055DB37 /* background.js */; };
+		C46CCB212FC5858D0055DB37 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB172FC5858D0055DB37 /* popup.html */; };
+		C46CCB222FC5858D0055DB37 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB182FC5858D0055DB37 /* manifest.json */; };
+		C46CCB232FC5858D0055DB37 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = C46CCB192FC5858D0055DB37 /* popup.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C46CCAE82FC5858C0055DB37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C46CCAB52FC5858C0055DB37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46CCAE52FC5858C0055DB37;
+			remoteInfo = "H2M Vocabulary Extension Extension (iOS)";
+		};
+		C46CCAF22FC5858C0055DB37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C46CCAB52FC5858C0055DB37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46CCAEF2FC5858C0055DB37;
+			remoteInfo = "H2M Vocabulary Extension Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C46CCB092FC5858C0055DB37 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C46CCAE72FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCB102FC5858C0055DB37 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C46CCAF12FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C46CCABC2FC5858C0055DB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		C46CCABD2FC5858C0055DB37 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C46CCABE2FC5858C0055DB37 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		C46CCABF2FC5858C0055DB37 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		C46CCAC02FC5858C0055DB37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C46CCAC12FC5858C0055DB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C46CCAC32FC5858C0055DB37 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		C46CCAC82FC5858C0055DB37 /* H2M Vocabulary Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H2M Vocabulary Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46CCACB2FC5858C0055DB37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C46CCACD2FC5858C0055DB37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C46CCAD02FC5858C0055DB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C46CCAD32FC5858C0055DB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C46CCAD52FC5858C0055DB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46CCADA2FC5858C0055DB37 /* H2M Vocabulary Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H2M Vocabulary Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46CCADC2FC5858C0055DB37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C46CCADF2FC5858C0055DB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C46CCAE12FC5858C0055DB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46CCAE62FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "H2M Vocabulary Extension Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46CCAEB2FC5858C0055DB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46CCAF02FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "H2M Vocabulary Extension Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46CCAF52FC5858C0055DB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46CCB152FC5858D0055DB37 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = Resources/popup.js; sourceTree = "<group>"; };
+		C46CCB162FC5858D0055DB37 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		C46CCB172FC5858D0055DB37 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		C46CCB182FC5858D0055DB37 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		C46CCB192FC5858D0055DB37 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = Resources/popup.css; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C46CCAC52FC5858C0055DB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAD72FC5858C0055DB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAE32FC5858C0055DB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAED2FC5858C0055DB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C46CCAB42FC5858C0055DB37 = {
+			isa = PBXGroup;
+			children = (
+				C46CCAB92FC5858C0055DB37 /* Shared (App) */,
+				C46CCAC22FC5858C0055DB37 /* Shared (Extension) */,
+				C46CCACA2FC5858C0055DB37 /* iOS (App) */,
+				C46CCADB2FC5858C0055DB37 /* macOS (App) */,
+				C46CCAEA2FC5858C0055DB37 /* iOS (Extension) */,
+				C46CCAF42FC5858C0055DB37 /* macOS (Extension) */,
+				C46CCAC92FC5858C0055DB37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C46CCAB92FC5858C0055DB37 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCAC02FC5858C0055DB37 /* ViewController.swift */,
+				C46CCAC12FC5858C0055DB37 /* Assets.xcassets */,
+				C46CCABA2FC5858C0055DB37 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		C46CCABA2FC5858C0055DB37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCABB2FC5858C0055DB37 /* Main.html */,
+				C46CCABD2FC5858C0055DB37 /* Icon.png */,
+				C46CCABE2FC5858C0055DB37 /* Style.css */,
+				C46CCABF2FC5858C0055DB37 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C46CCAC22FC5858C0055DB37 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCB142FC5858D0055DB37 /* Resources */,
+				C46CCAC32FC5858C0055DB37 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		C46CCAC92FC5858C0055DB37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCAC82FC5858C0055DB37 /* H2M Vocabulary Extension.app */,
+				C46CCADA2FC5858C0055DB37 /* H2M Vocabulary Extension.app */,
+				C46CCAE62FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */,
+				C46CCAF02FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C46CCACA2FC5858C0055DB37 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCACB2FC5858C0055DB37 /* AppDelegate.swift */,
+				C46CCACD2FC5858C0055DB37 /* SceneDelegate.swift */,
+				C46CCACF2FC5858C0055DB37 /* LaunchScreen.storyboard */,
+				C46CCAD22FC5858C0055DB37 /* Main.storyboard */,
+				C46CCAD52FC5858C0055DB37 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		C46CCADB2FC5858C0055DB37 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCADC2FC5858C0055DB37 /* AppDelegate.swift */,
+				C46CCADE2FC5858C0055DB37 /* Main.storyboard */,
+				C46CCAE12FC5858C0055DB37 /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		C46CCAEA2FC5858C0055DB37 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCAEB2FC5858C0055DB37 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		C46CCAF42FC5858C0055DB37 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCAF52FC5858C0055DB37 /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		C46CCB142FC5858D0055DB37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C46CCB152FC5858D0055DB37 /* popup.js */,
+				C46CCB162FC5858D0055DB37 /* background.js */,
+				C46CCB172FC5858D0055DB37 /* popup.html */,
+				C46CCB182FC5858D0055DB37 /* manifest.json */,
+				C46CCB192FC5858D0055DB37 /* popup.css */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C46CCAC72FC5858C0055DB37 /* H2M Vocabulary Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46CCB0A2FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension (iOS)" */;
+			buildPhases = (
+				C46CCAC42FC5858C0055DB37 /* Sources */,
+				C46CCAC52FC5858C0055DB37 /* Frameworks */,
+				C46CCAC62FC5858C0055DB37 /* Resources */,
+				C46CCB092FC5858C0055DB37 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C46CCAE92FC5858C0055DB37 /* PBXTargetDependency */,
+			);
+			name = "H2M Vocabulary Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "H2M Vocabulary Extension (iOS)";
+			productReference = C46CCAC82FC5858C0055DB37 /* H2M Vocabulary Extension.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C46CCAD92FC5858C0055DB37 /* H2M Vocabulary Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46CCB112FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension (macOS)" */;
+			buildPhases = (
+				C46CCAD62FC5858C0055DB37 /* Sources */,
+				C46CCAD72FC5858C0055DB37 /* Frameworks */,
+				C46CCAD82FC5858C0055DB37 /* Resources */,
+				C46CCB102FC5858C0055DB37 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C46CCAF32FC5858C0055DB37 /* PBXTargetDependency */,
+			);
+			name = "H2M Vocabulary Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "H2M Vocabulary Extension (macOS)";
+			productReference = C46CCADA2FC5858C0055DB37 /* H2M Vocabulary Extension.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C46CCAE52FC5858C0055DB37 /* H2M Vocabulary Extension Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46CCB062FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension Extension (iOS)" */;
+			buildPhases = (
+				C46CCAE22FC5858C0055DB37 /* Sources */,
+				C46CCAE32FC5858C0055DB37 /* Frameworks */,
+				C46CCAE42FC5858C0055DB37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "H2M Vocabulary Extension Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "H2M Vocabulary Extension Extension (iOS)";
+			productReference = C46CCAE62FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C46CCAEF2FC5858C0055DB37 /* H2M Vocabulary Extension Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46CCB0D2FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension Extension (macOS)" */;
+			buildPhases = (
+				C46CCAEC2FC5858C0055DB37 /* Sources */,
+				C46CCAED2FC5858C0055DB37 /* Frameworks */,
+				C46CCAEE2FC5858C0055DB37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "H2M Vocabulary Extension Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "H2M Vocabulary Extension Extension (macOS)";
+			productReference = C46CCAF02FC5858C0055DB37 /* H2M Vocabulary Extension Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C46CCAB52FC5858C0055DB37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					C46CCAC72FC5858C0055DB37 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					C46CCAD92FC5858C0055DB37 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					C46CCAE52FC5858C0055DB37 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					C46CCAEF2FC5858C0055DB37 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = C46CCAB82FC5858C0055DB37 /* Build configuration list for PBXProject "H2M Vocabulary Extension" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C46CCAB42FC5858C0055DB37;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C46CCAC92FC5858C0055DB37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C46CCAC72FC5858C0055DB37 /* H2M Vocabulary Extension (iOS) */,
+				C46CCAD92FC5858C0055DB37 /* H2M Vocabulary Extension (macOS) */,
+				C46CCAE52FC5858C0055DB37 /* H2M Vocabulary Extension Extension (iOS) */,
+				C46CCAEF2FC5858C0055DB37 /* H2M Vocabulary Extension Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C46CCAC62FC5858C0055DB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCAF82FC5858C0055DB37 /* Icon.png in Resources */,
+				C46CCAD12FC5858C0055DB37 /* LaunchScreen.storyboard in Resources */,
+				C46CCAF62FC5858C0055DB37 /* Main.html in Resources */,
+				C46CCAFC2FC5858C0055DB37 /* Script.js in Resources */,
+				C46CCB002FC5858C0055DB37 /* Assets.xcassets in Resources */,
+				C46CCAD42FC5858C0055DB37 /* Main.storyboard in Resources */,
+				C46CCAFA2FC5858C0055DB37 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAD82FC5858C0055DB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCAF92FC5858C0055DB37 /* Icon.png in Resources */,
+				C46CCAFB2FC5858C0055DB37 /* Style.css in Resources */,
+				C46CCAE02FC5858C0055DB37 /* Main.storyboard in Resources */,
+				C46CCAFD2FC5858C0055DB37 /* Script.js in Resources */,
+				C46CCB012FC5858C0055DB37 /* Assets.xcassets in Resources */,
+				C46CCAF72FC5858C0055DB37 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAE42FC5858C0055DB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCB232FC5858D0055DB37 /* popup.css in Resources */,
+				C46CCB222FC5858D0055DB37 /* manifest.json in Resources */,
+				C46CCB202FC5858D0055DB37 /* background.js in Resources */,
+				C46CCB212FC5858D0055DB37 /* popup.html in Resources */,
+				C46CCB1F2FC5858D0055DB37 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAEE2FC5858C0055DB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCB1E2FC5858D0055DB37 /* popup.css in Resources */,
+				C46CCB1D2FC5858D0055DB37 /* manifest.json in Resources */,
+				C46CCB1B2FC5858D0055DB37 /* background.js in Resources */,
+				C46CCB1C2FC5858D0055DB37 /* popup.html in Resources */,
+				C46CCB1A2FC5858D0055DB37 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C46CCAC42FC5858C0055DB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCAFE2FC5858C0055DB37 /* ViewController.swift in Sources */,
+				C46CCACC2FC5858C0055DB37 /* AppDelegate.swift in Sources */,
+				C46CCACE2FC5858C0055DB37 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAD62FC5858C0055DB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCAFF2FC5858C0055DB37 /* ViewController.swift in Sources */,
+				C46CCADD2FC5858C0055DB37 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAE22FC5858C0055DB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCB022FC5858C0055DB37 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46CCAEC2FC5858C0055DB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46CCB032FC5858C0055DB37 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C46CCAE92FC5858C0055DB37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C46CCAE52FC5858C0055DB37 /* H2M Vocabulary Extension Extension (iOS) */;
+			targetProxy = C46CCAE82FC5858C0055DB37 /* PBXContainerItemProxy */;
+		};
+		C46CCAF32FC5858C0055DB37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C46CCAEF2FC5858C0055DB37 /* H2M Vocabulary Extension Extension (macOS) */;
+			targetProxy = C46CCAF22FC5858C0055DB37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C46CCABB2FC5858C0055DB37 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46CCABC2FC5858C0055DB37 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		C46CCACF2FC5858C0055DB37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46CCAD02FC5858C0055DB37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C46CCAD22FC5858C0055DB37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46CCAD32FC5858C0055DB37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C46CCADE2FC5858C0055DB37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46CCADF2FC5858C0055DB37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C46CCB042FC5858C0055DB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C46CCB052FC5858C0055DB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C46CCB072FC5858C0055DB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension.Extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C46CCB082FC5858C0055DB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension.Extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C46CCB0B2FC5858C0055DB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C46CCB0C2FC5858C0055DB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C46CCB0E2FC5858C0055DB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension.Extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C46CCB0F2FC5858C0055DB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension.Extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C46CCB122FC5858C0055DB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C46CCB132FC5858C0055DB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5DF55WRB5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "H2M Vocabulary Extension";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.h2m.vocabulary.extension;
+				PRODUCT_NAME = "H2M Vocabulary Extension";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C46CCAB82FC5858C0055DB37 /* Build configuration list for PBXProject "H2M Vocabulary Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46CCB042FC5858C0055DB37 /* Debug */,
+				C46CCB052FC5858C0055DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46CCB062FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46CCB072FC5858C0055DB37 /* Debug */,
+				C46CCB082FC5858C0055DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46CCB0A2FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46CCB0B2FC5858C0055DB37 /* Debug */,
+				C46CCB0C2FC5858C0055DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46CCB0D2FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46CCB0E2FC5858C0055DB37 /* Debug */,
+				C46CCB0F2FC5858C0055DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46CCB112FC5858C0055DB37 /* Build configuration list for PBXNativeTarget "H2M Vocabulary Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46CCB122FC5858C0055DB37 /* Debug */,
+				C46CCB132FC5858C0055DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C46CCAB52FC5858C0055DB37 /* Project object */;
+}

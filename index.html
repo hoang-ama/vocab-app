@@ -864,7 +864,15 @@
                 await loadData();
             });
 
+            const applyInitialViewFromUrl = () => {
+                const view = new URLSearchParams(window.location.search).get('view');
+                if (view === 'favorites' || view === 'recency' || view === 'all') {
+                    currentView = view;
+                }
+            };
+
             // Initialize
+            applyInitialViewFromUrl();
             loadData();
         });
     </script>

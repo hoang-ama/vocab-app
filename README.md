@@ -16,6 +16,7 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
   - Delete words
 - **Favorites** with star toggle and a dedicated favorites view.
 - **Recency view** to show the latest 10 words added.
+- **Safari extension scaffold** for quick access from the browser toolbar.
 - **Smart search UX**:
   - Real-time filtering
   - Suggestion to add a searched word when no match exists
@@ -38,6 +39,7 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
 - **Database / Backend**: Supabase (Postgres + REST)
 - **Hosting**: Vercel
 - **CI/CD**: GitHub Actions + Vercel CLI deployment workflow
+- **Browser extension**: Safari Web Extension (Manifest V3 scaffold)
 
 ## Project Structure
 
@@ -47,6 +49,14 @@ vocabApp/
 ├── image/
 │   ├── H2M_logo.png                # Header logo
 │   └── favicon.png                 # Browser favicon / OG image reference
+├── safari-extension/
+│   ├── README.md                   # Safari extension build instructions
+│   └── web-extension/
+│       ├── manifest.json
+│       ├── popup.html
+│       ├── popup.css
+│       ├── popup.js
+│       └── background.js
 ├── supabase.schema.sql             # DB table + indexes + RLS policies
 ├── DEPLOY_SUPABASE_VERCEL.md       # Step-by-step go-live guide
 ├── .github/workflows/
@@ -121,6 +131,21 @@ Required GitHub secrets:
 - `VERCEL_PROJECT_ID`
 - `SUPABASE_URL`
 - `SUPABASE_ANON_KEY`
+
+## Safari Extension
+
+The repository includes a Safari extension scaffold in `safari-extension/web-extension`.
+
+What it does:
+
+- Opens the app from Safari toolbar
+- Quick actions:
+  - Open app
+  - Open Favorites view (`?view=favorites`)
+  - Open Recency view (`?view=recency`)
+- Allows saving a custom app URL in extension storage
+
+See detailed instructions in `safari-extension/README.md`.
 
 ## Notes
 
