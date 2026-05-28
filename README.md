@@ -95,6 +95,7 @@ The app reads/writes to `public.vocab_words` with these main fields:
    - Option B: create `config.js` from `config.example.js` and set:
      - `window.VOCAB_SUPABASE_URL`
      - `window.VOCAB_SUPABASE_ANON_KEY`
+     - `window.VOCAB_GEMINI_API_KEY` (optional, for AI Rewrite)
 3. Serve the app with any static server.
    - Example: VS Code Live Server
 4. Open `index.html` in browser and verify:

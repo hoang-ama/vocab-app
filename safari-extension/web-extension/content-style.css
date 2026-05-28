@@ -56,3 +56,45 @@
   height: calc(100% - 42px);
   background: #f3f4f6;
 }
+
+#h2m-vocab-overlay-root iframe.hidden {
+  display: none;
+}
+
+#h2m-vocab-overlay-root .h2m-fallback {
+  height: calc(100% - 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #374151;
+  background: #f9fafb;
+}
+
+#h2m-vocab-overlay-root .h2m-fallback.hidden {
+  display: none;
+}
+
+#h2m-vocab-overlay-root .h2m-fallback-hint {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+#h2m-vocab-overlay-root .h2m-fallback button {
+  all: unset;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#h2m-vocab-overlay-root .h2m-fallback button:hover {
+  background: #1d4ed8;
+}

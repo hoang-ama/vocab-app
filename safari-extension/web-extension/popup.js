@@ -2,6 +2,8 @@ const DEFAULT_APP_URL = "https://h2mvocab.vercel.app";
 
 const openAppBtn = document.getElementById("openAppBtn");
 const togglePanelBtn = document.getElementById("togglePanelBtn");
+const openTranslatorBtn = document.getElementById("openTranslatorBtn");
+const toggleTranslatorPanelBtn = document.getElementById("toggleTranslatorPanelBtn");
 const openFavoritesBtn = document.getElementById("openFavoritesBtn");
 const openRecencyBtn = document.getElementById("openRecencyBtn");
 const saveUrlBtn = document.getElementById("saveUrlBtn");
@@ -19,14 +21,15 @@ const openInNewTab = async (suffix = "") => {
   await chrome.tabs.create({ url });
 };
 
-const toggleInPagePanel = async () => {
+const toggleInPagePanel = async (suffix = "") => {
   const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!activeTab || !activeTab.id) {
     setStatus("No active tab available.", true);
     return;
   }
 
-  const appUrl = await getSavedUrl();
+  const baseUrl = await getSavedUrl();
+  const appUrl = `${baseUrl}${suffix}`;
 
   chrome.tabs.sendMessage(
     activeTab.id,
@@ -73,6 +76,8 @@ const init = async () => {
 
 openAppBtn.addEventListener("click", () => openInNewTab());
 togglePanelBtn.addEventListener("click", toggleInPagePanel);
+openTranslatorBtn.addEventListener("click", () => openInNewTab("?tool=translator"));
+toggleTranslatorPanelBtn.addEventListener("click", () => toggleInPagePanel("?tool=translator"));
 openFavoritesBtn.addEventListener("click", () => openInNewTab("?view=favorites"));
 openRecencyBtn.addEventListener("click", () => openInNewTab("?view=recency"));
 saveUrlBtn.addEventListener("click", saveUrl);
