@@ -287,7 +287,16 @@
         </div>
     </div>
 
-    <script src="./config.js"></script>
+    <script src="./config.runtime.js"></script>
+    <script>
+        if (
+            window.location.protocol === 'file:' ||
+            window.location.hostname === 'localhost' ||
+            window.location.hostname === '127.0.0.1'
+        ) {
+            document.write('<script src="./config.js"><\\/script>');
+        }
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Elements ---

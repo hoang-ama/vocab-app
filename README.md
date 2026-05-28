@@ -92,7 +92,7 @@ The app reads/writes to `public.vocab_words` with these main fields:
 1. Clone the repo.
 2. Configure Supabase credentials:
    - Option A: hardcoded fallback in `index.html`
-   - Option B: create `config.js` from `config.example.js` and set:
+   - Option B: create `config.js` from `config.example.js` for local override (localhost), and set:
      - `window.VOCAB_SUPABASE_URL`
      - `window.VOCAB_SUPABASE_ANON_KEY`
      - `window.VOCAB_GEMINI_API_KEY` (optional, for AI Rewrite)
