@@ -294,16 +294,24 @@
 
     <script src="./config.runtime.js"></script>
     <script>
-        const isLocalDev =
-            window.location.protocol === 'file:' ||
-            window.location.hostname === 'localhost' ||
-            window.location.hostname === '127.0.0.1';
+        (function loadRuntimeConfigSync() {
+            const isLocalDev =
+                window.location.protocol === 'file:' ||
+                window.location.hostname === 'localhost' ||
+                window.location.hostname === '127.0.0.1';
+            const src = isLocalDev ? './config.js' : '/api/config-runtime';
 
-        if (isLocalDev) {
-            document.write('<script src="./config.js"><\\/script>');
-        } else {
-            document.write('<script src="/api/config-runtime"><\\/script>');
-        }
+            try {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', src, false);
+                xhr.send();
+                if (xhr.status >= 200 && xhr.status < 300 && xhr.responseText) {
+                    (0, eval)(xhr.responseText);
+                }
+            } catch (error) {
+                console.warn('Unable to load runtime config from', src, error);
+            }
+        })();
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -432,27 +440,35 @@
             };
 
             const loadData = async () => {
+                setDatabaseStatus('Database: connecting...', 'neutral');
+
                 if (!supabaseClient) {
-                    setDatabaseStatus('Database not configured. Set Supabase URL and anon key in index.html.', 'error');
+                    setDatabaseStatus('Database not configured. Set Supabase URL and anon key in config.js.', 'error');
                     words = [];
                     applyFilters();
                     return;
                 }
 
-                const { data, error } = await supabaseClient
-                    .from(SUPABASE_TABLE)
-                    .select('*')
-                    .order('updated_at', { ascending: false });
+                try {
+                    const { data, error } = await supabaseClient
+                        .from(SUPABASE_TABLE)
+                        .select('*')
+                        .order('updated_at', { ascending: false });
 
-                if (error) {
+                    if (error) {
+                        console.error(error);
+                        setDatabaseStatus(`Database error: ${error.message}`, 'error');
+                        return;
+                    }
+
+                    words = (data || []).map(dbRowToAppWord);
+                    setDatabaseStatus(`Database connected. ${words.length} words loaded.`, 'ok');
+                    applyFilters();
+                } catch (error) {
                     console.error(error);
-                    setDatabaseStatus(`Database error: ${error.message}`, 'error');
-                    return;
+                    const message = safeReadString(error?.message) || 'Unknown connection error';
+                    setDatabaseStatus(`Database error: ${message}`, 'error');
                 }
-
-                words = (data || []).map(dbRowToAppWord);
-                setDatabaseStatus(`Database connected. ${words.length} words loaded.`, 'ok');
-                applyFilters();
             };
 
             const escapeHtml = (unsafe = '') => {
@@ -970,6 +986,31 @@
                 modal.classList.remove('hidden');
             };
 
+            const applyInitialViewFromUrl = () => {
+                const view = new URLSearchParams(window.location.search).get('view');
+                if (view === 'favorites' || view === 'recency' || view === 'all') {
+                    currentView = view;
+                }
+            };
+
+            const applyInitialToolFromUrl = () => {
+                const tool = new URLSearchParams(window.location.search).get('tool');
+                if (tool !== 'translator') return;
+
+                requestAnimationFrame(() => {
+                    translatorSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    viInput?.focus();
+                });
+            };
+
+            // Initialize app state before wiring UI handlers.
+            setViTab('translation');
+            loadTranslatorSettings();
+            updateTranslatorDirectionUI();
+            applyInitialViewFromUrl();
+            applyInitialToolFromUrl();
+            loadData();
+
             addWordBtn.addEventListener('click', () => {
                 openAddModal();
             });
@@ -1285,32 +1326,6 @@
                 saveTranslatorSettings();
                 await rewriteWithAI();
             });
-
-            const applyInitialViewFromUrl = () => {
-                const view = new URLSearchParams(window.location.search).get('view');
-                if (view === 'favorites' || view === 'recency' || view === 'all') {
-                    currentView = view;
-                }
-            };
-
-            const applyInitialToolFromUrl = () => {
-                const tool = new URLSearchParams(window.location.search).get('tool');
-                if (tool !== 'translator') return;
-
-                // Run after first paint so Safari extension iframe can settle layout before scrolling.
-                requestAnimationFrame(() => {
-                    translatorSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    viInput?.focus();
-                });
-            };
-
-            // Initialize
-            setViTab('translation');
-            loadTranslatorSettings();
-            updateTranslatorDirectionUI();
-            applyInitialViewFromUrl();
-            applyInitialToolFromUrl();
-            loadData();
         });
     </script>
 </body>
