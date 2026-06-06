@@ -6,13 +6,17 @@ This folder contains a Safari Web Extension scaffold that wraps the existing web
 
 ```text
 safari-extension/
-└── web-extension/
+└── web-extension/          # Source of truth (edit this folder)
     ├── manifest.json
     ├── popup.html
     ├── popup.css
     ├── popup.js
+    ├── content-script.js
+    ├── content-style.css
     └── background.js
 ```
+
+The `H2M Vocabulary Extension/` Xcode project is **not** stored in git. It is generated locally when you build for Safari (see below).
 
 ## What the Extension Does
 

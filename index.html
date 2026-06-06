@@ -131,9 +131,14 @@
 
             <div class="flex gap-2 mb-3">
                 <textarea id="viInput" rows="2" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="Nhập từ hoặc câu tiếng Việt..."></textarea>
-                <button id="viTranslateBtn" class="self-start px-4 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors">
-                    Translate
-                </button>
+                <div class="flex flex-col gap-2 self-start">
+                    <button id="viTranslateBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">
+                        Translate
+                    </button>
+                    <button id="viClearBtn" class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-sm font-semibold border border-gray-300 hover:bg-gray-200 transition-colors">
+                        Clear
+                    </button>
+                </div>
             </div>
             <p id="viTranslateStatus" class="text-sm text-gray-500 mb-3 min-h-[20px]"></p>
 
@@ -144,15 +149,15 @@
 
             <div id="viTranslationPanel" class="bg-gray-50 rounded-lg p-4">
                 <p id="viResultLabel" class="text-sm text-gray-500 mb-2">English Translation</p>
-                <p id="viEnResult" class="text-2xl font-bold text-gray-900">-</p>
+                <p id="viEnResult" class="text-base font-medium text-gray-900">-</p>
                 <div class="mt-3 flex flex-wrap gap-2">
-                    <button id="viEnSpeakBtn" class="px-3 py-1.5 rounded-md text-gray-600 bg-white border border-gray-300 hover:text-blue-600 hover:border-blue-400" title="Speak translation">
+                    <button id="viEnSpeakBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 bg-white border border-gray-300 hover:text-blue-600 hover:border-blue-400" title="Speak translation">
                         <i class="fas fa-volume-up mr-1"></i> Speak
                     </button>
-                    <button id="saveFromTranslateBtn" class="px-3 py-1.5 rounded-md text-green-700 bg-green-50 border border-green-200 hover:bg-green-100" title="Save to vocabulary">
+                    <button id="saveFromTranslateBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-green-700 bg-green-50 border border-green-200 hover:bg-green-100" title="Save to vocabulary">
                         <i class="fas fa-bookmark mr-1"></i> Save to Vocabulary
                     </button>
-                    <button id="aiRewriteBtn" class="px-3 py-1.5 rounded-md text-purple-700 bg-purple-50 border border-purple-200 hover:bg-purple-100" title="Rewrite with AI">
+                    <button id="aiRewriteBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-purple-700 bg-purple-50 border border-purple-200 hover:bg-purple-100" title="Rewrite with AI">
                         <i class="fas fa-wand-magic-sparkles mr-1"></i> AI Rewrite
                     </button>
                 </div>
@@ -288,14 +293,16 @@
     </div>
 
     <script src="./config.runtime.js"></script>
-    <script src="/api/config-runtime"></script>
     <script>
-        if (
+        const isLocalDev =
             window.location.protocol === 'file:' ||
             window.location.hostname === 'localhost' ||
-            window.location.hostname === '127.0.0.1'
-        ) {
+            window.location.hostname === '127.0.0.1';
+
+        if (isLocalDev) {
             document.write('<script src="./config.js"><\\/script>');
+        } else {
+            document.write('<script src="/api/config-runtime"><\\/script>');
         }
     </script>
     <script>
@@ -317,6 +324,7 @@
             const viEnDirection = document.getElementById('viEnDirection');
             const viInput = document.getElementById('viInput');
             const viTranslateBtn = document.getElementById('viTranslateBtn');
+            const viClearBtn = document.getElementById('viClearBtn');
             const viTranslateStatus = document.getElementById('viTranslateStatus');
             const viTabTranslation = document.getElementById('viTabTranslation');
             const viTabDefinition = document.getElementById('viTabDefinition');
@@ -593,6 +601,23 @@
                 viDefPos.textContent = '-';
                 viDefMeaning.textContent = '-';
                 viDefExample.textContent = '-';
+            };
+
+            const clearTranslatorInput = () => {
+                viInput.value = '';
+                viEnResult.textContent = '-';
+                viTranslateStatus.textContent = '';
+                latestTranslation = '';
+                latestTranslationData = {
+                    sourceText: '',
+                    translatedText: '',
+                    direction: viEnDirection.value,
+                    englishText: '',
+                    vietnameseText: '',
+                    englishWord: ''
+                };
+                resetDefinitionPanel();
+                viInput.focus();
             };
 
             const loadEnglishDefinition = async (englishText) => {
@@ -1233,6 +1258,7 @@
             });
 
             viTranslateBtn.addEventListener('click', translateTextByDirection);
+            viClearBtn.addEventListener('click', clearTranslatorInput);
             viInput.addEventListener('keydown', (event) => {
                 if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
                     translateTextByDirection();
