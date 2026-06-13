@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Provide support or assistance",
+    "description": "Offer help, guidance, or hands-on support to someone.",
+    "keywords": "help, give a hand, support, assist",
+    "structures": [
+      {
+        "pattern": "help sb with sth",
+        "notes": "sb = someone, sth = something",
+        "examples": [
+          "I can help you with your presentation slides before the meeting."
+        ]
+      },
+      {
+        "pattern": "get sb interested",
+        "notes": "sb = someone",
+        "examples": [
+          "help you structure and refine your business plan, and create a pitch that will get investors interested."
+        ]
+      },
+      {
+        "pattern": "give sb a hand with sth",
+        "notes": "Informal way to offer help",
+        "examples": [
+          "Let me give you a hand with the onboarding checklist this afternoon."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Meet follow-up",
+    "description": "Schedule or confirm a follow-up meeting or next step.",
+    "keywords": "follow up, check in, touch base, schedule",
+    "structures": [
+      {
+        "pattern": "follow up with sb on sth",
+        "notes": "sb = someone, sth = topic",
+        "examples": [
+          "I'll follow up with you on the proposal timeline next Tuesday."
+        ]
+      },
+      {
+        "pattern": "touch base with sb about sth",
+        "notes": "Casual follow-up",
+        "examples": [
+          "Can we touch base with the client about the revised scope?"
+        ]
+      },
+      {
+        "pattern": "schedule a follow-up meeting with sb",
+        "notes": "Formal scheduling",
+        "examples": [
+          "Let's schedule a follow-up meeting with the design team after the demo."
+        ]
+      }
+    ]
+  }
+]

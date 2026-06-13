@@ -16,6 +16,11 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
   - Delete words
 - **Favorites** with star toggle and a dedicated favorites view.
 - **Recency view** to show the latest 10 words added.
+- **Sentence Structures tab** for purpose-driven English patterns:
+  - Browse purposes, keywords, structures, and example sentences
+  - Full CRUD in Supabase (`sentence_purposes`, `sentence_structures`, `sentence_examples`)
+  - Purpose-assisted sentence builder with placeholder tokens (`sb`, `sth`, `adj`)
+  - Live preview and one-click copy
 - **Safari extension scaffold** for quick access from the browser toolbar.
 - **Smart search UX**:
   - Real-time filtering
@@ -58,6 +63,12 @@ vocabApp/
 │       ├── popup.js
 │       └── background.js
 ├── supabase.schema.sql             # DB table + indexes + RLS policies
+├── supabase.sentence-structures.schema.sql  # Sentence structures tables + RLS
+├── scripts/
+│   ├── import-sentence-structures.py        # JSON import for sentence structures
+│   └── convert-structure-csv.py             # Convert Structure.csv to import JSON
+├── sentence-structures.json                 # Generated import payload from Structure.csv
+├── sentence-structures.sample.json          # Small sample import payload
 ├── DEPLOY_SUPABASE_VERCEL.md       # Step-by-step go-live guide
 ├── .github/workflows/
 │   └── vercel-deploy.yml           # CI/CD workflow for preview + production
@@ -87,6 +98,37 @@ The app reads/writes to `public.vocab_words` with these main fields:
 - `created_at`
 - `updated_at`
 
+## Sentence Structures Data Model
+
+Three related tables power the **Structures** tab:
+
+- `sentence_purposes`
+  - `title`, `description`, `keywords` (comma-separated phrases)
+- `sentence_structures`
+  - `purpose_id`, `pattern`, `notes`, `sort_order`
+  - Pattern tokens: `sb` (someone), `sth` (something), `adj` (adjective)
+- `sentence_examples`
+  - `structure_id`, `sentence`
+
+### Import sentence structures JSON
+
+1. Run [`supabase.sentence-structures.schema.sql`](supabase.sentence-structures.schema.sql) in Supabase SQL Editor.
+2. Prepare a JSON file like [`sentence-structures.sample.json`](sentence-structures.sample.json), or convert your CSV:
+
+```bash
+python3 scripts/convert-structure-csv.py /path/to/Structure.csv -o sentence-structures.json
+```
+
+3. Import:
+
+```bash
+export SUPABASE_URL="https://YOUR_PROJECT_ID.supabase.co"
+export SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+python3 scripts/import-sentence-structures.py sentence-structures.sample.json
+```
+
+Use `--force-duplicates` if you want to import purposes even when the title already exists.
+
 ## Local Development
 
 1. Clone the repo.
@@ -106,7 +148,8 @@ The app reads/writes to `public.vocab_words` with these main fields:
 
 1. Create a Supabase project.
 2. Run `supabase.schema.sql` in SQL Editor.
-3. Import seed data if needed:
+3. Run `supabase.sentence-structures.schema.sql` for the Structures tab.
+4. Import seed data if needed:
    - convert JSON to CSV
    - import into `vocab_words`
 
