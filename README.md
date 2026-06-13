@@ -36,6 +36,7 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
   - Uses dictionary audio URL when available
   - Falls back to browser speech synthesis
 - **Responsive mobile-first UI** with quick action FAB for adding words.
+- **Backup export** to a single Excel file (`.xlsx`) with **Vocabulary** and **Structures** sheets.
 
 ## Tech Stack
 

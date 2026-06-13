@@ -16,6 +16,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,8 +109,12 @@
                     <button id="refreshDbBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
                         <i class="fas fa-rotate mr-1"></i> Refresh
                     </button>
+                    <button id="exportBackupBtn" class="px-3 py-2 text-sm rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors" title="Download Excel backup with Vocabulary and Structures sheets">
+                        <i class="fas fa-file-export mr-1"></i> Export Backup
+                    </button>
                 </div>
             </div>
+            <p id="exportStatus" class="text-xs text-gray-500 mt-2 min-h-[16px]"></p>
         </div>
 
         <!-- Two-way Translator + Dictionary -->
@@ -493,6 +498,8 @@
             const fetchStatus = document.getElementById('fetchStatus');
             const modalTitle = document.getElementById('modalTitle');
             const refreshDbBtn = document.getElementById('refreshDbBtn');
+            const exportBackupBtn = document.getElementById('exportBackupBtn');
+            const exportStatus = document.getElementById('exportStatus');
             const databaseStatus = document.getElementById('databaseStatus');
             const translatorSection = document.getElementById('translatorSection');
             const viEnDirection = document.getElementById('viEnDirection');
@@ -593,6 +600,115 @@
             const supabaseClient = (window.supabase && isSupabaseConfigured)
                 ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
                 : null;
+
+            const formatBackupDate = () => new Date().toISOString().slice(0, 10);
+
+            const buildVocabularyExportRows = () => {
+                return words.map((item) => ({
+                    word: item.word,
+                    phonetic: item.phonetic,
+                    part_of_speech: item.partOfSpeech,
+                    english_meaning: item.englishMeaning,
+                    vietnamese_meaning: item.vietnameseMeaning,
+                    synonyms: item.synonyms,
+                    antonyms: item.antonyms,
+                    collocations: item.collocations,
+                    example_sentence: item.example,
+                    audio_url: item.audioUrl,
+                    favorite: item.favorite ? 'yes' : 'no',
+                    created_at: item.createdAt,
+                    updated_at: item.updatedAt
+                }));
+            };
+
+            const buildStructuresExportRows = () => {
+                const rows = [];
+                const sortedPurposes = [...purposes].sort((a, b) => a.title.localeCompare(b.title));
+
+                sortedPurposes.forEach((purpose) => {
+                    const purposeStructures = getStructuresForPurpose(purpose.id);
+                    if (!purposeStructures.length) {
+                        rows.push({
+                            purpose: purpose.title,
+                            keywords: purpose.keywords,
+                            description: purpose.description,
+                            structure: '',
+                            notes: '',
+                            example: ''
+                        });
+                        return;
+                    }
+
+                    purposeStructures.forEach((structure) => {
+                        const structureExamples = getExamplesForStructure(structure.id);
+                        if (!structureExamples.length) {
+                            rows.push({
+                                purpose: purpose.title,
+                                keywords: purpose.keywords,
+                                description: purpose.description,
+                                structure: structure.pattern,
+                                notes: structure.notes,
+                                example: ''
+                            });
+                            return;
+                        }
+
+                        structureExamples.forEach((example) => {
+                            rows.push({
+                                purpose: purpose.title,
+                                keywords: purpose.keywords,
+                                description: purpose.description,
+                                structure: structure.pattern,
+                                notes: structure.notes,
+                                example: example.sentence
+                            });
+                        });
+                    });
+                });
+
+                return rows;
+            };
+
+            const exportBackupWorkbook = () => {
+                if (typeof XLSX === 'undefined') {
+                    throw new Error('Export library failed to load.');
+                }
+
+                const workbook = XLSX.utils.book_new();
+                const vocabSheet = XLSX.utils.json_to_sheet(buildVocabularyExportRows());
+                const structuresSheet = XLSX.utils.json_to_sheet(buildStructuresExportRows());
+                XLSX.utils.book_append_sheet(workbook, vocabSheet, 'Vocabulary');
+                XLSX.utils.book_append_sheet(workbook, structuresSheet, 'Structures');
+                XLSX.writeFile(workbook, `h2m-vocab-backup-${formatBackupDate()}.xlsx`);
+            };
+
+            const runBackupExport = async () => {
+                if (!supabaseClient) {
+                    exportStatus.innerHTML = '<span class="text-red-600">Database not configured.</span>';
+                    return;
+                }
+
+                exportBackupBtn.disabled = true;
+                exportStatus.textContent = 'Refreshing data for export...';
+
+                try {
+                    await loadData();
+                    await loadSentenceData();
+
+                    if (!words.length && !purposes.length) {
+                        exportStatus.innerHTML = '<span class="text-amber-600">Nothing to export yet.</span>';
+                        return;
+                    }
+
+                    exportBackupWorkbook();
+                    exportStatus.innerHTML = `<span class="text-green-600"><i class="fas fa-check"></i> Downloaded backup with Vocabulary + Structures sheets (${words.length} words, ${purposes.length} purposes).</span>`;
+                } catch (error) {
+                    console.error(error);
+                    exportStatus.innerHTML = `<span class="text-red-600">Export failed: ${escapeHtml(safeReadString(error?.message) || 'Unknown error')}</span>`;
+                } finally {
+                    exportBackupBtn.disabled = false;
+                }
+            };
 
             // --- Helper Functions ---
 
@@ -1940,6 +2056,8 @@
                 await loadData();
                 await loadSentenceData();
             });
+
+            exportBackupBtn.addEventListener('click', () => runBackupExport());
 
             structuresTab.addEventListener('click', () => {
                 currentView = 'structures';
