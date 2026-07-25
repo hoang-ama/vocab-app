@@ -16,11 +16,11 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
   - Delete words
 - **Favorites** with star toggle and a dedicated favorites view.
 - **Recency view** to show the latest 10 words added.
-- **Sentence Structures tab** for purpose-driven English patterns:
-  - Browse purposes, keywords, structures, and example sentences
-  - Full CRUD in Supabase (`sentence_purposes`, `sentence_structures`, `sentence_examples`)
-  - Purpose-assisted sentence builder with placeholder tokens (`sb`, `sth`, `adj`)
-  - Live preview and one-click copy
+- **Functions tab** for language functions:
+  - Browse Functions -> Structures / Phrases -> linked Examples
+  - Full CRUD in Supabase (`language_functions`, `function_structures`, `function_phrases`, `function_examples`)
+  - Unified Add/Edit Function modal for bulk structures, phrases, and linked examples
+  - Gemini Fetch starter content with at least 3 structures, 3 phrases, and 3 examples
 - **Safari extension scaffold** for quick access from the browser toolbar.
 - **Smart search UX**:
   - Real-time filtering
@@ -36,7 +36,7 @@ A mobile-first web app for building and managing personal vocabulary, with cloud
   - Uses dictionary audio URL when available
   - Falls back to browser speech synthesis
 - **Responsive mobile-first UI** with quick action FAB for adding words.
-- **Backup export** to a single Excel file (`.xlsx`) with **Vocabulary** and **Structures** sheets.
+- **Backup export** to a single Excel file (`.xlsx`) with **Vocabulary** and **Functions** sheets.
 
 ## Tech Stack
 
@@ -64,12 +64,13 @@ vocabApp/
 │       ├── popup.js
 │       └── background.js
 ├── supabase.schema.sql             # DB table + indexes + RLS policies
-├── supabase.sentence-structures.schema.sql  # Sentence structures tables + RLS
+├── supabase.language-functions.schema.sql   # Language functions tables + RLS
+├── supabase.sentence-structures.schema.sql  # Deprecated pointer to new schema
 ├── scripts/
-│   ├── import-sentence-structures.py        # JSON import for sentence structures
-│   └── convert-structure-csv.py             # Convert Structure.csv to import JSON
-├── sentence-structures.json                 # Generated import payload from Structure.csv
-├── sentence-structures.sample.json          # Small sample import payload
+│   ├── import-sentence-structures.py        # Deprecated legacy importer
+│   └── convert-structure-csv.py             # Deprecated legacy converter
+├── sentence-structures.json                 # Deprecated legacy payload
+├── sentence-structures.sample.json          # Deprecated legacy sample
 ├── DEPLOY_SUPABASE_VERCEL.md       # Step-by-step go-live guide
 ├── .github/workflows/
 │   └── vercel-deploy.yml           # CI/CD workflow for preview + production
@@ -99,36 +100,23 @@ The app reads/writes to `public.vocab_words` with these main fields:
 - `created_at`
 - `updated_at`
 
-## Sentence Structures Data Model
+## Language Functions Data Model
 
-Three related tables power the **Structures** tab:
+Four related tables power the **Functions** tab:
 
-- `sentence_purposes`
-  - `title`, `description`, `keywords` (comma-separated phrases)
-- `sentence_structures`
-  - `purpose_id`, `pattern`, `notes`, `sort_order`
-  - Pattern tokens: `sb` (someone), `sth` (something), `adj` (adjective)
-- `sentence_examples`
-  - `structure_id`, `sentence`
+- `language_functions`
+  - `title`, `favorite`
+- `function_structures`
+  - `function_id`, `pattern`, `sort_order`
+- `function_phrases`
+  - `function_id`, `phrase`, `sort_order`
+- `function_examples`
+  - `function_id`, `structure_id` or `phrase_id`, `content`, `sort_order`
+  - Each example links to exactly one structure or phrase.
 
-### Import sentence structures JSON
+### Reset old sentence structures and create language functions
 
-1. Run [`supabase.sentence-structures.schema.sql`](supabase.sentence-structures.schema.sql) in Supabase SQL Editor.
-2. Prepare a JSON file like [`sentence-structures.sample.json`](sentence-structures.sample.json), or convert your CSV:
-
-```bash
-python3 scripts/convert-structure-csv.py /path/to/Structure.csv -o sentence-structures.json
-```
-
-3. Import:
-
-```bash
-export SUPABASE_URL="https://YOUR_PROJECT_ID.supabase.co"
-export SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
-python3 scripts/import-sentence-structures.py sentence-structures.sample.json
-```
-
-Use `--force-duplicates` if you want to import purposes even when the title already exists.
+Run [`supabase.language-functions.schema.sql`](supabase.language-functions.schema.sql) in Supabase SQL Editor. It drops the old `sentence_purposes`, `sentence_structures`, and `sentence_examples` tables, then creates the new language function tables.
 
 ## Local Development
 
@@ -138,7 +126,7 @@ Use `--force-duplicates` if you want to import purposes even when the title alre
    - Option B: create `config.js` from `config.example.js` for local override (localhost), and set:
      - `window.VOCAB_SUPABASE_URL`
      - `window.VOCAB_SUPABASE_ANON_KEY`
-     - `window.VOCAB_GEMINI_API_KEY` (optional, for AI Rewrite)
+     - `window.VOCAB_GEMINI_API_KEY` (optional, for AI Rewrite and Function Fetch)
 3. Serve the app with any static server.
    - Example: VS Code Live Server
 4. Open `index.html` in browser and verify:
@@ -149,7 +137,7 @@ Use `--force-duplicates` if you want to import purposes even when the title alre
 
 1. Create a Supabase project.
 2. Run `supabase.schema.sql` in SQL Editor.
-3. Run `supabase.sentence-structures.schema.sql` for the Structures tab.
+3. Run `supabase.language-functions.schema.sql` for the Functions tab.
 4. Import seed data if needed:
    - convert JSON to CSV
    - import into `vocab_words`
