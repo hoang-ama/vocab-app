@@ -216,9 +216,16 @@
                     <h2 class="text-xl font-bold text-gray-800">Language Functions</h2>
                     <span class="text-xs text-gray-500">Function -> Structures / Phrases -> Examples</span>
                 </div>
-                <div class="relative mb-4">
-                    <input type="text" id="structureSearchInput" placeholder="Search functions, structures, phrases, examples..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <div id="functionSearchWrap" class="relative mb-4">
+                    <input type="text" id="structureSearchInput" placeholder="Search or select a function..." class="w-full px-4 py-3 pl-10 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" autocomplete="off">
                     <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+                    <button type="button" id="clearFunctionSearchBtn" class="hidden absolute right-11 top-3 text-gray-400 hover:text-gray-600" title="Clear function search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button type="button" id="functionSearchToggleBtn" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700" title="Show functions">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
                 </div>
                 <div id="functionsList" class="space-y-4"></div>
             </div>
@@ -428,7 +435,11 @@
             const favoritesCount = document.getElementById('favoritesCount');
             const vocabSearchSection = document.getElementById('vocabSearchSection');
             const structuresPanel = document.getElementById('structuresPanel');
+            const functionSearchWrap = document.getElementById('functionSearchWrap');
             const structureSearchInput = document.getElementById('structureSearchInput');
+            const functionSearchToggleBtn = document.getElementById('functionSearchToggleBtn');
+            const clearFunctionSearchBtn = document.getElementById('clearFunctionSearchBtn');
+            const functionSearchDropdown = document.getElementById('functionSearchDropdown');
             const functionsList = document.getElementById('functionsList');
             const addStructureFab = document.getElementById('addStructureFab');
             const functionModal = document.getElementById('functionModal');
@@ -446,6 +457,7 @@
             let structures = [];
             let phrases = [];
             let examples = [];
+            let selectedFunctionFilterId = null;
             let viEnActiveTab = 'translation';
             let latestTranslation = '';
             let latestTranslationData = {
@@ -1082,6 +1094,56 @@
                 .filter(item => parentType === 'structure' ? item.structureId === parentId : item.phraseId === parentId)
                 .sort((a, b) => a.sortOrder - b.sortOrder || a.content.localeCompare(b.content));
 
+            const closeFunctionSearchDropdown = () => {
+                functionSearchDropdown.classList.add('hidden');
+            };
+
+            const renderFunctionSearchDropdown = () => {
+                const term = structureSearchInput.value.toLowerCase().trim();
+                const matches = functions
+                    .filter(fn => !term || fn.title.toLowerCase().includes(term))
+                    .sort((a, b) => a.title.localeCompare(b.title));
+
+                if (!matches.length) {
+                    functionSearchDropdown.innerHTML = '<div class="px-4 py-3 text-sm text-gray-500">No matching functions.</div>';
+                    functionSearchDropdown.classList.remove('hidden');
+                    return;
+                }
+
+                functionSearchDropdown.innerHTML = matches.map(fn => {
+                    const isSelected = fn.id === selectedFunctionFilterId;
+                    const fnStructures = getStructuresForFunction(fn.id);
+                    const fnPhrases = getPhrasesForFunction(fn.id);
+                    const fnExamples = getExamplesForFunction(fn.id);
+                    return `
+                        <button type="button" data-select-function-filter="${escapeHtml(fn.id)}" class="w-full text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0 ${isSelected ? 'bg-teal-50' : 'bg-white'}">
+                            <span class="block font-semibold text-gray-900">${escapeHtml(fn.title)}</span>
+                            <span class="block text-xs text-gray-500 mt-1">${fnStructures.length} structures &bull; ${fnPhrases.length} phrases &bull; ${fnExamples.length} examples</span>
+                        </button>
+                    `;
+                }).join('');
+
+                functionSearchDropdown.querySelectorAll('[data-select-function-filter]').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const functionId = button.getAttribute('data-select-function-filter');
+                        const fn = getFunctionById(functionId);
+                        if (!fn) return;
+                        selectedFunctionFilterId = fn.id;
+                        structureSearchInput.value = fn.title;
+                        closeFunctionSearchDropdown();
+                        renderStructuresView();
+                    });
+                });
+                functionSearchDropdown.classList.remove('hidden');
+            };
+
+            const clearFunctionSearch = () => {
+                selectedFunctionFilterId = null;
+                structureSearchInput.value = '';
+                closeFunctionSearchDropdown();
+                renderStructuresView();
+            };
+
             const toggleMainSections = () => {
                 const isStructuresView = currentView === 'structures';
                 vocabSearchSection.classList.toggle('hidden', isStructuresView);
@@ -1118,6 +1180,11 @@
                     structures = (structuresRes.data || []).map(dbRowToStructure);
                     phrases = (phrasesRes.data || []).map(dbRowToPhrase);
                     examples = (examplesRes.data || []).map(dbRowToExample);
+
+                    if (selectedFunctionFilterId && !getFunctionById(selectedFunctionFilterId)) {
+                        selectedFunctionFilterId = null;
+                        structureSearchInput.value = '';
+                    }
 
                     renderStructuresView();
                 } catch (error) {
@@ -1167,7 +1234,9 @@
                 toggleMainSections();
 
                 const term = structureSearchInput.value.toLowerCase().trim();
+                clearFunctionSearchBtn.classList.toggle('hidden', !term && !selectedFunctionFilterId);
                 const filteredFunctions = functions.filter(fn => {
+                    if (selectedFunctionFilterId) return fn.id === selectedFunctionFilterId;
                     if (!term) return true;
                     const fnStructures = getStructuresForFunction(fn.id);
                     const fnPhrases = getPhrasesForFunction(fn.id);
@@ -1941,7 +2010,28 @@
 
             structureSearchInput.addEventListener('input', () => {
                 if (currentView === 'structures') {
+                    selectedFunctionFilterId = null;
+                    renderFunctionSearchDropdown();
                     applyStructureFilters();
+                }
+            });
+            structureSearchInput.addEventListener('focus', () => {
+                if (currentView === 'structures') {
+                    renderFunctionSearchDropdown();
+                }
+            });
+            functionSearchToggleBtn.addEventListener('click', () => {
+                if (functionSearchDropdown.classList.contains('hidden')) {
+                    renderFunctionSearchDropdown();
+                    structureSearchInput.focus();
+                } else {
+                    closeFunctionSearchDropdown();
+                }
+            });
+            clearFunctionSearchBtn.addEventListener('click', clearFunctionSearch);
+            document.addEventListener('click', (event) => {
+                if (!functionSearchWrap.contains(event.target)) {
+                    closeFunctionSearchDropdown();
                 }
             });
 
