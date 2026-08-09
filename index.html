@@ -88,6 +88,12 @@
         .modal-scroll::-webkit-scrollbar-thumb:hover {
             background: #94a3b8; 
         }
+        /* Flip Card Utilities */
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-preserve-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+        .is-flipped { transform: rotateY(180deg); }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -199,6 +205,9 @@
             <button id="structuresTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
                 Functions
             </button>
+            <button id="quizTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
+                Quiz
+            </button>
         </div>
 
         <!-- Vocabulary List -->
@@ -225,6 +234,48 @@
                     <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
                 </div>
                 <div id="functionsList" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <!-- Quiz Panel -->
+        <div id="quizPanel" class="hidden mb-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center min-h-[400px] justify-center relative overflow-hidden">
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                    <button id="shuffleQuizBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors" title="Shuffle Words">
+                        <i class="fas fa-random"></i> Mix
+                    </button>
+                </div>
+                
+                <div id="quizCardContainer" class="w-full max-w-sm perspective-1000 cursor-pointer mt-8">
+                    <div id="quizCard" class="relative w-full h-72 transition-transform duration-500 transform-style-preserve-3d text-center">
+                        <!-- Front -->
+                        <div id="quizCardFront" class="absolute w-full h-full bg-blue-50 rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden p-6 border border-blue-200">
+                            <p id="quizWord" class="text-3xl font-bold text-gray-800 mb-2 break-all">-</p>
+                            <p id="quizPhonetic" class="text-gray-500 italic mb-4">-</p>
+                            <p class="text-sm text-blue-400 mt-auto"><i class="fas fa-hand-pointer mr-1"></i> Click to flip</p>
+                        </div>
+                        <!-- Back -->
+                        <div id="quizCardBack" class="absolute w-full h-full bg-white rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden rotate-y-180 p-6 border border-gray-200">
+                            <p id="quizPos" class="text-xs font-semibold bg-gray-200 text-gray-700 px-2 py-1 rounded mb-3">-</p>
+                            <p id="quizViMeaning" class="text-xl font-bold text-blue-600 mb-2">-</p>
+                            <p id="quizEnMeaning" class="text-gray-700 mb-4 text-sm">-</p>
+                            <p id="quizExample" class="text-gray-500 italic text-sm text-center line-clamp-3">-</p>
+                            <button id="quizSpeakBtn" class="mt-auto px-4 py-2 rounded-lg text-sm text-gray-600 bg-gray-50 hover:text-blue-600 border border-gray-200 transition-colors">
+                                <i class="fas fa-volume-up"></i> Listen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 mt-10">
+                    <button id="quizPrevBtn" class="w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-blue-600 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-left text-lg"></i>
+                    </button>
+                    <span id="quizCounter" class="text-gray-500 font-medium min-w-[60px] text-center">0 / 0</span>
+                    <button id="quizNextBtn" class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 hover:text-blue-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-right text-lg"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -429,9 +480,24 @@
             const favoritesTab = document.getElementById('favoritesTab');
             const recencyTab = document.getElementById('recencyTab');
             const structuresTab = document.getElementById('structuresTab');
+            const quizTab = document.getElementById('quizTab');
             const favoritesCount = document.getElementById('favoritesCount');
             const vocabSearchSection = document.getElementById('vocabSearchSection');
             const structuresPanel = document.getElementById('structuresPanel');
+            const quizPanel = document.getElementById('quizPanel');
+            const quizCardContainer = document.getElementById('quizCardContainer');
+            const quizCard = document.getElementById('quizCard');
+            const quizWord = document.getElementById('quizWord');
+            const quizPhonetic = document.getElementById('quizPhonetic');
+            const quizPos = document.getElementById('quizPos');
+            const quizViMeaning = document.getElementById('quizViMeaning');
+            const quizEnMeaning = document.getElementById('quizEnMeaning');
+            const quizExample = document.getElementById('quizExample');
+            const quizPrevBtn = document.getElementById('quizPrevBtn');
+            const quizNextBtn = document.getElementById('quizNextBtn');
+            const quizCounter = document.getElementById('quizCounter');
+            const shuffleQuizBtn = document.getElementById('shuffleQuizBtn');
+            const quizSpeakBtn = document.getElementById('quizSpeakBtn');
             const functionSearchWrap = document.getElementById('functionSearchWrap');
             const structureSearchInput = document.getElementById('structureSearchInput');
             const functionSearchToggleBtn = document.getElementById('functionSearchToggleBtn');
@@ -456,6 +522,9 @@
             let examples = [];
             let selectedFunctionFilterId = null;
             let viEnActiveTab = 'translation';
+            let quizWords = [];
+            let currentQuizIndex = 0;
+            let isQuizCardFlipped = false;
             let latestTranslation = '';
             let latestTranslationData = {
                 sourceText: '',
@@ -1143,10 +1212,12 @@
 
             const toggleMainSections = () => {
                 const isStructuresView = currentView === 'structures';
-                vocabSearchSection.classList.toggle('hidden', isStructuresView);
-                vocabularyList.classList.toggle('hidden', isStructuresView);
+                const isQuizView = currentView === 'quiz';
+                vocabSearchSection.classList.toggle('hidden', isStructuresView || isQuizView);
+                vocabularyList.classList.toggle('hidden', isStructuresView || isQuizView);
                 structuresPanel.classList.toggle('hidden', !isStructuresView);
-                addWordBtn.classList.toggle('hidden', isStructuresView);
+                quizPanel.classList.toggle('hidden', !isQuizView);
+                addWordBtn.classList.toggle('hidden', isStructuresView || isQuizView);
                 addStructureFab.classList.toggle('hidden', !isStructuresView);
             };
 
@@ -1638,6 +1709,7 @@
                 favoritesTab.className = inactiveClass;
                 recencyTab.className = inactiveClass;
                 structuresTab.className = inactiveClass;
+                quizTab.className = inactiveClass;
 
                 if (currentView === 'favorites') {
                     favoritesTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-yellow-400 text-gray-900';
@@ -1645,6 +1717,8 @@
                     recencyTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-purple-600 text-white';
                 } else if (currentView === 'structures') {
                     structuresTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-teal-600 text-white';
+                } else if (currentView === 'quiz') {
+                    quizTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-pink-600 text-white';
                 } else {
                     allWordsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white';
                 }
@@ -1654,6 +1728,10 @@
                 toggleMainSections();
                 if (currentView === 'structures') {
                     applyStructureFilters();
+                    return;
+                }
+                if (currentView === 'quiz') {
+                    updateViewTabs();
                     return;
                 }
 
@@ -2012,6 +2090,106 @@
             structuresTab.addEventListener('click', () => {
                 currentView = 'structures';
                 applyFilters();
+            });
+
+            // Quiz Logic
+            const shuffleArray = (array) => {
+                const arr = [...array];
+                for (let i = arr.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+                return arr;
+            };
+
+            const renderQuizCard = () => {
+                if (!quizWords.length) {
+                    quizWord.textContent = 'No words available';
+                    quizPhonetic.textContent = '';
+                    quizPos.textContent = '-';
+                    quizViMeaning.textContent = '-';
+                    quizEnMeaning.textContent = '-';
+                    quizExample.textContent = '-';
+                    quizCounter.textContent = '0 / 0';
+                    quizPrevBtn.disabled = true;
+                    quizNextBtn.disabled = true;
+                    return;
+                }
+                
+                const currentWord = quizWords[currentQuizIndex];
+                
+                // Front
+                quizWord.textContent = currentWord.word || '-';
+                quizPhonetic.textContent = currentWord.phonetic || '';
+                
+                // Back
+                quizPos.textContent = currentWord.partOfSpeech || '-';
+                quizViMeaning.textContent = currentWord.vietnameseMeaning || '-';
+                quizEnMeaning.textContent = currentWord.englishMeaning || '-';
+                quizExample.textContent = currentWord.example || '-';
+                
+                quizCounter.textContent = `${currentQuizIndex + 1} / ${quizWords.length}`;
+                
+                quizPrevBtn.disabled = currentQuizIndex === 0;
+                quizNextBtn.disabled = currentQuizIndex === quizWords.length - 1;
+                
+                // Reset flip
+                isQuizCardFlipped = false;
+                quizCard.classList.remove('is-flipped');
+            };
+
+            const startQuiz = () => {
+                quizWords = shuffleArray(words);
+                currentQuizIndex = 0;
+                renderQuizCard();
+            };
+
+            const flipQuizCard = () => {
+                if (!quizWords.length) return;
+                isQuizCardFlipped = !isQuizCardFlipped;
+                if (isQuizCardFlipped) {
+                    quizCard.classList.add('is-flipped');
+                } else {
+                    quizCard.classList.remove('is-flipped');
+                }
+            };
+
+            quizCardContainer.addEventListener('click', flipQuizCard);
+            
+            quizPrevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentQuizIndex > 0) {
+                    currentQuizIndex--;
+                    renderQuizCard();
+                }
+            });
+            
+            quizNextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentQuizIndex < quizWords.length - 1) {
+                    currentQuizIndex++;
+                    renderQuizCard();
+                }
+            });
+            
+            shuffleQuizBtn.addEventListener('click', startQuiz);
+            
+            quizSpeakBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (quizWords.length) {
+                    const currentWord = quizWords[currentQuizIndex];
+                    if (window.playAudio) {
+                        window.playAudio(currentWord.audioUrl, currentWord.word);
+                    }
+                }
+            });
+
+            quizTab.addEventListener('click', () => {
+                currentView = 'quiz';
+                applyFilters();
+                if (quizWords.length === 0 && words.length > 0) {
+                    startQuiz();
+                }
             });
 
             structureSearchInput.addEventListener('input', () => {
