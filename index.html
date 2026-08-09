@@ -1329,9 +1329,15 @@
                 if (!fn) return;
                 document.getElementById('functionId').value = fn.id;
                 document.getElementById('functionTitleInput').value = fn.title;
-                document.getElementById('functionStructuresInput').value = getStructuresForFunction(fn.id).map(item => item.pattern).join('\n');
-                document.getElementById('functionPhrasesInput').value = getPhrasesForFunction(fn.id).map(item => item.phrase).join('\n');
-                document.getElementById('functionExamplesInput').value = serializeFunctionExamplesForModal(fn.id);
+
+                const uniqueStructures = uniqueNormalizedList(getStructuresForFunction(fn.id).map(item => item.pattern), 100);
+                const uniquePhrases = uniqueNormalizedList(getPhrasesForFunction(fn.id).map(item => item.phrase), 100);
+                const exampleLines = serializeFunctionExamplesForModal(fn.id).split('\n');
+                const uniqueExamples = uniqueNormalizedList(exampleLines, 100);
+
+                document.getElementById('functionStructuresInput').value = uniqueStructures.join('\n');
+                document.getElementById('functionPhrasesInput').value = uniquePhrases.join('\n');
+                document.getElementById('functionExamplesInput').value = uniqueExamples.join('\n');
                 functionModalTitle.textContent = 'Edit Function';
                 functionFetchStatus.textContent = '';
                 functionModal.classList.remove('hidden');
@@ -1364,13 +1370,16 @@
             };
 
             const saveFunctionChildren = async (functionId, structureItems, phraseItems, exampleItems) => {
-                const [{ error: deleteExamplesError }, { error: deleteStructuresError }, { error: deletePhrasesError }] = await Promise.all([
-                    supabaseClient.from(EXAMPLES_TABLE).delete().eq('function_id', functionId),
+                // Delete examples first to remove foreign key references
+                const { error: deleteExamplesError } = await supabaseClient.from(EXAMPLES_TABLE).delete().eq('function_id', functionId);
+                if (deleteExamplesError) throw deleteExamplesError;
+
+                // Delete structures and phrases sequentially after examples are removed
+                const [{ error: deleteStructuresError }, { error: deletePhrasesError }] = await Promise.all([
                     supabaseClient.from(STRUCTURES_TABLE).delete().eq('function_id', functionId),
                     supabaseClient.from(PHRASES_TABLE).delete().eq('function_id', functionId)
                 ]);
 
-                if (deleteExamplesError) throw deleteExamplesError;
                 if (deleteStructuresError) throw deleteStructuresError;
                 if (deletePhrasesError) throw deletePhrasesError;
 
@@ -2046,8 +2055,10 @@
 
                 const id = document.getElementById('functionId').value.trim();
                 const title = document.getElementById('functionTitleInput').value.trim();
-                const structureItems = splitLines(document.getElementById('functionStructuresInput').value).map(pattern => ({ pattern }));
-                const phraseItems = splitLines(document.getElementById('functionPhrasesInput').value).map(phrase => ({ phrase }));
+                const structureLines = uniqueNormalizedList(splitLines(document.getElementById('functionStructuresInput').value), 100);
+                const phraseLines = uniqueNormalizedList(splitLines(document.getElementById('functionPhrasesInput').value), 100);
+                const structureItems = structureLines.map(pattern => ({ pattern }));
+                const phraseItems = phraseLines.map(phrase => ({ phrase }));
                 let exampleItems = [];
 
                 if (!title) return;
