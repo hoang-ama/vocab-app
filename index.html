@@ -183,78 +183,88 @@
             </div>
         </div>
         
-        <!-- Search Input -->
-        <div id="vocabSearchSection" class="mb-8">
+        <!-- Main Navigation -->
+        <div class="flex border-b border-gray-200 mb-6 bg-white rounded-xl overflow-hidden shadow-sm">
+            <button id="vocabNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-blue-600 text-blue-600 flex items-center justify-center gap-2 transition-colors">
+                <i class="fas fa-book"></i> Vocabulary
+            </button>
+            <button id="structuresNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
+                <i class="fas fa-layer-group"></i> Functions
+            </button>
+            <button id="rootsNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
+                <i class="fas fa-code-branch"></i> Roots & Affixes
+            </button>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div id="vocabSection" class="space-y-6">
+            <!-- Search Input -->
             <div class="relative">
                 <input type="text" id="searchInput" placeholder="Search for a word..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
                 <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
             </div>
-        </div>
+            
+            <!-- Vocab Sub Filters -->
+            <div class="flex flex-wrap gap-2 mb-4">
+                <button id="allWordsTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm transition-colors">
+                    All Words
+                </button>
+                <button id="favoritesTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                    Favorites (<span id="favoritesCount">0</span>)
+                </button>
+                <button id="recencyTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                    Recency
+                </button>
+                <button id="quizTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                    Quiz
+                </button>
+            </div>
 
-        <!-- View Toggle -->
-        <div class="mb-6 flex flex-wrap gap-2">
-            <button id="allWordsTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white">
-                All Words
-            </button>
-            <button id="favoritesTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
-                Favorites (<span id="favoritesCount">0</span>)
-            </button>
-            <button id="recencyTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
-                Recency
-            </button>
-            <button id="structuresTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
-                Functions
-            </button>
-            <button id="rootsTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
-                Roots & Affixes
-            </button>
-            <button id="quizTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
-                Quiz
-            </button>
-        </div>
-
-        <!-- Vocabulary List -->
-        <div id="vocabularyList">
-            <!-- Vocabulary cards will be inserted here by JavaScript -->
+            <!-- Vocabulary List -->
+            <div id="vocabularyList" class="space-y-4">
+                <!-- Vocabulary cards will be inserted here by JavaScript -->
+            </div>
         </div>
 
         <!-- Language Functions Panel -->
-        <div id="structuresPanel" class="hidden mb-6 space-y-4">
-            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div class="flex items-center justify-between mb-3">
-                    <h2 class="text-xl font-bold text-gray-800">Language Functions</h2>
-                    <span class="text-xs text-gray-500">Function -> Structures / Phrases -> Examples</span>
-                </div>
-                <div id="functionSearchWrap" class="relative mb-4">
-                    <input type="text" id="structureSearchInput" placeholder="Search or select a function..." class="w-full px-4 py-3 pl-10 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" autocomplete="off">
-                    <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
-                    <button type="button" id="clearFunctionSearchBtn" class="hidden absolute right-11 top-3 text-gray-400 hover:text-gray-600" title="Clear function search">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <button type="button" id="functionSearchToggleBtn" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700" title="Show functions">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
-                </div>
-                <div id="functionsList" class="space-y-4"></div>
+        <div id="structuresPanel" class="hidden mb-6 space-y-6">
+            <!-- Function Search Input -->
+            <div id="functionSearchWrap" class="relative">
+                <input type="text" id="structureSearchInput" placeholder="Search or select a function..." class="w-full px-4 py-3 pl-10 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" autocomplete="off">
+                <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+                <button type="button" id="clearFunctionSearchBtn" class="hidden absolute right-11 top-3 text-gray-400 hover:text-gray-600 focus:outline-none" title="Clear function search">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button type="button" id="functionSearchToggleBtn" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 focus:outline-none" title="Show functions">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
             </div>
+            
+            <div class="flex items-center justify-between mb-4 mt-2 px-2">
+                <h2 class="text-2xl font-bold text-gray-900">Language Functions</h2>
+                <span class="text-sm text-gray-500 font-medium">Function <i class="fas fa-arrow-right text-[10px] mx-1"></i> Structures / Phrases <i class="fas fa-arrow-right text-[10px] mx-1"></i> Examples</span>
+            </div>
+
+            <div id="functionsList" class="space-y-4"></div>
         </div>
 
         <!-- Roots & Affixes Panel -->
         <div id="rootsPanel" class="hidden mb-6 space-y-4">
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-xl font-bold text-gray-800">Roots & Affixes Dictionary</h2>
-                    <div class="flex gap-2" id="rootsFilterContainer">
-                        <button class="roots-filter-btn active px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-600 text-white shadow-md shadow-blue-500/20" data-type="all">All</button>
-                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="prefix">Prefixes</button>
-                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="root">Roots</button>
-                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="suffix">Suffixes</button>
-                    </div>
-                </div>
-                <div id="rootsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Root cards injected here -->
-                </div>
+            <!-- Root Search Input -->
+            <div class="relative">
+                <input type="text" id="rootSearchInput" placeholder="Search roots, prefixes, suffixes..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+            </div>
+            <div class="flex gap-2 mb-6" id="rootsFilterContainer">
+                <button class="roots-filter-btn active px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm" data-type="all">All</button>
+                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-purple-50 text-purple-600 hover:bg-purple-100 border border-purple-100" data-type="root">Roots</button>
+                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-100" data-type="prefix">Prefixes</button>
+                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-green-50 text-green-600 hover:bg-green-100 border border-green-100" data-type="suffix">Suffixes</button>
+            </div>
+            
+            <div id="rootsList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Root cards injected here -->
             </div>
         </div>
 
@@ -463,6 +473,50 @@
         </div>
     </div>
 
+    <!-- Edit Root Modal -->
+    <div id="rootModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md flex flex-col">
+            <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-lg">
+                <h2 id="rootModalTitle" class="text-2xl font-bold text-gray-800">Edit Morpheme</h2>
+                <button id="closeRootModalBtn" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto">
+                <form id="rootForm">
+                    <input type="hidden" id="editRootId">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Morpheme</label>
+                        <input type="text" id="editRootMorpheme" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Type</label>
+                        <select id="editRootType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 uppercase" required>
+                            <option value="prefix">PREFIX</option>
+                            <option value="root">ROOT</option>
+                            <option value="suffix">SUFFIX</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="editRootOrigin" class="block text-gray-700 font-medium mb-1">Origin</label>
+                        <input type="text" id="editRootOrigin" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Latin (dicere / dictus)">
+                    </div>
+                    <div class="mb-4">
+                        <label for="editRootMeaning" class="block text-gray-700 font-medium mb-1">Meaning</label>
+                        <textarea id="editRootMeaning" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. To say, to speak..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg flex justify-between gap-3">
+                <button type="button" id="deleteRootBtn" class="px-6 py-2 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 font-medium transition-colors hidden">Delete</button>
+                <div class="flex gap-3 ml-auto">
+                    <button type="button" id="cancelRootBtn" class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
+                    <button type="submit" form="rootForm" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./config.runtime.js"></script>
     <script>
         (function loadRuntimeConfigSync() {
@@ -522,13 +576,16 @@
             const viDefPos = document.getElementById('viDefPos');
             const viDefMeaning = document.getElementById('viDefMeaning');
             const viDefExample = document.getElementById('viDefExample');
+            const vocabNavBtn = document.getElementById('vocabNavBtn');
+            const structuresNavBtn = document.getElementById('structuresNavBtn');
+            const rootsNavBtn = document.getElementById('rootsNavBtn');
+
             const allWordsTab = document.getElementById('allWordsTab');
             const favoritesTab = document.getElementById('favoritesTab');
             const recencyTab = document.getElementById('recencyTab');
-            const structuresTab = document.getElementById('structuresTab');
             const quizTab = document.getElementById('quizTab');
             const favoritesCount = document.getElementById('favoritesCount');
-            const vocabSearchSection = document.getElementById('vocabSearchSection');
+            const vocabSection = document.getElementById('vocabSection');
             const structuresPanel = document.getElementById('structuresPanel');
             const quizPanel = document.getElementById('quizPanel');
             const quizCardContainer = document.getElementById('quizCardContainer');
@@ -582,6 +639,7 @@
                 englishWord: ''
             };
             const SUPABASE_TABLE = 'vocab_words';
+            const FUNCTIONS_TABLE = 'language_functions';
             const ROOTS_TABLE = 'word_roots';
             const STRUCTURES_TABLE = 'function_structures';
             const PHRASES_TABLE = 'function_phrases';
@@ -1272,7 +1330,7 @@
                 const isRootsView = currentView === 'roots';
                 const isQuizView = currentView === 'quiz';
                 const isSpecialView = isStructuresView || isRootsView || isQuizView;
-                vocabSearchSection.classList.toggle('hidden', isSpecialView);
+                vocabSection.classList.toggle('hidden', isSpecialView);
                 vocabularyList.classList.toggle('hidden', isSpecialView);
                 structuresPanel.classList.toggle('hidden', !isStructuresView);
                 rootsPanel.classList.toggle('hidden', !isRootsView);
@@ -1328,15 +1386,14 @@
                 }
 
                 return `
-                    <ul class="mt-2 space-y-1">
+                    <ul class="space-y-2">
                         ${parentExamples.map(example => `
-                            <li class="text-sm text-gray-700 flex items-start gap-2">
-                                <span class="text-teal-500 mt-0.5">&bull;</span>
-                                <span class="flex-1">${escapeHtml(example.content)}
-                                    <button onclick="playAudio(null, '${escapeForSingleQuoteJs(example.content)}')" class="ml-1 text-amber-500 hover:text-amber-600" title="Speak example">
-                                        <i class="fas fa-volume-up text-xs"></i>
-                                    </button>
-                                </span>
+                            <li class="text-gray-700 flex items-start">
+                                <div class="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 mr-2 flex-shrink-0"></div>
+                                <span class="flex-1">${escapeHtml(example.content)}</span>
+                                <button onclick="playAudio(null, '${escapeForSingleQuoteJs(example.content)}')" class="ml-2 text-orange-400 hover:text-orange-600 focus:outline-none shrink-0" title="Speak example">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
                             </li>
                         `).join('')}
                     </ul>
@@ -1344,14 +1401,14 @@
             };
 
             const renderParentItems = (items, type) => {
-                const titleClass = type === 'structure' ? 'font-semibold text-blue-600' : 'font-semibold text-purple-600';
+                const titleClass = type === 'structure' ? 'font-bold text-blue-600 text-lg mb-2' : 'font-bold text-purple-600 text-lg mb-2';
                 const textKey = type === 'structure' ? 'pattern' : 'phrase';
                 if (!items.length) {
                     return `<p class="text-sm text-gray-500">No ${type === 'structure' ? 'structures' : 'phrases'} yet.</p>`;
                 }
 
                 return items.map(item => `
-                    <div class="rounded-lg border border-gray-200 bg-gray-50 p-3">
+                    <div class="rounded-lg border border-gray-100 bg-gray-50 p-4 mb-2">
                         <p class="${titleClass}">${escapeHtml(item[textKey])}</p>
                         ${renderLinkedExamples(type, item.id)}
                     </div>
@@ -1390,31 +1447,33 @@
                     const favoriteIconClass = fn.favorite ? 'fas fa-star text-yellow-400' : 'far fa-star text-gray-400 hover:text-yellow-400';
 
                     return `
-                        <div class="border border-gray-200 rounded-lg p-4 bg-white">
-                            <div class="flex items-start justify-between gap-3 mb-4">
-                                <div class="flex items-start gap-3">
-                                    <button type="button" data-toggle-function-favorite="${escapeHtml(fn.id)}" title="Favorite function" class="mt-0.5">
-                                        <i class="${favoriteIconClass} text-xl transition-colors"></i>
+                        <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-start justify-between gap-3 mb-6">
+                                <div class="flex items-start gap-4">
+                                    <button type="button" data-toggle-function-favorite="${escapeHtml(fn.id)}" title="Favorite function" class="mt-1 focus:outline-none">
+                                        <i class="${favoriteIconClass} text-2xl transition-colors"></i>
                                     </button>
                                     <div>
-                                        <h3 class="text-lg font-bold text-gray-900">${escapeHtml(fn.title)}</h3>
-                                        <p class="text-xs text-gray-500 mt-1">${fnStructures.length} structures &bull; ${fnPhrases.length} phrases &bull; ${fnExamples.length} examples</p>
+                                        <h3 class="text-2xl font-bold text-gray-900 leading-tight">${escapeHtml(fn.title)}</h3>
+                                        <p class="text-sm text-gray-500 mt-2 font-medium">${fnStructures.length} structures &bull; ${fnPhrases.length} phrases &bull; ${fnExamples.length} examples</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-2 shrink-0">
-                                    <button type="button" data-edit-function="${escapeHtml(fn.id)}" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200" title="Edit function"><i class="fas fa-pen"></i></button>
-                                    <button type="button" data-delete-function="${escapeHtml(fn.id)}" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-red-50 text-red-600 hover:bg-red-100" title="Delete function"><i class="fas fa-trash"></i></button>
+                                    <button type="button" data-edit-function="${escapeHtml(fn.id)}" class="p-2.5 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 focus:outline-none transition-colors" title="Edit function"><i class="fas fa-pencil-alt"></i></button>
+                                    <button type="button" data-delete-function="${escapeHtml(fn.id)}" class="p-2.5 rounded-lg text-red-600 bg-red-50 hover:bg-red-100 focus:outline-none transition-colors" title="Delete function"><i class="fas fa-trash"></i></button>
                                 </div>
                             </div>
-                            <div class="space-y-4">
+                            <div class="space-y-6">
+                                ${fnStructures.length > 0 ? `
                                 <div>
-                                    <h4 class="font-bold text-blue-600 mb-2">Structures</h4>
-                                    <div class="space-y-2">${renderParentItems(fnStructures, 'structure')}</div>
-                                </div>
+                                    <h4 class="font-bold text-blue-600 text-lg mb-3">Structures</h4>
+                                    <div>${renderParentItems(fnStructures, 'structure')}</div>
+                                </div>` : ''}
+                                ${fnPhrases.length > 0 ? `
                                 <div>
-                                    <h4 class="font-bold text-purple-600 mb-2">Key phrases</h4>
-                                    <div class="space-y-2">${renderParentItems(fnPhrases, 'phrase')}</div>
-                                </div>
+                                    <h4 class="font-bold text-purple-600 text-lg mb-3">Key Phrases</h4>
+                                    <div>${renderParentItems(fnPhrases, 'phrase')}</div>
+                                </div>` : ''}
                             </div>
                         </div>
                     `;
@@ -1713,17 +1772,47 @@
                     let structureHtml = '';
                     if (prefix || root || suffix) {
                         const parts = [];
-                        if (prefix) parts.push(`<span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded cursor-pointer hover:bg-blue-200" onclick="window.switchTab('roots', '${prefix.id}')" title="${escapeHtml(prefix.meaning)}">${escapeHtml(prefix.morpheme)}-</span>`);
-                        if (root) parts.push(`<span class="bg-green-100 text-green-800 px-2 py-0.5 rounded cursor-pointer hover:bg-green-200" onclick="window.switchTab('roots', '${root.id}')" title="${escapeHtml(root.meaning)}">${escapeHtml(root.morpheme)}</span>`);
-                        if (suffix) parts.push(`<span class="bg-red-100 text-red-800 px-2 py-0.5 rounded cursor-pointer hover:bg-red-200" onclick="window.switchTab('roots', '${suffix.id}')" title="${escapeHtml(suffix.meaning)}">-${escapeHtml(suffix.morpheme)}</span>`);
-                        structureHtml = `<div class="mb-3 flex flex-wrap gap-1 text-sm items-center">${parts.join(' <span class="text-gray-400 font-bold text-lg leading-none">+</span> ')}</div>`;
+                        if (prefix) {
+                            const meaningHtml = prefix.meaning ? ` <span class="text-blue-400 font-normal">(${escapeHtml(prefix.meaning)})</span>` : '';
+                            parts.push(`<button onclick="window.switchTab('roots', '${prefix.id}')" class="bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-blue-100 transition-colors">${escapeHtml(prefix.morpheme)}-${meaningHtml}</button>`);
+                        }
+                        if (root) {
+                            const meaningHtml = root.meaning ? ` <span class="text-purple-400 font-normal">(${escapeHtml(root.meaning)})</span>` : '';
+                            parts.push(`<button onclick="window.switchTab('roots', '${root.id}')" class="bg-purple-50 border border-purple-200 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-purple-100 transition-colors">${escapeHtml(root.morpheme)}${meaningHtml}</button>`);
+                        }
+                        if (suffix) {
+                            const meaningHtml = suffix.meaning ? ` <span class="text-green-400 font-normal">(${escapeHtml(suffix.meaning)})</span>` : '';
+                            parts.push(`<button onclick="window.switchTab('roots', '${suffix.id}')" class="bg-green-50 border border-green-200 text-green-700 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-green-100 transition-colors">-${escapeHtml(suffix.morpheme)}${meaningHtml}</button>`);
+                        }
+                        structureHtml = `
+                            <div class="mb-5">
+                                <div class="text-xs font-bold text-gray-500 uppercase flex items-center gap-2 mb-3">
+                                    <i class="fas fa-puzzle-piece"></i> WORD ANATOMY
+                                </div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    ${parts.join(' <span class="text-gray-400 font-bold mx-1">+</span> ')}
+                                </div>
+                            </div>
+                        `;
                     }
 
                     let wordFamilyHtml = '';
                     if (item.wordFamily && item.wordFamily.length > 0) {
-                        const familyList = item.wordFamily.map(fw => `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs border border-gray-200">${escapeHtml(fw)}</span>`).join(' ');
-                        wordFamilyHtml = `<div class="mb-3"><div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Word Family</div><div class="flex flex-wrap gap-1">${familyList}</div></div>`;
+                        const familyList = item.wordFamily.map(fw => `<span class="bg-white text-gray-800 px-3 py-1.5 rounded-lg text-sm font-semibold border border-gray-200 shadow-sm">${escapeHtml(fw)}</span>`).join(' ');
+                        wordFamilyHtml = `
+                            <div class="bg-gray-50 rounded-xl p-4">
+                                <div class="text-xs font-bold text-gray-500 uppercase flex items-center gap-2 mb-3">
+                                    <i class="fas fa-sitemap"></i> WORD FAMILY
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    ${familyList}
+                                </div>
+                            </div>
+                        `;
                     }
+                    
+                    const hasAnatomyOrFamily = (prefix || root || suffix || (item.wordFamily && item.wordFamily.length > 0));
+                    const dividerHtml = hasAnatomyOrFamily ? '<hr class="my-5 border-gray-100 border-dashed">' : '';
                     
                     const card = document.createElement('div');
                     card.className = 'card group';
@@ -1741,28 +1830,26 @@
 
                         <!-- Header -->
                         <div class="flex items-center mb-1 ml-8">
-                            <h2 class="text-2xl font-bold text-gray-900 mr-3">${safeWord}</h2>
+                            <h2 class="text-3xl font-bold text-gray-900 mr-3">${safeWord}</h2>
                             <button onclick="playAudio('${safeAudioUrl}', '${wordForJs}')" class="focus:outline-none">
-                                <i class="fas fa-volume-up speaker-icon text-xl"></i>
+                                <i class="fas fa-volume-up text-gray-400 hover:text-gray-600 text-xl transition-colors"></i>
                             </button>
                         </div>
 
                         <!-- Sub-header -->
-                        <div class="flex flex-wrap items-baseline gap-2 mb-3">
-                            <span class="text-lg text-gray-600 font-serif italic">${safePhonetic}</span>
-                            <span class="text-sm font-semibold bg-gray-200 text-gray-700 px-2 py-0.5 rounded">${safePos}</span>
+                        <div class="flex flex-wrap items-baseline gap-2 mb-4 ml-8">
+                            <span class="text-lg text-gray-500 font-serif italic">${safePhonetic}</span>
+                            <span class="text-sm font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded">${safePos}</span>
                         </div>
-                        ${structureHtml}
-                        ${wordFamilyHtml}
-
+                        
                         <!-- Meanings -->
                         <div class="mb-4 space-y-1">
-                            <p class="text-gray-800"><span class="font-bold text-blue-900">Eng:</span> ${safeEnglishMeaning}</p>
-                            ${item.vietnameseMeaning ? `<p class="text-gray-800"><span class="font-bold text-red-900">Vie:</span> ${safeVietnameseMeaning}</p>` : ''}
+                            <p class="text-gray-800 text-lg"><span class="font-bold text-blue-700">EN:</span> ${safeEnglishMeaning}</p>
+                            ${item.vietnameseMeaning ? `<p class="text-gray-800 text-lg"><span class="font-bold text-red-700">VN:</span> ${safeVietnameseMeaning}</p>` : ''}
                         </div>
 
                         <!-- Extra Details Grid -->
-                        <div class="mb-4 bg-gray-50 p-2 rounded-md ${(!item.synonyms && !item.antonyms && !item.collocations) ? 'hidden' : ''}">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-md ${(!item.synonyms && !item.antonyms && !item.collocations) ? 'hidden' : ''}">
                             ${synonymsHtml}
                             ${antonymsHtml}
                             ${collocationsHtml}
@@ -1770,12 +1857,16 @@
 
                         <!-- Example -->
                         ${item.example ? `
-                        <div class="text-gray-700 italic border-l-4 border-blue-200 pl-3">
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 italic text-gray-700 rounded-r-lg mb-2">
                             "${safeExample}"
-                            <button onclick="playAudio(null, '${exampleForJs}')" class="ml-2 text-gray-400 hover:text-gray-600">
+                            <button onclick="playAudio(null, '${exampleForJs}')" class="ml-2 text-gray-400 hover:text-gray-600 transition-colors">
                                 <i class="fas fa-volume-up text-sm"></i>
                             </button>
                         </div>` : ''}
+                        
+                        ${dividerHtml}
+                        ${structureHtml}
+                        ${wordFamilyHtml}
                     `;
                     vocabularyList.appendChild(card);
                 });
@@ -1785,26 +1876,37 @@
                 const favoriteTotal = words.filter(item => item.favorite).length;
                 favoritesCount.textContent = String(favoriteTotal);
 
-                const inactiveClass = 'px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700';
-                allWordsTab.className = inactiveClass;
-                favoritesTab.className = inactiveClass;
-                recencyTab.className = inactiveClass;
-                structuresTab.className = inactiveClass;
-                rootsTab.className = inactiveClass;
-                quizTab.className = inactiveClass;
+                // Update Main Navigation styling
+                const mainInactiveClass = 'flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors';
+                const mainActiveClass = 'flex-1 py-4 text-sm font-bold border-b-2 border-blue-600 text-blue-600 flex items-center justify-center gap-2 transition-colors';
+                
+                vocabNavBtn.className = mainInactiveClass;
+                structuresNavBtn.className = mainInactiveClass;
+                rootsNavBtn.className = mainInactiveClass;
+
+                if (currentView === 'structures') {
+                    structuresNavBtn.className = mainActiveClass;
+                } else if (currentView === 'roots') {
+                    rootsNavBtn.className = mainActiveClass;
+                } else {
+                    vocabNavBtn.className = mainActiveClass;
+                }
+
+                // Update Vocab Sub-filters
+                const subInactiveClass = 'px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors shadow-sm';
+                allWordsTab.className = subInactiveClass;
+                favoritesTab.className = subInactiveClass;
+                recencyTab.className = subInactiveClass;
+                quizTab.className = subInactiveClass;
 
                 if (currentView === 'favorites') {
-                    favoritesTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-yellow-400 text-gray-900';
+                    favoritesTab.className = 'px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm';
                 } else if (currentView === 'recency') {
-                    recencyTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-purple-600 text-white';
-                } else if (currentView === 'structures') {
-                    structuresTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-teal-600 text-white';
-                } else if (currentView === 'roots') {
-                    rootsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-indigo-600 text-white';
+                    recencyTab.className = 'px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm';
                 } else if (currentView === 'quiz') {
-                    quizTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-pink-600 text-white';
-                } else {
-                    allWordsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white';
+                    quizTab.className = 'px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm';
+                } else if (currentView === 'all') {
+                    allWordsTab.className = 'px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm transition-colors';
                 }
             };
 
@@ -2224,15 +2326,36 @@
 
             exportBackupBtn.addEventListener('click', () => runBackupExport());
 
-            structuresTab.addEventListener('click', () => {
+            vocabNavBtn.addEventListener('click', () => {
+                currentView = 'all';
+                applyFilters();
+            });
+
+            structuresNavBtn.addEventListener('click', () => {
                 currentView = 'structures';
                 applyFilters();
             });
 
-            rootsTab.addEventListener('click', () => {
+            rootsNavBtn.addEventListener('click', () => {
                 currentView = 'roots';
                 applyFilters();
             });
+
+            // Fallback bindings for existing logic
+            const structuresTab = document.getElementById('structuresTab');
+            const rootsTab = document.getElementById('rootsTab');
+            if (structuresTab) {
+                structuresTab.addEventListener('click', () => {
+                    currentView = 'structures';
+                    applyFilters();
+                });
+            }
+            if (rootsTab) {
+                rootsTab.addEventListener('click', () => {
+                    currentView = 'roots';
+                    applyFilters();
+                });
+            }
 
             let currentRootFilter = 'all'; // 'all', 'prefix', 'root', 'suffix'
             
@@ -2241,9 +2364,19 @@
                 if (!listContainer) return;
                 listContainer.innerHTML = '';
                 
+                const rootSearchInput = document.getElementById('rootSearchInput');
+                const rootSearchTerm = rootSearchInput ? rootSearchInput.value.toLowerCase().trim() : '';
+                
                 let filteredRoots = wordRoots;
                 if (currentRootFilter !== 'all') {
                     filteredRoots = wordRoots.filter(r => r.type === currentRootFilter);
+                }
+                
+                if (rootSearchTerm) {
+                    filteredRoots = filteredRoots.filter(r => 
+                        r.morpheme.toLowerCase().includes(rootSearchTerm) || 
+                        (r.meaning && r.meaning.toLowerCase().includes(rootSearchTerm))
+                    );
                 }
                 
                 if (filteredRoots.length === 0) {
@@ -2252,29 +2385,62 @@
                 }
                 
                 filteredRoots.forEach(root => {
-                    const originHtml = root.origin ? `<div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">${escapeHtml(root.origin)}</div>` : '';
+                    const originHtml = root.origin ? `<div class="text-sm text-gray-500 italic mb-4 mt-1">Origin: ${escapeHtml(root.origin)}</div>` : '<div class="mb-4"></div>';
                     
                     let morphemeText = escapeHtml(root.morpheme);
                     if (root.type === 'prefix') morphemeText += '-';
                     if (root.type === 'suffix') morphemeText = '-' + morphemeText;
                     
-                    const badgeClass = root.type === 'prefix' ? 'bg-blue-100 text-blue-800' : (root.type === 'root' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800');
+                    let badgeClass = '';
+                    let borderClass = '';
+                    if (root.type === 'prefix') {
+                        badgeClass = 'bg-blue-100 text-blue-700';
+                        borderClass = 'border-l-4 border-blue-500';
+                    } else if (root.type === 'root') {
+                        badgeClass = 'bg-purple-100 text-purple-700';
+                        borderClass = 'border-l-4 border-purple-500';
+                    } else {
+                        badgeClass = 'bg-green-100 text-green-700';
+                        borderClass = 'border-l-4 border-green-500';
+                    }
                     
-                    const examplesArr = Array.isArray(root.examples) ? root.examples : [];
-                    const examplesHtml = examplesArr.length > 0 ? `<div class="mt-3 pt-3 border-t border-gray-200"><div class="text-[10px] uppercase font-bold text-gray-400 mb-1">Examples</div><div class="flex flex-wrap gap-1">${examplesArr.map(ex => `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs border border-gray-200">${escapeHtml(ex)}</span>`).join('')}</div></div>` : '';
+                    const linkedWords = words.filter(w => w.prefixId === root.id || w.rootId === root.id || w.suffixId === root.id);
+                    let linkedHtml = '';
+                    if (linkedWords.length > 0) {
+                        const linkedTags = linkedWords.map(w => `
+                            <button onclick="window.switchTab('all', null); setTimeout(() => { const i = document.getElementById('searchInput'); i.value = '${escapeForSingleQuoteJs(w.word)}'; i.dispatchEvent(new Event('input')); }, 100);" class="bg-white border border-gray-200 px-3 py-1.5 rounded-lg text-sm text-gray-800 hover:bg-gray-50 transition-colors flex items-center gap-2">
+                                ${escapeHtml(w.word)} <i class="fas fa-external-link-alt text-xs text-gray-400"></i>
+                            </button>
+                        `).join('');
+                        linkedHtml = `
+                            <div class="mt-6 pt-4 border-t border-gray-100">
+                                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">LINKED VOCABULARY (${linkedWords.length})</div>
+                                <div class="flex flex-wrap gap-2">
+                                    ${linkedTags}
+                                </div>
+                            </div>
+                        `;
+                    }
 
                     const card = document.createElement('div');
-                    card.className = 'bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-all flex flex-col justify-between';
+                    card.className = `bg-white p-6 rounded-2xl border border-gray-100 shadow-sm relative hover:shadow-md transition-shadow flex flex-col justify-between ${borderClass}`;
                     card.id = `root-card-${root.id}`;
                     card.innerHTML = `
+                        <button class="absolute top-6 right-6 text-gray-300 hover:text-blue-500 transition-colors focus:outline-none" onclick="openEditRootModal('${root.id}')" title="Edit">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
                         <div>
-                            ${originHtml}
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="${badgeClass} px-3 py-1.5 rounded-lg font-bold text-lg leading-none">${morphemeText}</span>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-3xl font-bold text-gray-900">${morphemeText}</h3>
+                                <span class="${badgeClass} px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">${root.type}</span>
                             </div>
-                            <p class="text-gray-700 text-sm mb-2 font-medium">${escapeHtml(root.meaning || 'No meaning provided')}</p>
+                            ${originHtml}
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">MEANING:</span>
+                                <span class="text-lg text-gray-800">${escapeHtml(root.meaning || 'No meaning provided')}</span>
+                            </div>
                         </div>
-                        ${examplesHtml}
+                        ${linkedHtml}
                     `;
                     listContainer.appendChild(card);
                 });
@@ -2306,7 +2472,7 @@
                     if(allBtn && !allBtn.classList.contains('active')) allBtn.click();
 
                     setTimeout(() => {
-                        const card = document.getElementById(\`root-card-\${dataId}\`);
+                        const card = document.getElementById(`root-card-${dataId}`);
                         if (card) {
                             card.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             card.classList.add('ring-4', 'ring-blue-300', 'transition-all');
@@ -2533,6 +2699,117 @@
                 saveTranslatorSettings();
                 await rewriteWithAI();
             });
+            // Roots modal setup
+            const rootModal = document.getElementById('rootModal');
+            const closeRootModalBtn = document.getElementById('closeRootModalBtn');
+            const cancelRootBtn = document.getElementById('cancelRootBtn');
+            const rootForm = document.getElementById('rootForm');
+
+            const deleteRootBtn = document.getElementById('deleteRootBtn');
+
+            const openEditRootModal = (rootId) => {
+                const root = wordRoots.find(r => r.id === rootId);
+                if (!root) return;
+                
+                document.getElementById('editRootId').value = root.id;
+                document.getElementById('editRootMorpheme').value = root.morpheme;
+                document.getElementById('editRootType').value = root.type;
+                document.getElementById('editRootOrigin').value = root.origin || '';
+                document.getElementById('editRootMeaning').value = root.meaning || '';
+                
+                if (deleteRootBtn) {
+                    deleteRootBtn.classList.remove('hidden');
+                    deleteRootBtn.onclick = async () => {
+                        if (!confirm('Are you sure you want to delete this morpheme?')) return;
+                        
+                        deleteRootBtn.disabled = true;
+                        deleteRootBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                        try {
+                            const { error } = await supabaseClient
+                                .from(ROOTS_TABLE)
+                                .delete()
+                                .eq('id', root.id);
+                            
+                            if (error) throw error;
+                            
+                            wordRoots = wordRoots.filter(r => r.id !== root.id);
+                            if (currentView === 'roots') {
+                                renderRootsView();
+                            } else {
+                                applyFilters();
+                            }
+                            closeRootModal();
+                        } catch (err) {
+                            console.error('Error deleting root:', err);
+                            alert('Failed to delete morpheme. It might be linked to some words.');
+                        } finally {
+                            deleteRootBtn.disabled = false;
+                            deleteRootBtn.textContent = 'Delete';
+                        }
+                    };
+                }
+
+                rootModal.classList.remove('hidden');
+            };
+
+            const closeRootModal = () => rootModal.classList.add('hidden');
+
+            if (closeRootModalBtn) closeRootModalBtn.addEventListener('click', closeRootModal);
+            if (cancelRootBtn) cancelRootBtn.addEventListener('click', closeRootModal);
+            if (rootModal) rootModal.addEventListener('click', (event) => {
+                if (event.target === rootModal) closeRootModal();
+            });
+            
+            window.openEditRootModal = openEditRootModal;
+
+            if (rootForm) {
+                rootForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const id = document.getElementById('editRootId').value;
+                    const morpheme = document.getElementById('editRootMorpheme').value.trim();
+                    const type = document.getElementById('editRootType').value;
+                    const origin = document.getElementById('editRootOrigin').value.trim();
+                    const meaning = document.getElementById('editRootMeaning').value.trim();
+
+                    const originalBtn = document.querySelector('button[form="rootForm"]');
+                    if (originalBtn) {
+                        originalBtn.disabled = true;
+                        originalBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+                    }
+
+                    try {
+                        const { error } = await supabaseClient
+                            .from(ROOTS_TABLE)
+                            .update({ morpheme, type, origin, meaning, updated_at: new Date().toISOString() })
+                            .eq('id', id);
+
+                        if (error) throw error;
+
+                        const localIndex = wordRoots.findIndex(r => r.id === id);
+                        if (localIndex > -1) {
+                            wordRoots[localIndex].morpheme = morpheme;
+                            wordRoots[localIndex].type = type;
+                            wordRoots[localIndex].origin = origin;
+                            wordRoots[localIndex].meaning = meaning;
+                        }
+                        
+                        if (currentView === 'roots') {
+                            renderRootsView();
+                        } else {
+                            applyFilters(); // Fallback re-render
+                        }
+                        closeRootModal();
+                    } catch (err) {
+                        console.error('Error updating root:', err);
+                        alert('Failed to update morpheme.');
+                    } finally {
+                        if (originalBtn) {
+                            originalBtn.disabled = false;
+                            originalBtn.textContent = 'Save';
+                        }
+                    }
+                });
+            }
         });
     </script>
 </body>
