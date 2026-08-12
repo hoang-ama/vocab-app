@@ -205,6 +205,9 @@
             <button id="structuresTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
                 Functions
             </button>
+            <button id="rootsTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
+                Roots & Affixes
+            </button>
             <button id="quizTab" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">
                 Quiz
             </button>
@@ -234,6 +237,24 @@
                     <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
                 </div>
                 <div id="functionsList" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <!-- Roots & Affixes Panel -->
+        <div id="rootsPanel" class="hidden mb-6 space-y-4">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-gray-800">Roots & Affixes Dictionary</h2>
+                    <div class="flex gap-2" id="rootsFilterContainer">
+                        <button class="roots-filter-btn active px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-600 text-white shadow-md shadow-blue-500/20" data-type="all">All</button>
+                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="prefix">Prefixes</button>
+                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="root">Roots</button>
+                        <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200" data-type="suffix">Suffixes</button>
+                    </div>
+                </div>
+                <div id="rootsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Root cards injected here -->
+                </div>
             </div>
         </div>
 
@@ -359,6 +380,30 @@
                         <input type="text" id="collocations" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="go to school, make a decision...">
                     </div>
 
+                    <!-- Roots & Affixes -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Word Structure (Morphemes)</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div>
+                                <input type="text" id="prefixInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Prefix (e.g. un)">
+                            </div>
+                            <div class="flex gap-1">
+                                <input type="text" id="rootInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Root (e.g. believe)">
+                                <button type="button" id="lookupRootBtn" class="bg-gray-200 text-gray-700 px-3 rounded-lg hover:bg-gray-300 transition-colors" title="Wiktionary Lookup">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <input type="text" id="suffixInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Suffix (e.g. able)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="wordFamilyInput" class="block text-gray-700 font-medium mb-1">Word Family (comma separated)</label>
+                        <input type="text" id="wordFamilyInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. constructive (adj), construction (n)">
+                    </div>
+
                     <!-- Example -->
                     <div class="mb-4">
                         <label for="exampleSentence" class="block text-gray-700 font-medium mb-1">Example Sentence</label>
@@ -450,6 +495,7 @@
             const cancelBtn = document.getElementById('cancelBtn');
             const wordForm = document.getElementById('wordForm');
             const fetchWordDataBtn = document.getElementById('fetchWordDataBtn');
+            const lookupRootBtn = document.getElementById('lookupRootBtn');
             const fetchStatus = document.getElementById('fetchStatus');
             const modalTitle = document.getElementById('modalTitle');
             const refreshDbBtn = document.getElementById('refreshDbBtn');
@@ -515,6 +561,7 @@
 
             // --- State ---
             let words = [];
+            let wordRoots = [];
             let currentView = 'all';
             let functions = [];
             let structures = [];
@@ -535,7 +582,7 @@
                 englishWord: ''
             };
             const SUPABASE_TABLE = 'vocab_words';
-            const FUNCTIONS_TABLE = 'language_functions';
+            const ROOTS_TABLE = 'word_roots';
             const STRUCTURES_TABLE = 'function_structures';
             const PHRASES_TABLE = 'function_phrases';
             const EXAMPLES_TABLE = 'function_examples';
@@ -688,6 +735,10 @@
                     word: safeReadString(row.word).trim(),
                     phonetic: safeReadString(row.phonetic).trim(),
                     partOfSpeech: safeReadString(row.part_of_speech).trim(),
+                    prefixId: row.prefix_id || null,
+                    rootId: row.root_id || null,
+                    suffixId: row.suffix_id || null,
+                    wordFamily: Array.isArray(row.word_family) ? row.word_family : [],
                     englishMeaning: safeReadString(row.english_meaning).trim(),
                     vietnameseMeaning: safeReadString(row.vietnamese_meaning).trim(),
                     example: safeReadString(row.example_sentence).trim(),
@@ -713,6 +764,10 @@
                     collocations: safeReadString(wordData.collocations).trim(),
                     example_sentence: safeReadString(wordData.example).trim(),
                     audio_url: safeReadString(wordData.audioUrl).trim(),
+                    prefix_id: wordData.prefixId || null,
+                    root_id: wordData.rootId || null,
+                    suffix_id: wordData.suffixId || null,
+                    word_family: Array.isArray(wordData.wordFamily) ? wordData.wordFamily : [],
                     favorite: Boolean(wordData.favorite),
                     updated_at: new Date().toISOString()
                 };
@@ -729,18 +784,20 @@
                 }
 
                 try {
-                    const { data, error } = await supabaseClient
-                        .from(SUPABASE_TABLE)
-                        .select('*')
-                        .order('updated_at', { ascending: false });
+                    const [{ data: wordsData, error: wordsError }, { data: rootsData, error: rootsError }] = await Promise.all([
+                        supabaseClient.from(SUPABASE_TABLE).select('*').order('updated_at', { ascending: false }),
+                        supabaseClient.from(ROOTS_TABLE).select('*')
+                    ]);
 
-                    if (error) {
-                        console.error(error);
-                        setDatabaseStatus(`Database error: ${error.message}`, 'error');
+                    if (wordsError || rootsError) {
+                        const err = wordsError || rootsError;
+                        console.error(err);
+                        setDatabaseStatus(`Database error: ${err.message}`, 'error');
                         return;
                     }
 
-                    words = (data || []).map(dbRowToAppWord);
+                    wordRoots = rootsData || [];
+                    words = (wordsData || []).map(dbRowToAppWord);
                     setDatabaseStatus(`Database connected. ${words.length} words loaded.`, 'ok');
                     applyFilters();
                 } catch (error) {
@@ -1212,12 +1269,15 @@
 
             const toggleMainSections = () => {
                 const isStructuresView = currentView === 'structures';
+                const isRootsView = currentView === 'roots';
                 const isQuizView = currentView === 'quiz';
-                vocabSearchSection.classList.toggle('hidden', isStructuresView || isQuizView);
-                vocabularyList.classList.toggle('hidden', isStructuresView || isQuizView);
+                const isSpecialView = isStructuresView || isRootsView || isQuizView;
+                vocabSearchSection.classList.toggle('hidden', isSpecialView);
+                vocabularyList.classList.toggle('hidden', isSpecialView);
                 structuresPanel.classList.toggle('hidden', !isStructuresView);
+                rootsPanel.classList.toggle('hidden', !isRootsView);
                 quizPanel.classList.toggle('hidden', !isQuizView);
-                addWordBtn.classList.toggle('hidden', isStructuresView || isQuizView);
+                addWordBtn.classList.toggle('hidden', isSpecialView);
                 addStructureFab.classList.toggle('hidden', !isStructuresView);
             };
 
@@ -1645,6 +1705,25 @@
                     const synonymsHtml = item.synonyms ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-green-600">Syn:</span> ${safeSynonyms}</p>` : '';
                     const antonymsHtml = item.antonyms ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-red-500">Ant:</span> ${safeAntonyms}</p>` : '';
                     const collocationsHtml = item.collocations ? `<p class="text-sm text-gray-600 mt-1"><span class="font-semibold text-blue-600">Col:</span> ${safeCollocations}</p>` : '';
+
+                    const prefix = item.prefixId ? wordRoots.find(r => r.id === item.prefixId) : null;
+                    const root = item.rootId ? wordRoots.find(r => r.id === item.rootId) : null;
+                    const suffix = item.suffixId ? wordRoots.find(r => r.id === item.suffixId) : null;
+
+                    let structureHtml = '';
+                    if (prefix || root || suffix) {
+                        const parts = [];
+                        if (prefix) parts.push(`<span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded cursor-pointer hover:bg-blue-200" onclick="window.switchTab('roots', '${prefix.id}')" title="${escapeHtml(prefix.meaning)}">${escapeHtml(prefix.morpheme)}-</span>`);
+                        if (root) parts.push(`<span class="bg-green-100 text-green-800 px-2 py-0.5 rounded cursor-pointer hover:bg-green-200" onclick="window.switchTab('roots', '${root.id}')" title="${escapeHtml(root.meaning)}">${escapeHtml(root.morpheme)}</span>`);
+                        if (suffix) parts.push(`<span class="bg-red-100 text-red-800 px-2 py-0.5 rounded cursor-pointer hover:bg-red-200" onclick="window.switchTab('roots', '${suffix.id}')" title="${escapeHtml(suffix.meaning)}">-${escapeHtml(suffix.morpheme)}</span>`);
+                        structureHtml = `<div class="mb-3 flex flex-wrap gap-1 text-sm items-center">${parts.join(' <span class="text-gray-400 font-bold text-lg leading-none">+</span> ')}</div>`;
+                    }
+
+                    let wordFamilyHtml = '';
+                    if (item.wordFamily && item.wordFamily.length > 0) {
+                        const familyList = item.wordFamily.map(fw => `<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs border border-gray-200">${escapeHtml(fw)}</span>`).join(' ');
+                        wordFamilyHtml = `<div class="mb-3"><div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Word Family</div><div class="flex flex-wrap gap-1">${familyList}</div></div>`;
+                    }
                     
                     const card = document.createElement('div');
                     card.className = 'card group';
@@ -1673,6 +1752,8 @@
                             <span class="text-lg text-gray-600 font-serif italic">${safePhonetic}</span>
                             <span class="text-sm font-semibold bg-gray-200 text-gray-700 px-2 py-0.5 rounded">${safePos}</span>
                         </div>
+                        ${structureHtml}
+                        ${wordFamilyHtml}
 
                         <!-- Meanings -->
                         <div class="mb-4 space-y-1">
@@ -1709,6 +1790,7 @@
                 favoritesTab.className = inactiveClass;
                 recencyTab.className = inactiveClass;
                 structuresTab.className = inactiveClass;
+                rootsTab.className = inactiveClass;
                 quizTab.className = inactiveClass;
 
                 if (currentView === 'favorites') {
@@ -1717,6 +1799,8 @@
                     recencyTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-purple-600 text-white';
                 } else if (currentView === 'structures') {
                     structuresTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-teal-600 text-white';
+                } else if (currentView === 'roots') {
+                    rootsTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-indigo-600 text-white';
                 } else if (currentView === 'quiz') {
                     quizTab.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-pink-600 text-white';
                 } else {
@@ -1728,6 +1812,11 @@
                 toggleMainSections();
                 if (currentView === 'structures') {
                     applyStructureFilters();
+                    return;
+                }
+                if (currentView === 'roots') {
+                    renderRootsView();
+                    updateViewTabs();
                     return;
                 }
                 if (currentView === 'quiz') {
@@ -1842,6 +1931,14 @@
                 document.getElementById('collocations').value = wordToEdit.collocations || '';
                 document.getElementById('exampleSentence').value = wordToEdit.example || '';
                 document.getElementById('audioUrl').value = wordToEdit.audioUrl || '';
+                
+                const editPrefix = wordToEdit.prefixId ? wordRoots.find(r => r.id === wordToEdit.prefixId) : null;
+                const editRoot = wordToEdit.rootId ? wordRoots.find(r => r.id === wordToEdit.rootId) : null;
+                const editSuffix = wordToEdit.suffixId ? wordRoots.find(r => r.id === wordToEdit.suffixId) : null;
+                document.getElementById('prefixInput').value = editPrefix ? editPrefix.morpheme : '';
+                document.getElementById('rootInput').value = editRoot ? editRoot.morpheme : '';
+                document.getElementById('suffixInput').value = editSuffix ? editSuffix.morpheme : '';
+                document.getElementById('wordFamilyInput').value = Array.isArray(wordToEdit.wordFamily) ? wordToEdit.wordFamily.join(', ') : '';
 
                 modalTitle.textContent = "Edit Word";
                 fetchStatus.textContent = '';
@@ -1893,6 +1990,42 @@
                 if (!supabaseClient) return;
                 
                 const id = document.getElementById('wordId').value;
+                
+                // Helper to resolve or create morpheme
+                const resolveMorpheme = async (morpheme, type) => {
+                    if (!morpheme) return null;
+                    const cleanStr = morpheme.toLowerCase();
+                    const existing = wordRoots.find(r => r.morpheme.toLowerCase() === cleanStr && r.type === type);
+                    if (existing) return existing.id;
+                    
+                    const { data, error } = await supabaseClient
+                        .from(ROOTS_TABLE)
+                        .insert({ morpheme: cleanStr, type, created_at: new Date().toISOString() })
+                        .select()
+                        .single();
+                        
+                    if (error) {
+                        console.error('Failed to create morpheme', error);
+                        return null;
+                    }
+                    wordRoots.push(data);
+                    return data.id;
+                };
+
+                const prefixText = document.getElementById('prefixInput').value.trim().replace(/^-|-$/g, '');
+                const rootText = document.getElementById('rootInput').value.trim();
+                const suffixText = document.getElementById('suffixInput').value.trim().replace(/^-|-$/g, '');
+                
+                const prefixId = await resolveMorpheme(prefixText, 'prefix');
+                const rootId = await resolveMorpheme(rootText, 'root');
+                const suffixId = await resolveMorpheme(suffixText, 'suffix');
+                
+                let wordFamily = [];
+                const wfStr = document.getElementById('wordFamilyInput').value;
+                if (wfStr) {
+                    wordFamily = wfStr.split(',').map(s => s.trim()).filter(Boolean);
+                }
+
                 const newWordData = {
                     word: document.getElementById('wordInput').value.trim(),
                     phonetic: document.getElementById('phonetics').value.trim(),
@@ -1904,6 +2037,10 @@
                     collocations: document.getElementById('collocations').value.trim(),
                     example: document.getElementById('exampleSentence').value.trim(),
                     audioUrl: document.getElementById('audioUrl').value,
+                    prefixId,
+                    rootId,
+                    suffixId,
+                    wordFamily,
                     favorite: false
                 };
 
@@ -2091,6 +2228,93 @@
                 currentView = 'structures';
                 applyFilters();
             });
+
+            rootsTab.addEventListener('click', () => {
+                currentView = 'roots';
+                applyFilters();
+            });
+
+            let currentRootFilter = 'all'; // 'all', 'prefix', 'root', 'suffix'
+            
+            const renderRootsView = () => {
+                const listContainer = document.getElementById('rootsList');
+                if (!listContainer) return;
+                listContainer.innerHTML = '';
+                
+                let filteredRoots = wordRoots;
+                if (currentRootFilter !== 'all') {
+                    filteredRoots = wordRoots.filter(r => r.type === currentRootFilter);
+                }
+                
+                if (filteredRoots.length === 0) {
+                    listContainer.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500"><i class="fas fa-layer-group text-4xl mb-3 opacity-30"></i><p>No morphemes found.</p></div>`;
+                    return;
+                }
+                
+                filteredRoots.forEach(root => {
+                    const originHtml = root.origin ? `<div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">${escapeHtml(root.origin)}</div>` : '';
+                    
+                    let morphemeText = escapeHtml(root.morpheme);
+                    if (root.type === 'prefix') morphemeText += '-';
+                    if (root.type === 'suffix') morphemeText = '-' + morphemeText;
+                    
+                    const badgeClass = root.type === 'prefix' ? 'bg-blue-100 text-blue-800' : (root.type === 'root' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800');
+                    
+                    const examplesArr = Array.isArray(root.examples) ? root.examples : [];
+                    const examplesHtml = examplesArr.length > 0 ? `<div class="mt-3 pt-3 border-t border-gray-200"><div class="text-[10px] uppercase font-bold text-gray-400 mb-1">Examples</div><div class="flex flex-wrap gap-1">${examplesArr.map(ex => `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs border border-gray-200">${escapeHtml(ex)}</span>`).join('')}</div></div>` : '';
+
+                    const card = document.createElement('div');
+                    card.className = 'bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-all flex flex-col justify-between';
+                    card.id = `root-card-${root.id}`;
+                    card.innerHTML = `
+                        <div>
+                            ${originHtml}
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="${badgeClass} px-3 py-1.5 rounded-lg font-bold text-lg leading-none">${morphemeText}</span>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-2 font-medium">${escapeHtml(root.meaning || 'No meaning provided')}</p>
+                        </div>
+                        ${examplesHtml}
+                    `;
+                    listContainer.appendChild(card);
+                });
+            };
+
+            // Roots filter click listeners
+            document.querySelectorAll('.roots-filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.roots-filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+                        b.classList.add('bg-gray-100', 'text-gray-600');
+                    });
+                    
+                    const target = e.currentTarget;
+                    target.classList.remove('bg-gray-100', 'text-gray-600');
+                    target.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+                    
+                    currentRootFilter = target.dataset.type;
+                    renderRootsView();
+                });
+            });
+
+            window.switchTab = (tab, dataId) => {
+                currentView = tab;
+                applyFilters();
+                if (tab === 'roots' && dataId) {
+                    // Reset filter to all to ensure we can see it
+                    const allBtn = document.querySelector('.roots-filter-btn[data-type="all"]');
+                    if(allBtn && !allBtn.classList.contains('active')) allBtn.click();
+
+                    setTimeout(() => {
+                        const card = document.getElementById(\`root-card-\${dataId}\`);
+                        if (card) {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            card.classList.add('ring-4', 'ring-blue-300', 'transition-all');
+                            setTimeout(() => card.classList.remove('ring-4', 'ring-blue-300'), 2000);
+                        }
+                    }, 100);
+                }
+            };
 
             // Quiz Logic
             const shuffleArray = (array) => {
