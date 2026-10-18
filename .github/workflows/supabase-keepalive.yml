@@ -1,0 +1,31 @@
+name: Supabase Keep-Alive
+
+# Supabase Free tier tự pause project sau ~7 ngày không có request.
+# Workflow này gọi REST API 2 lần/tuần để giữ project luôn active.
+on:
+  schedule:
+    - cron: "0 3 * * 1,4" # 03:00 UTC thứ Hai & thứ Năm
+  workflow_dispatch: # cho phép chạy tay từ tab Actions
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase (query vocab_words)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "Missing SUPABASE_URL or SUPABASE_ANON_KEY secret"; exit 1
+          fi
+          status=$(curl -s -o /tmp/resp.txt -w "%{http_code}" \
+            "$SUPABASE_URL/rest/v1/vocab_words?select=id&limit=1" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "HTTP $status"
+          cat /tmp/resp.txt; echo
+          if [ "$status" -ge 400 ]; then
+            echo "::error::Supabase ping failed (HTTP $status). Project có thể đã bị pause."
+            exit 1
+          fi
