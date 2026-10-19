@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph (OG Meta Tags) -->
+    <!-- Open Graph (OG Meta Tags) -->
     <meta property="og:image" content="https://h2mvocab.vercel.app/image/favicon.png" />
     <meta property="og:title" content="H2M Vocabulary Builder" />
     <meta property="og:description" content="My personal dictionary" />
@@ -25,6 +26,7 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
         .card {
             background-color: white;
             border-radius: 1rem;
@@ -34,31 +36,40 @@
             transition: all 0.3s ease;
             position: relative;
         }
+
         .card:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
+
         .speaker-icon {
             cursor: pointer;
-            color: #4B5563; /* Gray-600 */
+            color: #4B5563;
+            /* Gray-600 */
             transition: color 0.2s ease;
         }
+
         .speaker-icon:hover {
-            color: #2563EB; /* Blue-600 */
+            color: #2563EB;
+            /* Blue-600 */
         }
+
         .action-btn {
             opacity: 0.6;
             transition: opacity 0.2s;
             cursor: pointer;
         }
+
         .action-btn:hover {
             opacity: 1;
         }
+
         .add-word-fab {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background-color: #3B82F6; /* Blue-500 */
+            background-color: #3B82F6;
+            /* Blue-500 */
             color: white;
             width: 4rem;
             height: 4rem;
@@ -71,31 +82,53 @@
             transition: background-color 0.3s;
             z-index: 40;
         }
+
         .add-word-fab:hover {
-             background-color: #2563EB; /* Blue-600 */
+            background-color: #2563EB;
+            /* Blue-600 */
         }
+
         /* Custom scrollbar for modal */
         .modal-scroll::-webkit-scrollbar {
             width: 8px;
         }
+
         .modal-scroll::-webkit-scrollbar-track {
-            background: #f1f1f1; 
+            background: #f1f1f1;
         }
+
         .modal-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
+            background: #cbd5e1;
             border-radius: 4px;
         }
+
         .modal-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
+            background: #94a3b8;
         }
+
         /* Flip Card Utilities */
-        .perspective-1000 { perspective: 1000px; }
-        .transform-style-preserve-3d { transform-style: preserve-3d; }
-        .backface-hidden { backface-visibility: hidden; }
-        .rotate-y-180 { transform: rotateY(180deg); }
-        .is-flipped { transform: rotateY(180deg); }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        .is-flipped {
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
+
 <body class="bg-gray-100">
 
     <div class="container mx-auto max-w-2xl p-4 sm:p-6 lg:p-8 pb-24">
@@ -112,10 +145,13 @@
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <p id="databaseStatus" class="text-sm text-gray-600">Database: connecting...</p>
                 <div class="flex flex-wrap gap-2">
-                    <button id="refreshDbBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                    <button id="refreshDbBtn"
+                        class="px-3 py-2 text-sm rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
                         <i class="fas fa-rotate mr-1"></i> Refresh
                     </button>
-                    <button id="exportBackupBtn" class="px-3 py-2 text-sm rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors" title="Download Excel backup with Vocabulary and Functions sheets">
+                    <button id="exportBackupBtn"
+                        class="px-3 py-2 text-sm rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors"
+                        title="Download Excel backup with Vocabulary and Functions sheets">
                         <i class="fas fa-file-export mr-1"></i> Export Backup
                     </button>
                 </div>
@@ -131,19 +167,24 @@
             </div>
 
             <div class="mb-3">
-                <select id="viEnDirection" class="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <select id="viEnDirection"
+                    class="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     <option value="vi-en">Vietnamese -> English</option>
                     <option value="en-vi">English -> Vietnamese</option>
                 </select>
             </div>
 
             <div class="flex gap-2 mb-3">
-                <textarea id="viInput" rows="2" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="Nhập từ hoặc câu tiếng Việt..."></textarea>
+                <textarea id="viInput" rows="2"
+                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                    placeholder="Nhập từ hoặc câu tiếng Việt..."></textarea>
                 <div class="flex flex-col gap-2 self-start">
-                    <button id="viTranslateBtn" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">
+                    <button id="viTranslateBtn"
+                        class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">
                         Translate
                     </button>
-                    <button id="viClearBtn" class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-sm font-semibold border border-gray-300 hover:bg-gray-200 transition-colors">
+                    <button id="viClearBtn"
+                        class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 text-sm font-semibold border border-gray-300 hover:bg-gray-200 transition-colors">
                         Clear
                     </button>
                 </div>
@@ -151,21 +192,29 @@
             <p id="viTranslateStatus" class="text-sm text-gray-500 mb-3 min-h-[20px]"></p>
 
             <div class="mb-3 flex gap-2">
-                <button id="viTabTranslation" class="px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white">Translation</button>
-                <button id="viTabDefinition" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">Definition</button>
+                <button id="viTabTranslation"
+                    class="px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white">Translation</button>
+                <button id="viTabDefinition"
+                    class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700">Definition</button>
             </div>
 
             <div id="viTranslationPanel" class="bg-gray-50 rounded-lg p-4">
                 <p id="viResultLabel" class="text-sm text-gray-500 mb-2">English Translation</p>
                 <p id="viEnResult" class="text-base font-medium text-gray-900">-</p>
                 <div class="mt-3 flex flex-wrap gap-2">
-                    <button id="viEnSpeakBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 bg-white border border-gray-300 hover:text-blue-600 hover:border-blue-400" title="Speak translation">
+                    <button id="viEnSpeakBtn"
+                        class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 bg-white border border-gray-300 hover:text-blue-600 hover:border-blue-400"
+                        title="Speak translation">
                         <i class="fas fa-volume-up mr-1"></i> Speak
                     </button>
-                    <button id="saveFromTranslateBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-green-700 bg-green-50 border border-green-200 hover:bg-green-100" title="Save to vocabulary">
+                    <button id="saveFromTranslateBtn"
+                        class="px-4 py-2 rounded-lg text-sm font-semibold text-green-700 bg-green-50 border border-green-200 hover:bg-green-100"
+                        title="Save to vocabulary">
                         <i class="fas fa-bookmark mr-1"></i> Save to Vocabulary
                     </button>
-                    <button id="aiRewriteBtn" class="px-4 py-2 rounded-lg text-sm font-semibold text-purple-700 bg-purple-50 border border-purple-200 hover:bg-purple-100" title="Rewrite with AI">
+                    <button id="aiRewriteBtn"
+                        class="px-4 py-2 rounded-lg text-sm font-semibold text-purple-700 bg-purple-50 border border-purple-200 hover:bg-purple-100"
+                        title="Rewrite with AI">
                         <i class="fas fa-wand-magic-sparkles mr-1"></i> AI Rewrite
                     </button>
                 </div>
@@ -176,22 +225,26 @@
                 <p id="viDefWord" class="text-2xl font-bold text-gray-900 mb-1">-</p>
                 <div class="flex items-center gap-2 mb-2">
                     <span id="viDefPhonetic" class="text-gray-600 italic">-</span>
-                    <span id="viDefPos" class="text-xs font-semibold bg-gray-200 text-gray-700 px-2 py-0.5 rounded">-</span>
+                    <span id="viDefPos"
+                        class="text-xs font-semibold bg-gray-200 text-gray-700 px-2 py-0.5 rounded">-</span>
                 </div>
                 <p id="viDefMeaning" class="text-gray-800 mb-2">-</p>
                 <p id="viDefExample" class="text-gray-600 italic">-</p>
             </div>
         </div>
-        
+
         <!-- Main Navigation -->
         <div class="flex border-b border-gray-200 mb-6 bg-white rounded-xl overflow-hidden shadow-sm">
-            <button id="vocabNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-blue-600 text-blue-600 flex items-center justify-center gap-2 transition-colors">
+            <button id="vocabNavBtn"
+                class="flex-1 py-4 text-sm font-bold border-b-2 border-blue-600 text-blue-600 flex items-center justify-center gap-2 transition-colors">
                 <i class="fas fa-book"></i> Vocabulary
             </button>
-            <button id="rootsNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
+            <button id="rootsNavBtn"
+                class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
                 <i class="fas fa-code-branch"></i> Roots & Affixes
             </button>
-            <button id="structuresNavBtn" class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
+            <button id="structuresNavBtn"
+                class="flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors">
                 <i class="fas fa-layer-group"></i> Functions
             </button>
         </div>
@@ -200,22 +253,27 @@
         <div id="vocabSection" class="space-y-6">
             <!-- Search Input -->
             <div class="relative">
-                <input type="text" id="searchInput" placeholder="Search for a word..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <input type="text" id="searchInput" placeholder="Search for a word..."
+                    class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
                 <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
             </div>
-            
+
             <!-- Vocab Sub Filters -->
             <div class="flex flex-wrap gap-2 mb-4">
-                <button id="allWordsTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm transition-colors">
+                <button id="allWordsTab"
+                    class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm transition-colors">
                     All Words
                 </button>
-                <button id="favoritesTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                <button id="favoritesTab"
+                    class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
                     Favorites (<span id="favoritesCount">0</span>)
                 </button>
-                <button id="recencyTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                <button id="recencyTab"
+                    class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
                     Recency
                 </button>
-                <button id="quizTab" class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                <button id="quizTab"
+                    class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
                     Quiz
                 </button>
             </div>
@@ -225,21 +283,30 @@
                 <!-- Vocabulary cards will be inserted here by JavaScript -->
             </div>
         </div>
-        
-       <!-- Roots & Affixes Panel -->
+
+        <!-- Roots & Affixes Panel -->
         <div id="rootsPanel" class="hidden mb-6 space-y-4">
             <!-- Root Search Input -->
             <div class="relative">
-                <input type="text" id="rootSearchInput" placeholder="Search roots, prefixes, suffixes..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <input type="text" id="rootSearchInput" placeholder="Search roots, prefixes, suffixes..."
+                    class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
                 <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
             </div>
             <div class="flex gap-2 mb-6" id="rootsFilterContainer">
-                <button class="roots-filter-btn active px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm" data-type="all">All</button>
-                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-purple-50 text-purple-600 hover:bg-purple-100 border border-purple-100" data-type="root">Roots</button>
-                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-100" data-type="prefix">Prefixes</button>
-                <button class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-green-50 text-green-600 hover:bg-green-100 border border-green-100" data-type="suffix">Suffixes</button>
+                <button
+                    class="roots-filter-btn active px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-900 text-white shadow-sm"
+                    data-type="all">All</button>
+                <button
+                    class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-purple-50 text-purple-600 hover:bg-purple-100 border border-purple-100"
+                    data-type="root">Roots</button>
+                <button
+                    class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-100"
+                    data-type="prefix">Prefixes</button>
+                <button
+                    class="roots-filter-btn px-4 py-1.5 rounded-full text-sm font-semibold bg-green-50 text-green-600 hover:bg-green-100 border border-green-100"
+                    data-type="suffix">Suffixes</button>
             </div>
-            
+
             <div id="rootsList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Root cards injected here -->
             </div>
@@ -249,20 +316,30 @@
         <div id="structuresPanel" class="hidden mb-6 space-y-6">
             <!-- Function Search Input -->
             <div id="functionSearchWrap" class="relative">
-                <input type="text" id="structureSearchInput" placeholder="Search or select a function..." class="w-full px-4 py-3 pl-10 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" autocomplete="off">
+                <input type="text" id="structureSearchInput" placeholder="Search or select a function..."
+                    class="w-full px-4 py-3 pl-10 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                    autocomplete="off">
                 <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
-                <button type="button" id="clearFunctionSearchBtn" class="hidden absolute right-11 top-3 text-gray-400 hover:text-gray-600 focus:outline-none" title="Clear function search">
+                <button type="button" id="clearFunctionSearchBtn"
+                    class="hidden absolute right-11 top-3 text-gray-400 hover:text-gray-600 focus:outline-none"
+                    title="Clear function search">
                     <i class="fas fa-times"></i>
                 </button>
-                <button type="button" id="functionSearchToggleBtn" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 focus:outline-none" title="Show functions">
+                <button type="button" id="functionSearchToggleBtn"
+                    class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 focus:outline-none"
+                    title="Show functions">
                     <i class="fas fa-chevron-down"></i>
                 </button>
-                <div id="functionSearchDropdown" class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto"></div>
+                <div id="functionSearchDropdown"
+                    class="hidden absolute z-30 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-y-auto">
+                </div>
             </div>
-            
+
             <div class="flex items-center justify-between mb-4 mt-2 px-2">
                 <h2 class="text-2xl font-bold text-gray-900">Language Functions</h2>
-                <span class="text-sm text-gray-500 font-medium">Function <i class="fas fa-arrow-right text-[10px] mx-1"></i> Structures / Phrases <i class="fas fa-arrow-right text-[10px] mx-1"></i> Examples</span>
+                <span class="text-sm text-gray-500 font-medium">Function <i
+                        class="fas fa-arrow-right text-[10px] mx-1"></i> Structures / Phrases <i
+                        class="fas fa-arrow-right text-[10px] mx-1"></i> Examples</span>
             </div>
 
             <div id="functionsList" class="space-y-4"></div>
@@ -270,28 +347,37 @@
 
         <!-- Quiz Panel -->
         <div id="quizPanel" class="hidden mb-6">
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center min-h-[400px] justify-center relative overflow-hidden">
+            <div
+                class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center min-h-[400px] justify-center relative overflow-hidden">
                 <div class="absolute top-4 right-4 z-10 flex gap-2">
-                    <button id="shuffleQuizBtn" class="px-3 py-2 text-sm rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors" title="Shuffle Words">
+                    <button id="shuffleQuizBtn"
+                        class="px-3 py-2 text-sm rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors"
+                        title="Shuffle Words">
                         <i class="fas fa-random"></i> Mix
                     </button>
                 </div>
-                
+
                 <div id="quizCardContainer" class="w-full max-w-sm perspective-1000 cursor-pointer mt-8">
-                    <div id="quizCard" class="relative w-full h-72 transition-transform duration-500 transform-style-preserve-3d text-center">
+                    <div id="quizCard"
+                        class="relative w-full h-72 transition-transform duration-500 transform-style-preserve-3d text-center">
                         <!-- Front -->
-                        <div id="quizCardFront" class="absolute w-full h-full bg-blue-50 rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden p-6 border border-blue-200">
+                        <div id="quizCardFront"
+                            class="absolute w-full h-full bg-blue-50 rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden p-6 border border-blue-200">
                             <p id="quizWord" class="text-3xl font-bold text-gray-800 mb-2 break-all">-</p>
                             <p id="quizPhonetic" class="text-gray-500 italic mb-4">-</p>
-                            <p class="text-sm text-blue-400 mt-auto"><i class="fas fa-hand-pointer mr-1"></i> Click to flip</p>
+                            <p class="text-sm text-blue-400 mt-auto"><i class="fas fa-hand-pointer mr-1"></i> Click to
+                                flip</p>
                         </div>
                         <!-- Back -->
-                        <div id="quizCardBack" class="absolute w-full h-full bg-white rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden rotate-y-180 p-6 border border-gray-200">
-                            <p id="quizPos" class="text-xs font-semibold bg-gray-200 text-gray-700 px-2 py-1 rounded mb-3">-</p>
+                        <div id="quizCardBack"
+                            class="absolute w-full h-full bg-white rounded-xl shadow-md flex flex-col items-center justify-center backface-hidden rotate-y-180 p-6 border border-gray-200">
+                            <p id="quizPos"
+                                class="text-xs font-semibold bg-gray-200 text-gray-700 px-2 py-1 rounded mb-3">-</p>
                             <p id="quizViMeaning" class="text-xl font-bold text-blue-600 mb-2">-</p>
                             <p id="quizEnMeaning" class="text-gray-700 mb-4 text-sm">-</p>
                             <p id="quizExample" class="text-gray-500 italic text-sm text-center line-clamp-3">-</p>
-                            <button id="quizSpeakBtn" class="mt-auto px-4 py-2 rounded-lg text-sm text-gray-600 bg-gray-50 hover:text-blue-600 border border-gray-200 transition-colors">
+                            <button id="quizSpeakBtn"
+                                class="mt-auto px-4 py-2 rounded-lg text-sm text-gray-600 bg-gray-50 hover:text-blue-600 border border-gray-200 transition-colors">
                                 <i class="fas fa-volume-up"></i> Listen
                             </button>
                         </div>
@@ -299,11 +385,13 @@
                 </div>
 
                 <div class="flex items-center gap-6 mt-10">
-                    <button id="quizPrevBtn" class="w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-blue-600 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button id="quizPrevBtn"
+                        class="w-12 h-12 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-blue-600 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
                         <i class="fas fa-chevron-left text-lg"></i>
                     </button>
                     <span id="quizCounter" class="text-gray-500 font-medium min-w-[60px] text-center">0 / 0</span>
-                    <button id="quizNextBtn" class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 hover:text-blue-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button id="quizNextBtn"
+                        class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 hover:text-blue-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
                         <i class="fas fa-chevron-right text-lg"></i>
                     </button>
                 </div>
@@ -311,7 +399,7 @@
         </div>
 
     </div>
-    
+
     <!-- Add Word Floating Action Button -->
     <div id="addWordBtn" class="add-word-fab">
         <i class="fas fa-plus fa-lg"></i>
@@ -323,9 +411,10 @@
     </div>
 
     <!-- Add/Edit Word Modal -->
-    <div id="wordModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+    <div id="wordModal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-lg flex flex-col max-h-[90vh]">
-            
+
             <!-- Modal Header -->
             <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-lg">
                 <h2 id="modalTitle" class="text-2xl font-bold text-gray-800">Add a New Word</h2>
@@ -342,10 +431,14 @@
 
                     <!-- Word & Fetch -->
                     <div class="mb-4">
-                        <label for="wordInput" class="block text-gray-700 font-medium mb-1">Word <span class="text-red-500">*</span></label>
+                        <label for="wordInput" class="block text-gray-700 font-medium mb-1">Word <span
+                                class="text-red-500">*</span></label>
                         <div class="flex gap-2">
-                            <input type="text" id="wordInput" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="e.g., Serendipity">
-                            <button type="button" id="fetchWordDataBtn" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition-colors flex items-center gap-2">
+                            <input type="text" id="wordInput"
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                required placeholder="e.g., Serendipity">
+                            <button type="button" id="fetchWordDataBtn"
+                                class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition-colors flex items-center gap-2">
                                 <i class="fas fa-cloud-download-alt"></i> Fetch
                             </button>
                         </div>
@@ -356,82 +449,134 @@
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label for="phonetics" class="block text-gray-700 font-medium mb-1">Phonetics</label>
-                            <input type="text" id="phonetics" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="/.../">
+                            <input type="text" id="phonetics"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="/.../">
                         </div>
                         <div>
-                            <label for="partOfSpeech" class="block text-gray-700 font-medium mb-1">Part of Speech</label>
-                            <input type="text" id="partOfSpeech" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="noun, verb...">
+                            <label for="partOfSpeech" class="block text-gray-700 font-medium mb-1">Part of
+                                Speech</label>
+                            <input type="text" id="partOfSpeech"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="noun, verb...">
                         </div>
                     </div>
 
                     <!-- Meanings -->
                     <div class="mb-4">
-                        <label for="englishMeaning" class="block text-gray-700 font-medium mb-1">English Meaning <span class="text-red-500">*</span></label>
-                        <input type="text" id="englishMeaning" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="Definition...">
+                        <label for="englishMeaning" class="block text-gray-700 font-medium mb-1">English Meaning <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" id="englishMeaning"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            required placeholder="Definition...">
                     </div>
-                     <div class="mb-4">
-                        <label for="vietnameseMeaning" class="block text-gray-700 font-medium mb-1">Vietnamese Meaning</label>
-                        <input type="text" id="vietnameseMeaning" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Nghĩa tiếng Việt...">
+                    <div class="mb-4">
+                        <label for="vietnameseMeaning" class="block text-gray-700 font-medium mb-1">Vietnamese
+                            Meaning</label>
+                        <input type="text" id="vietnameseMeaning"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Nghĩa tiếng Việt...">
                     </div>
 
                     <!-- Extras: Synonyms, Antonyms, Collocations -->
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label for="synonyms" class="block text-gray-700 font-medium mb-1">Synonyms</label>
-                            <input type="text" id="synonyms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="happy, joyful...">
+                            <input type="text" id="synonyms"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="happy, joyful...">
                         </div>
                         <div>
                             <label for="antonyms" class="block text-gray-700 font-medium mb-1">Antonyms</label>
-                            <input type="text" id="antonyms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="sad, upset...">
+                            <input type="text" id="antonyms"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="sad, upset...">
                         </div>
                     </div>
                     <div class="mb-4">
                         <label for="collocations" class="block text-gray-700 font-medium mb-1">Collocations</label>
-                        <input type="text" id="collocations" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="go to school, make a decision...">
+                        <input type="text" id="collocations"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="go to school, make a decision...">
                     </div>
 
                     <!-- Roots & Affixes -->
                     <div class="mb-4">
-                        <label class="block text-gray-700 font-medium mb-1">Word Structure (Morphemes)</label>
+                        <label class="block text-gray-700 font-medium mb-1">Word Structure (Morphemes & Meanings)</label>
                         <div class="grid grid-cols-3 gap-2">
                             <div>
-                                <input type="text" id="prefixInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Prefix (e.g. un)">
-                            </div>
-                            <div class="flex gap-1">
-                                <input type="text" id="rootInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Root (e.g. believe)">
-                                <button type="button" id="lookupRootBtn" class="bg-gray-200 text-gray-700 px-3 rounded-lg hover:bg-gray-300 transition-colors" title="Wiktionary Lookup">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </button>
+                                <label for="prefixInput" class="block text-[11px] font-semibold text-gray-500 uppercase mb-0.5">Prefix</label>
+                                <input type="text" id="prefixInput"
+                                    class="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Prefix (e.g. un)">
+                                <input type="text" id="prefixMeaningInput"
+                                    class="w-full mt-1.5 px-2 py-1 border border-gray-200 rounded text-xs text-gray-600 focus:ring-1 focus:ring-blue-400 placeholder:text-gray-400"
+                                    placeholder="Meaning (e.g. not)">
+                                <input type="hidden" id="prefixOriginInput">
                             </div>
                             <div>
-                                <input type="text" id="suffixInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Suffix (e.g. able)">
+                                <div class="flex justify-between items-center mb-0.5">
+                                    <label for="rootInput" class="block text-[11px] font-semibold text-gray-500 uppercase">Root</label>
+                                    <button type="button" id="lookupRootBtn"
+                                        class="text-xs text-gray-500 hover:text-blue-600 transition-colors"
+                                        title="Wiktionary Lookup">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                                <input type="text" id="rootInput"
+                                    class="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Root (e.g. fervere)">
+                                <input type="text" id="rootMeaningInput"
+                                    class="w-full mt-1.5 px-2 py-1 border border-gray-200 rounded text-xs text-gray-600 focus:ring-1 focus:ring-blue-400 placeholder:text-gray-400"
+                                    placeholder="Meaning (e.g. to boil)">
+                                <input type="hidden" id="rootOriginInput">
+                            </div>
+                            <div>
+                                <label for="suffixInput" class="block text-[11px] font-semibold text-gray-500 uppercase mb-0.5">Suffix</label>
+                                <input type="text" id="suffixInput"
+                                    class="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Suffix (e.g. id)">
+                                <input type="text" id="suffixMeaningInput"
+                                    class="w-full mt-1.5 px-2 py-1 border border-gray-200 rounded text-xs text-gray-600 focus:ring-1 focus:ring-blue-400 placeholder:text-gray-400"
+                                    placeholder="Meaning (e.g. quality)">
+                                <input type="hidden" id="suffixOriginInput">
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-4">
-                        <label for="wordFamilyInput" class="block text-gray-700 font-medium mb-1">Word Family (comma separated)</label>
-                        <input type="text" id="wordFamilyInput" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. constructive (adj), construction (n)">
+                        <label for="wordFamilyInput" class="block text-gray-700 font-medium mb-1">Word Family (comma
+                            separated)</label>
+                        <input type="text" id="wordFamilyInput"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="e.g. constructive (adj), construction (n)">
                     </div>
 
                     <!-- Example -->
                     <div class="mb-4">
-                        <label for="exampleSentence" class="block text-gray-700 font-medium mb-1">Example Sentence</label>
-                        <textarea id="exampleSentence" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Use the word in a sentence..."></textarea>
+                        <label for="exampleSentence" class="block text-gray-700 font-medium mb-1">Example
+                            Sentence</label>
+                        <textarea id="exampleSentence" rows="2"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Use the word in a sentence..."></textarea>
                     </div>
                 </form>
             </div>
 
             <!-- Modal Footer -->
             <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg flex justify-end gap-3">
-                <button type="button" id="cancelBtn" class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
-                <button type="submit" form="wordForm" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors shadow-lg shadow-blue-500/30">Save Word</button>
+                <button type="button" id="cancelBtn"
+                    class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
+                <button type="submit" form="wordForm"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors shadow-lg shadow-blue-500/30">Save
+                    Word</button>
             </div>
         </div>
     </div>
 
     <!-- Function Modal -->
-    <div id="functionModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+    <div id="functionModal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl flex flex-col max-h-[90vh]">
             <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-lg">
                 <h2 id="functionModalTitle" class="text-2xl font-bold text-gray-800">Add a New Function</h2>
@@ -443,38 +588,56 @@
                 <form id="functionForm">
                     <input type="hidden" id="functionId">
                     <div class="mb-4">
-                        <label for="functionTitleInput" class="block text-gray-700 font-medium mb-1">Function <span class="text-red-500">*</span></label>
+                        <label for="functionTitleInput" class="block text-gray-700 font-medium mb-1">Function <span
+                                class="text-red-500">*</span></label>
                         <div class="flex gap-2">
-                            <input type="text" id="functionTitleInput" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="e.g., Making Requests">
-                            <button type="button" id="fetchFunctionDataBtn" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition-colors flex items-center gap-2">
+                            <input type="text" id="functionTitleInput"
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                required placeholder="e.g., Making Requests">
+                            <button type="button" id="fetchFunctionDataBtn"
+                                class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition-colors flex items-center gap-2">
                                 <i class="fas fa-cloud-download-alt"></i> Fetch
                             </button>
                         </div>
                         <p id="functionFetchStatus" class="text-sm text-gray-500 mt-1 min-h-[20px]"></p>
                     </div>
                     <div class="mb-4">
-                        <label for="functionStructuresInput" class="block text-blue-600 font-bold mb-1">Structures</label>
-                        <textarea id="functionStructuresInput" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="One structure per line&#10;Could you help sb do sth?&#10;Would you mind + v-ing?"></textarea>
+                        <label for="functionStructuresInput"
+                            class="block text-blue-600 font-bold mb-1">Structures</label>
+                        <textarea id="functionStructuresInput" rows="5"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="One structure per line&#10;Could you help sb do sth?&#10;Would you mind + v-ing?"></textarea>
                     </div>
                     <div class="mb-4">
-                        <label for="functionPhrasesInput" class="block text-purple-600 font-bold mb-1">Key phrases</label>
-                        <textarea id="functionPhrasesInput" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="One phrase per line&#10;give a hand&#10;would you mind"></textarea>
+                        <label for="functionPhrasesInput" class="block text-purple-600 font-bold mb-1">Key
+                            phrases</label>
+                        <textarea id="functionPhrasesInput" rows="4"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="One phrase per line&#10;give a hand&#10;would you mind"></textarea>
                     </div>
                     <div class="mb-4">
-                        <label for="functionExamplesInput" class="block text-teal-600 font-bold mb-1">Examples <span class="text-red-500">*</span></label>
-                        <textarea id="functionExamplesInput" rows="7" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required placeholder="Link each example with: structure: exact structure | example&#10;structure: Could you help sb do sth? | Could you help me do my homework?&#10;phrase: give a hand | I can give you a hand with this."></textarea>
+                        <label for="functionExamplesInput" class="block text-teal-600 font-bold mb-1">Examples <span
+                                class="text-red-500">*</span></label>
+                        <textarea id="functionExamplesInput" rows="7"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            required
+                            placeholder="Link each example with: structure: exact structure | example&#10;structure: Could you help sb do sth? | Could you help me do my homework?&#10;phrase: give a hand | I can give you a hand with this."></textarea>
                     </div>
                 </form>
             </div>
             <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg flex justify-end gap-3">
-                <button type="button" id="cancelFunctionBtn" class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
-                <button type="submit" form="functionForm" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors">Save Function</button>
+                <button type="button" id="cancelFunctionBtn"
+                    class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
+                <button type="submit" form="functionForm"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors">Save
+                    Function</button>
             </div>
         </div>
     </div>
 
     <!-- Edit Root Modal -->
-    <div id="rootModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+    <div id="rootModal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-md flex flex-col">
             <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-lg">
                 <h2 id="rootModalTitle" class="text-2xl font-bold text-gray-800">Edit Morpheme</h2>
@@ -487,11 +650,15 @@
                     <input type="hidden" id="editRootId">
                     <div class="mb-4">
                         <label class="block text-gray-700 font-medium mb-1">Morpheme</label>
-                        <input type="text" id="editRootMorpheme" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <input type="text" id="editRootMorpheme"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            required>
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 font-medium mb-1">Type</label>
-                        <select id="editRootType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 uppercase" required>
+                        <select id="editRootType"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 uppercase"
+                            required>
                             <option value="prefix">PREFIX</option>
                             <option value="root">ROOT</option>
                             <option value="suffix">SUFFIX</option>
@@ -499,24 +666,32 @@
                     </div>
                     <div class="mb-4">
                         <label for="editRootOrigin" class="block text-gray-700 font-medium mb-1">Origin</label>
-                        <input type="text" id="editRootOrigin" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Latin (dicere / dictus)">
+                        <input type="text" id="editRootOrigin"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="e.g. Latin (dicere / dictus)">
                     </div>
                     <div class="mb-4">
                         <label for="editRootMeaning" class="block text-gray-700 font-medium mb-1">Meaning</label>
-                        <textarea id="editRootMeaning" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. To say, to speak..."></textarea>
+                        <textarea id="editRootMeaning" rows="2"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="e.g. To say, to speak..."></textarea>
                     </div>
                 </form>
             </div>
             <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg flex justify-between gap-3">
-                <button type="button" id="deleteRootBtn" class="px-6 py-2 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 font-medium transition-colors hidden">Delete</button>
+                <button type="button" id="deleteRootBtn"
+                    class="px-6 py-2 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 font-medium transition-colors hidden">Delete</button>
                 <div class="flex gap-3 ml-auto">
-                    <button type="button" id="cancelRootBtn" class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
-                    <button type="submit" form="rootForm" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors">Save</button>
+                    <button type="button" id="cancelRootBtn"
+                        class="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 font-medium transition-colors">Cancel</button>
+                    <button type="submit" form="rootForm"
+                        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-bold transition-colors">Save</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="./config.js"></script>
     <script src="./config.runtime.js"></script>
     <script>
         (function loadRuntimeConfigSync() {
@@ -647,8 +822,12 @@
             const TRANSLATOR_SETTINGS_KEY = 'vocab_translator_settings_v1';
             const SUPABASE_URL = window.VOCAB_SUPABASE_URL || 'https://xayeekqcwtqvmqqubqlq.supabase.co';
             const SUPABASE_ANON_KEY = window.VOCAB_SUPABASE_ANON_KEY || 'sb_publishable_dYl1w0ezah4j6LS27m17EA_7Ppc8Qas';
-            const CONFIG_GEMINI_API_KEY = (typeof window.VOCAB_GEMINI_API_KEY === 'string' ? window.VOCAB_GEMINI_API_KEY : '').trim();
-            const FIXED_AI_MODEL = 'gemini-3.1-flash-lite';
+            const CONFIG_GEMINI_API_KEY = (
+                (typeof window.VOCAB_GEMINI_API_KEY === 'string' ? window.VOCAB_GEMINI_API_KEY : '') ||
+                (typeof localStorage !== 'undefined' ? localStorage.getItem('VOCAB_GEMINI_API_KEY') : '') ||
+                'AIzaSyDItKU5E7CjQOCSVJQWRtixi9h2CN9p_Y4'
+            ).trim();
+            const FIXED_AI_MODEL = 'gemini-2.5-flash';
             const isSupabaseConfigured =
                 Boolean(SUPABASE_URL) &&
                 Boolean(SUPABASE_ANON_KEY);
@@ -969,7 +1148,7 @@
             };
 
             const getGeminiModelCandidates = (preferredModel, supportedModels) => {
-                const fallbackDefaults = [FIXED_AI_MODEL, 'gemini-2.0-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-latest', 'gemini-1.5-pro-latest'];
+                const fallbackDefaults = [FIXED_AI_MODEL, 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash', 'gemini-flash-latest'];
                 const all = [preferredModel, ...fallbackDefaults, ...(supportedModels || [])]
                     .map(item => safeReadString(item).replace(/^models\//, '').trim())
                     .filter(Boolean);
@@ -1810,10 +1989,10 @@
                             </div>
                         `;
                     }
-                    
+
                     const hasAnatomyOrFamily = (prefix || root || suffix || (item.wordFamily && item.wordFamily.length > 0));
                     const dividerHtml = hasAnatomyOrFamily ? '<hr class="my-5 border-gray-100 border-dashed">' : '';
-                    
+
                     const card = document.createElement('div');
                     card.className = 'card group';
                     card.innerHTML = `
@@ -1879,7 +2058,7 @@
                 // Update Main Navigation styling
                 const mainInactiveClass = 'flex-1 py-4 text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 flex items-center justify-center gap-2 transition-colors';
                 const mainActiveClass = 'flex-1 py-4 text-sm font-bold border-b-2 border-blue-600 text-blue-600 flex items-center justify-center gap-2 transition-colors';
-                
+
                 vocabNavBtn.className = mainInactiveClass;
                 structuresNavBtn.className = mainInactiveClass;
                 rootsNavBtn.className = mainInactiveClass;
@@ -1956,6 +2135,13 @@
                 document.getElementById('wordId').value = '';
                 document.getElementById('audioUrl').value = '';
                 document.getElementById('wordInput').value = safeReadString(prefillWord).trim();
+                const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+                setVal('prefixMeaningInput', '');
+                setVal('prefixOriginInput', '');
+                setVal('rootMeaningInput', '');
+                setVal('rootOriginInput', '');
+                setVal('suffixMeaningInput', '');
+                setVal('suffixOriginInput', '');
                 modalTitle.textContent = "Add a New Word";
                 fetchStatus.textContent = '';
                 modal.classList.remove('hidden');
@@ -2033,13 +2219,24 @@
                 document.getElementById('collocations').value = wordToEdit.collocations || '';
                 document.getElementById('exampleSentence').value = wordToEdit.example || '';
                 document.getElementById('audioUrl').value = wordToEdit.audioUrl || '';
-                
+
                 const editPrefix = wordToEdit.prefixId ? wordRoots.find(r => r.id === wordToEdit.prefixId) : null;
                 const editRoot = wordToEdit.rootId ? wordRoots.find(r => r.id === wordToEdit.rootId) : null;
                 const editSuffix = wordToEdit.suffixId ? wordRoots.find(r => r.id === wordToEdit.suffixId) : null;
+                
+                const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
                 document.getElementById('prefixInput').value = editPrefix ? editPrefix.morpheme : '';
+                setVal('prefixMeaningInput', editPrefix ? (editPrefix.meaning || '') : '');
+                setVal('prefixOriginInput', editPrefix ? (editPrefix.origin || '') : '');
+
                 document.getElementById('rootInput').value = editRoot ? editRoot.morpheme : '';
+                setVal('rootMeaningInput', editRoot ? (editRoot.meaning || '') : '');
+                setVal('rootOriginInput', editRoot ? (editRoot.origin || '') : '');
+
                 document.getElementById('suffixInput').value = editSuffix ? editSuffix.morpheme : '';
+                setVal('suffixMeaningInput', editSuffix ? (editSuffix.meaning || '') : '');
+                setVal('suffixOriginInput', editSuffix ? (editSuffix.origin || '') : '');
+
                 document.getElementById('wordFamilyInput').value = Array.isArray(wordToEdit.wordFamily) ? wordToEdit.wordFamily.join(', ') : '';
 
                 modalTitle.textContent = "Edit Word";
@@ -2090,22 +2287,52 @@
             wordForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 if (!supabaseClient) return;
-                
+
                 const id = document.getElementById('wordId').value;
-                
-                // Helper to resolve or create morpheme
-                const resolveMorpheme = async (morpheme, type) => {
+
+                // Helper to resolve, create, or enrich morpheme with meaning and origin
+                const resolveMorpheme = async (morpheme, type, meaning = '', origin = '') => {
                     if (!morpheme) return null;
                     const cleanStr = morpheme.toLowerCase();
-                    const existing = wordRoots.find(r => r.morpheme.toLowerCase() === cleanStr && r.type === type);
-                    if (existing) return existing.id;
+                    const existingIndex = wordRoots.findIndex(r => r.morpheme.toLowerCase() === cleanStr && r.type === type);
                     
+                    if (existingIndex !== -1) {
+                        const existing = wordRoots[existingIndex];
+                        // If existing morpheme lacks meaning or origin and we have them, update Supabase!
+                        const shouldUpdate = (!existing.meaning && meaning) || (!existing.origin && origin);
+                        if (shouldUpdate) {
+                            const updatePayload = {
+                                meaning: existing.meaning || meaning || '',
+                                origin: existing.origin || origin || '',
+                                updated_at: new Date().toISOString()
+                            };
+                            const { data, error } = await supabaseClient
+                                .from(ROOTS_TABLE)
+                                .update(updatePayload)
+                                .eq('id', existing.id)
+                                .select()
+                                .single();
+                            if (!error && data) {
+                                wordRoots[existingIndex] = data;
+                            }
+                        }
+                        return existing.id;
+                    }
+
+                    const insertPayload = {
+                        morpheme: cleanStr,
+                        type,
+                        meaning: meaning || '',
+                        origin: origin || '',
+                        created_at: new Date().toISOString(),
+                        updated_at: new Date().toISOString()
+                    };
                     const { data, error } = await supabaseClient
                         .from(ROOTS_TABLE)
-                        .insert({ morpheme: cleanStr, type, created_at: new Date().toISOString() })
+                        .insert(insertPayload)
                         .select()
                         .single();
-                        
+
                     if (error) {
                         console.error('Failed to create morpheme', error);
                         return null;
@@ -2115,13 +2342,21 @@
                 };
 
                 const prefixText = document.getElementById('prefixInput').value.trim().replace(/^-|-$/g, '');
+                const prefixMeaning = document.getElementById('prefixMeaningInput')?.value.trim() || '';
+                const prefixOrigin = document.getElementById('prefixOriginInput')?.value.trim() || '';
+
                 const rootText = document.getElementById('rootInput').value.trim();
+                const rootMeaning = document.getElementById('rootMeaningInput')?.value.trim() || '';
+                const rootOrigin = document.getElementById('rootOriginInput')?.value.trim() || '';
+
                 const suffixText = document.getElementById('suffixInput').value.trim().replace(/^-|-$/g, '');
-                
-                const prefixId = await resolveMorpheme(prefixText, 'prefix');
-                const rootId = await resolveMorpheme(rootText, 'root');
-                const suffixId = await resolveMorpheme(suffixText, 'suffix');
-                
+                const suffixMeaning = document.getElementById('suffixMeaningInput')?.value.trim() || '';
+                const suffixOrigin = document.getElementById('suffixOriginInput')?.value.trim() || '';
+
+                const prefixId = await resolveMorpheme(prefixText, 'prefix', prefixMeaning, prefixOrigin);
+                const rootId = await resolveMorpheme(rootText, 'root', rootMeaning, rootOrigin);
+                const suffixId = await resolveMorpheme(suffixText, 'suffix', suffixMeaning, suffixOrigin);
+
                 let wordFamily = [];
                 const wfStr = document.getElementById('wordFamilyInput').value;
                 if (wfStr) {
@@ -2199,93 +2434,195 @@
                     return;
                 }
 
-                fetchStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching dictionary + synonyms + antonyms + collocations + Vietnamese...';
-                
+                if (!CONFIG_GEMINI_API_KEY) {
+                    fetchStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Missing Gemini API key in config.js (`VOCAB_GEMINI_API_KEY`).</span>';
+                    return;
+                }
+
+                fetchStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching details with Gemini AI & audio...';
+
                 try {
-                    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
-                    if (!response.ok) throw new Error('Not found');
-                    
-                    const data = await response.json();
-                    const entry = data[0];
-                    const meanings = Array.isArray(entry.meanings) ? entry.meanings : [];
-                    const primaryMeaning = meanings.find(m => Array.isArray(m.definitions) && m.definitions.length) || meanings[0] || {};
-                    const primaryDefinition = Array.isArray(primaryMeaning.definitions) ? primaryMeaning.definitions[0] : null;
+                    // 1. Fetch audio pronunciation in parallel from Dictionary API
+                    const audioPromise = (async () => {
+                        try {
+                            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+                            if (!res.ok) return '';
+                            const data = await res.json();
+                            const entry = data[0];
+                            const phonetics = Array.isArray(entry?.phonetics) ? entry.phonetics : [];
+                            const validPhonetic = phonetics.find(p => p.audio && p.audio.endsWith('.mp3')) || phonetics.find(p => p.audio) || {};
+                            return safeReadString(validPhonetic.audio).trim();
+                        } catch {
+                            return '';
+                        }
+                    })();
 
-                    const phonetics = Array.isArray(entry.phonetics) ? entry.phonetics : [];
-                    const validPhonetic = phonetics.find(p => p.audio && p.text) || phonetics.find(p => p.audio) || phonetics.find(p => p.text) || {};
+                    // 2. Fetch linguistic data using Gemini AI: phonetic, define, synonym and antonym, sentence, collocation, word family, root word
+                    const prompt = `You are an expert lexicographer and English-Vietnamese linguist.
+Analyze the English word or phrase: "${word}".
+Query intent: "${word}: phonetic, define, synonym and antonym, sentence, collocation, word family, root word with morpheme meanings and origins".
 
-                    const partOfSpeech = safeReadString(primaryMeaning.partOfSpeech) || 'noun';
-                    const englishMeaning = safeReadString(primaryDefinition?.definition);
+Return ONLY a pure JSON object (no markdown, no backticks) with this exact schema:
+{
+  "phonetic": "Standard IPA phonetic transcription enclosed in slashes, e.g. /ˈter.ər/ or /ˌʌnbɪˈliːvəbl/",
+  "partOfSpeech": "Primary part of speech, e.g. noun, verb, adjective, adverb, phrase",
+  "englishMeaning": "Precise, clear, high-quality English definition",
+  "vietnameseMeaning": "Nghĩa tiếng Việt chuẩn xác, tự nhiên, súc tích",
+  "synonyms": ["accurate synonym 1", "accurate synonym 2", ...],
+  "antonyms": ["accurate antonym 1", "accurate antonym 2", ...],
+  "collocations": ["high-frequency collocation 1", "high-frequency collocation 2", ...],
+  "prefix": "prefix if clearly identifiable (e.g. un, dis, re, in), otherwise \"\"",
+  "prefixMeaning": "short meaning of prefix (e.g. not, opposite of), otherwise \"\"",
+  "prefixOrigin": "origin of prefix (e.g. Old English, Latin, Greek), otherwise \"\"",
+  "root": "root word or etymological root (e.g. terrere, fervere, spec, believe), otherwise \"\"",
+  "rootMeaning": "short meaning of root (e.g. to frighten, to boil/be hot, to look), otherwise \"\"",
+  "rootOrigin": "origin of root (e.g. Latin, Greek), otherwise \"\"",
+  "suffix": "suffix if clearly identifiable (e.g. able, tion, ment, ly, id), otherwise \"\"",
+  "suffixMeaning": "short meaning of suffix (e.g. quality or state of, tending to, capable of), otherwise \"\"",
+  "suffixOrigin": "origin of suffix (e.g. Latin, Old English), otherwise \"\"",
+  "wordFamily": ["word (pos)", ...],
+  "exampleSentence": "A natural, high-quality example sentence showcasing \"${word}\" in context"
+}
 
-                    const apiSynonyms = uniqueNormalizedList([
-                        ...(primaryMeaning.synonyms || []),
-                        ...(primaryDefinition?.synonyms || [])
-                    ], 10);
-                    const apiAntonyms = uniqueNormalizedList([
-                        ...(primaryMeaning.antonyms || []),
-                        ...(primaryDefinition?.antonyms || [])
-                    ], 10);
+Strict Quality Rules:
+1. "collocations": Provide only authentic, high-frequency collocations (e.g. adjective+noun like "sheer terror", "blind terror", verb+noun like "inspire terror", "strike terror", phrases like "reign of terror"). NEVER return generic grammatical filler like "the ${word}", "and ${word}", "of ${word}". If there are no clear common collocations, leave array empty [].
+2. "antonyms": Must be true, accurate opposites (e.g. for terror: peace, calm, tranquility, security, serenity). If none exist, leave array empty [].
+3. "synonyms": High-quality real synonyms (e.g. for terror: horror, dread, panic, fright, alarm). If none, leave array empty [].
+4. "prefix", "root", "suffix": Morphological & etymological breakdown. Provide rootMeaning, rootOrigin, prefixMeaning, prefixOrigin, suffixMeaning, suffixOrigin if applicable. If root is Latin/Greek (e.g. "terrere" for "terror", "fervere" for "fervid"), provide it. If no prefix or suffix is present, leave their morpheme, meaning and origin as empty string "". Do NOT invent morphemes.
+5. "wordFamily": Related forms with part of speech tags in parentheses, e.g. ["terrorize (v)", "terrorism (n)", "terrorist (n)", "terrible (adj)", "terrific (adj)"]. If none, leave array empty [].
+6. "exampleSentence": High-quality, natural sentence illustrating "${word}".
+7. If any field is not applicable or not found, leave it empty ("" or []). Never make up placeholder or filler data.`;
 
-                    const dictionaryExamples = uniqueNormalizedList(
-                        meanings.flatMap(m => (m.definitions || []).map(d => d.example)),
-                        5
-                    );
-                    const exampleSentence = dictionaryExamples[0] || buildFallbackExample(word, partOfSpeech);
+                    let candidates = [FIXED_AI_MODEL, 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+                    candidates = [...new Set(candidates.filter(Boolean))];
 
-                    const [
-                        datamuseSynonymsResult,
-                        datamuseAntonymsResult,
-                        previousCollocationsResult,
-                        nextCollocationsResult,
-                        vietnameseResult
-                    ] = await Promise.allSettled([
-                        fetchDatamuseWords(`rel_syn=${encodeURIComponent(word)}&max=10`),
-                        fetchDatamuseWords(`rel_ant=${encodeURIComponent(word)}&max=10`),
-                        fetchDatamuseWords(`rel_bgb=${encodeURIComponent(word)}&max=6`),
-                        fetchDatamuseWords(`rel_bga=${encodeURIComponent(word)}&max=6`),
-                        fetchVietnameseMeaning(englishMeaning || word)
-                    ]);
+                    let responseText = '';
+                    let lastGeminiError = '';
 
-                    const datamuseSynonyms = datamuseSynonymsResult.status === 'fulfilled' ? datamuseSynonymsResult.value : [];
-                    const datamuseAntonyms = datamuseAntonymsResult.status === 'fulfilled' ? datamuseAntonymsResult.value : [];
-                    const previousCollocations = previousCollocationsResult.status === 'fulfilled' ? previousCollocationsResult.value : [];
-                    const nextCollocations = nextCollocationsResult.status === 'fulfilled' ? nextCollocationsResult.value : [];
-                    const vietnameseMeaning = vietnameseResult.status === 'fulfilled' ? vietnameseResult.value : '';
+                    for (const candidate of candidates) {
+                        try {
+                            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(CONFIG_GEMINI_API_KEY)}`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    contents: [{ parts: [{ text: prompt }] }],
+                                    generationConfig: {
+                                        temperature: 0.1,
+                                        responseMimeType: 'application/json'
+                                    }
+                                })
+                            });
 
-                    const mergedSynonyms = uniqueNormalizedList([...apiSynonyms, ...datamuseSynonyms], 8);
-                    const mergedAntonyms = uniqueNormalizedList([...apiAntonyms, ...datamuseAntonyms], 8);
-                    const mergedCollocations = uniqueNormalizedList([
-                        ...previousCollocations.map(item => `${item} ${word}`),
-                        ...nextCollocations.map(item => `${word} ${item}`)
-                    ], 8);
+                            if (!response.ok) {
+                                lastGeminiError = await response.text();
+                                continue;
+                            }
 
-                    document.getElementById('phonetics').value = safeReadString(validPhonetic.text);
-                    document.getElementById('audioUrl').value = safeReadString(validPhonetic.audio);
-                    document.getElementById('partOfSpeech').value = partOfSpeech;
-                    document.getElementById('englishMeaning').value = englishMeaning;
-                    document.getElementById('vietnameseMeaning').value = vietnameseMeaning;
-                    document.getElementById('synonyms').value = mergedSynonyms.join(', ');
-                    document.getElementById('antonyms').value = mergedAntonyms.join(', ');
-                    document.getElementById('collocations').value = mergedCollocations.join(', ');
-                    document.getElementById('exampleSentence').value = exampleSentence;
-
-                    const missingFields = [];
-                    if (!document.getElementById('vietnameseMeaning').value.trim()) missingFields.push('Vietnamese');
-                    if (!document.getElementById('synonyms').value.trim()) missingFields.push('synonyms');
-                    if (!document.getElementById('antonyms').value.trim()) missingFields.push('antonyms');
-                    if (!document.getElementById('collocations').value.trim()) missingFields.push('collocations');
-                    if (!document.getElementById('exampleSentence').value.trim()) missingFields.push('example');
-
-                    if (missingFields.length) {
-                        fetchStatus.innerHTML = `<span class="text-amber-600"><i class="fas fa-info-circle"></i> Partial result. Missing: ${missingFields.join(', ')}.</span>`;
-                    } else {
-                        fetchStatus.innerHTML = '<span class="text-green-600"><i class="fas fa-check"></i> Great! All main fields were auto-filled.</span>';
+                            const data = await response.json();
+                            responseText = safeReadString(data?.candidates?.[0]?.content?.parts?.[0]?.text).trim();
+                            if (responseText) break;
+                        } catch (err) {
+                            lastGeminiError = err?.message || String(err);
+                        }
                     }
+
+                    // Fallback to supported models check if initial candidates fail
+                    if (!responseText) {
+                        const supportedModels = await fetchGeminiSupportedModels(CONFIG_GEMINI_API_KEY);
+                        const dynamicCandidates = getGeminiModelCandidates(FIXED_AI_MODEL, supportedModels)
+                            .filter(m => !candidates.includes(m));
+
+                        for (const candidate of dynamicCandidates) {
+                            try {
+                                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(CONFIG_GEMINI_API_KEY)}`, {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        contents: [{ parts: [{ text: prompt }] }],
+                                        generationConfig: {
+                                            temperature: 0.1,
+                                            responseMimeType: 'application/json'
+                                        }
+                                    })
+                                });
+
+                                if (!response.ok) continue;
+
+                                const data = await response.json();
+                                responseText = safeReadString(data?.candidates?.[0]?.content?.parts?.[0]?.text).trim();
+                                if (responseText) break;
+                            } catch {
+                                // continue to next candidate
+                            }
+                        }
+                    }
+
+                    if (!responseText) throw new Error(lastGeminiError || 'No valid response from AI models.');
+
+                    const wordData = extractJsonObject(responseText);
+                    const audioUrl = await audioPromise;
+
+                    // Helpers to clean & format fields
+                    const toCommaSeparated = (val) => {
+                        if (Array.isArray(val)) {
+                            return val
+                                .map(s => safeReadString(s).trim())
+                                .filter(s => s && !/^(none|n\/a|null|undefined|-)$/i.test(s))
+                                .join(', ');
+                        }
+                        const str = safeReadString(val).trim();
+                        return /^(none|n\/a|null|undefined|-)$/i.test(str) ? '' : str;
+                    };
+
+                    const cleanMorpheme = (val) => {
+                        const s = safeReadString(val).trim();
+                        if (!s || /^(none|n\/a|null|undefined|-)$/i.test(s)) return '';
+                        return s;
+                    };
+
+                    const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+
+                    // Fill into form with precise extraction
+                    document.getElementById('phonetics').value = safeReadString(wordData.phonetic).trim();
+                    document.getElementById('partOfSpeech').value = safeReadString(wordData.partOfSpeech).trim().toLowerCase();
+                    document.getElementById('englishMeaning').value = safeReadString(wordData.englishMeaning).trim();
+                    document.getElementById('vietnameseMeaning').value = safeReadString(wordData.vietnameseMeaning).trim();
+                    
+                    document.getElementById('synonyms').value = toCommaSeparated(wordData.synonyms);
+                    document.getElementById('antonyms').value = toCommaSeparated(wordData.antonyms);
+                    document.getElementById('collocations').value = toCommaSeparated(wordData.collocations);
+
+                    document.getElementById('prefixInput').value = cleanMorpheme(wordData.prefix).replace(/-+$/, '');
+                    setVal('prefixMeaningInput', cleanMorpheme(wordData.prefixMeaning));
+                    setVal('prefixOriginInput', cleanMorpheme(wordData.prefixOrigin));
+
+                    document.getElementById('rootInput').value = cleanMorpheme(wordData.root);
+                    setVal('rootMeaningInput', cleanMorpheme(wordData.rootMeaning));
+                    setVal('rootOriginInput', cleanMorpheme(wordData.rootOrigin));
+
+                    document.getElementById('suffixInput').value = cleanMorpheme(wordData.suffix).replace(/^-+/, '');
+                    setVal('suffixMeaningInput', cleanMorpheme(wordData.suffixMeaning));
+                    setVal('suffixOriginInput', cleanMorpheme(wordData.suffixOrigin));
+
+                    document.getElementById('wordFamilyInput').value = toCommaSeparated(wordData.wordFamily);
+                    document.getElementById('exampleSentence').value = safeReadString(wordData.exampleSentence).trim();
+                    if (audioUrl) document.getElementById('audioUrl').value = audioUrl;
+
+                    fetchStatus.innerHTML = `<span class="text-green-600"><i class="fas fa-check"></i> Great! All fields fetched accurately with Gemini AI.</span>`;
                 } catch (err) {
                     console.error(err);
-                    fetchStatus.innerHTML = '<span class="text-red-500"><i class="fas fa-exclamation-circle"></i> Word not found on online dictionary.</span>';
+                    fetchStatus.innerHTML = `<span class="text-red-500"><i class="fas fa-exclamation-circle"></i> Fetch failed: ${escapeHtml(safeReadString(err?.message).slice(0, 180) || 'Unknown error')}</span>`;
                 }
             });
+
+            if (lookupRootBtn) {
+                lookupRootBtn.addEventListener('click', () => {
+                    const root = document.getElementById('rootInput').value.trim() || document.getElementById('wordInput').value.trim();
+                    if (root) {
+                        window.open(`https://en.wiktionary.org/wiki/${encodeURIComponent(root)}`, '_blank');
+                    }
+                });
+            }
 
 
             // --- UI Handlers ---
@@ -2358,39 +2695,39 @@
             }
 
             let currentRootFilter = 'all'; // 'all', 'prefix', 'root', 'suffix'
-            
+
             const renderRootsView = () => {
                 const listContainer = document.getElementById('rootsList');
                 if (!listContainer) return;
                 listContainer.innerHTML = '';
-                
+
                 const rootSearchInput = document.getElementById('rootSearchInput');
                 const rootSearchTerm = rootSearchInput ? rootSearchInput.value.toLowerCase().trim() : '';
-                
+
                 let filteredRoots = wordRoots;
                 if (currentRootFilter !== 'all') {
                     filteredRoots = wordRoots.filter(r => r.type === currentRootFilter);
                 }
-                
+
                 if (rootSearchTerm) {
-                    filteredRoots = filteredRoots.filter(r => 
-                        r.morpheme.toLowerCase().includes(rootSearchTerm) || 
+                    filteredRoots = filteredRoots.filter(r =>
+                        r.morpheme.toLowerCase().includes(rootSearchTerm) ||
                         (r.meaning && r.meaning.toLowerCase().includes(rootSearchTerm))
                     );
                 }
-                
+
                 if (filteredRoots.length === 0) {
                     listContainer.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500"><i class="fas fa-layer-group text-4xl mb-3 opacity-30"></i><p>No morphemes found.</p></div>`;
                     return;
                 }
-                
+
                 filteredRoots.forEach(root => {
                     const originHtml = root.origin ? `<div class="text-sm text-gray-500 italic mb-4 mt-1">Origin: ${escapeHtml(root.origin)}</div>` : '<div class="mb-4"></div>';
-                    
+
                     let morphemeText = escapeHtml(root.morpheme);
                     if (root.type === 'prefix') morphemeText += '-';
                     if (root.type === 'suffix') morphemeText = '-' + morphemeText;
-                    
+
                     let badgeClass = '';
                     let borderClass = '';
                     if (root.type === 'prefix') {
@@ -2403,7 +2740,7 @@
                         badgeClass = 'bg-green-100 text-green-700';
                         borderClass = 'border-l-4 border-green-500';
                     }
-                    
+
                     const linkedWords = words.filter(w => w.prefixId === root.id || w.rootId === root.id || w.suffixId === root.id);
                     let linkedHtml = '';
                     if (linkedWords.length > 0) {
@@ -2453,11 +2790,11 @@
                         b.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
                         b.classList.add('bg-gray-100', 'text-gray-600');
                     });
-                    
+
                     const target = e.currentTarget;
                     target.classList.remove('bg-gray-100', 'text-gray-600');
                     target.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
-                    
+
                     currentRootFilter = target.dataset.type;
                     renderRootsView();
                 });
@@ -2469,7 +2806,7 @@
                 if (tab === 'roots' && dataId) {
                     // Reset filter to all to ensure we can see it
                     const allBtn = document.querySelector('.roots-filter-btn[data-type="all"]');
-                    if(allBtn && !allBtn.classList.contains('active')) allBtn.click();
+                    if (allBtn && !allBtn.classList.contains('active')) allBtn.click();
 
                     setTimeout(() => {
                         const card = document.getElementById(`root-card-${dataId}`);
@@ -2505,24 +2842,24 @@
                     quizNextBtn.disabled = true;
                     return;
                 }
-                
+
                 const currentWord = quizWords[currentQuizIndex];
-                
+
                 // Front
                 quizWord.textContent = currentWord.word || '-';
                 quizPhonetic.textContent = currentWord.phonetic || '';
-                
+
                 // Back
                 quizPos.textContent = currentWord.partOfSpeech || '-';
                 quizViMeaning.textContent = currentWord.vietnameseMeaning || '-';
                 quizEnMeaning.textContent = currentWord.englishMeaning || '-';
                 quizExample.textContent = currentWord.example || '-';
-                
+
                 quizCounter.textContent = `${currentQuizIndex + 1} / ${quizWords.length}`;
-                
+
                 quizPrevBtn.disabled = currentQuizIndex === 0;
                 quizNextBtn.disabled = currentQuizIndex === quizWords.length - 1;
-                
+
                 // Reset flip
                 isQuizCardFlipped = false;
                 quizCard.classList.remove('is-flipped');
@@ -2545,7 +2882,7 @@
             };
 
             quizCardContainer.addEventListener('click', flipQuizCard);
-            
+
             quizPrevBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if (currentQuizIndex > 0) {
@@ -2553,7 +2890,7 @@
                     renderQuizCard();
                 }
             });
-            
+
             quizNextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if (currentQuizIndex < quizWords.length - 1) {
@@ -2561,9 +2898,9 @@
                     renderQuizCard();
                 }
             });
-            
+
             shuffleQuizBtn.addEventListener('click', startQuiz);
-            
+
             quizSpeakBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if (quizWords.length) {
@@ -2710,18 +3047,18 @@
             const openEditRootModal = (rootId) => {
                 const root = wordRoots.find(r => r.id === rootId);
                 if (!root) return;
-                
+
                 document.getElementById('editRootId').value = root.id;
                 document.getElementById('editRootMorpheme').value = root.morpheme;
                 document.getElementById('editRootType').value = root.type;
                 document.getElementById('editRootOrigin').value = root.origin || '';
                 document.getElementById('editRootMeaning').value = root.meaning || '';
-                
+
                 if (deleteRootBtn) {
                     deleteRootBtn.classList.remove('hidden');
                     deleteRootBtn.onclick = async () => {
                         if (!confirm('Are you sure you want to delete this morpheme?')) return;
-                        
+
                         deleteRootBtn.disabled = true;
                         deleteRootBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                         try {
@@ -2729,9 +3066,9 @@
                                 .from(ROOTS_TABLE)
                                 .delete()
                                 .eq('id', root.id);
-                            
+
                             if (error) throw error;
-                            
+
                             wordRoots = wordRoots.filter(r => r.id !== root.id);
                             if (currentView === 'roots') {
                                 renderRootsView();
@@ -2759,7 +3096,7 @@
             if (rootModal) rootModal.addEventListener('click', (event) => {
                 if (event.target === rootModal) closeRootModal();
             });
-            
+
             window.openEditRootModal = openEditRootModal;
 
             if (rootForm) {
@@ -2792,7 +3129,7 @@
                             wordRoots[localIndex].origin = origin;
                             wordRoots[localIndex].meaning = meaning;
                         }
-                        
+
                         if (currentView === 'roots') {
                             renderRootsView();
                         } else {
@@ -2813,4 +3150,5 @@
         });
     </script>
 </body>
+
 </html>
