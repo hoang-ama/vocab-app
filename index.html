@@ -154,6 +154,11 @@
                         title="Download Excel backup with Vocabulary and Functions sheets">
                         <i class="fas fa-file-export mr-1"></i> Export Backup
                     </button>
+                    <button id="apiKeySettingsBtn"
+                        class="px-3 py-2 text-sm rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors"
+                        title="Configure Gemini API Key">
+                        <i class="fas fa-key mr-1"></i> Gemini Key
+                    </button>
                 </div>
             </div>
             <p id="exportStatus" class="text-xs text-gray-500 mt-2 min-h-[16px]"></p>
@@ -442,7 +447,7 @@
                                 <i class="fas fa-cloud-download-alt"></i> Fetch
                             </button>
                         </div>
-                        <p id="fetchStatus" class="text-sm text-gray-500 mt-1 h-5"></p>
+                        <p id="fetchStatus" class="text-sm text-gray-500 mt-1 min-h-[20px] mb-1"></p>
                     </div>
 
                     <!-- Phonetics & POS -->
@@ -822,12 +827,27 @@
             const TRANSLATOR_SETTINGS_KEY = 'vocab_translator_settings_v1';
             const SUPABASE_URL = window.VOCAB_SUPABASE_URL || 'https://xayeekqcwtqvmqqubqlq.supabase.co';
             const SUPABASE_ANON_KEY = window.VOCAB_SUPABASE_ANON_KEY || 'sb_publishable_dYl1w0ezah4j6LS27m17EA_7Ppc8Qas';
-            const CONFIG_GEMINI_API_KEY = (
-                (typeof window.VOCAB_GEMINI_API_KEY === 'string' ? window.VOCAB_GEMINI_API_KEY : '') ||
-                (typeof localStorage !== 'undefined' ? localStorage.getItem('VOCAB_GEMINI_API_KEY') : '') ||
-                'AIzaSyDItKU5E7CjQOCSVJQWRtixi9h2CN9p_Y4'
-            ).trim();
-            const FIXED_AI_MODEL = 'gemini-2.5-flash';
+            const getGeminiApiKey = () => {
+                return (
+                    (typeof window.VOCAB_GEMINI_API_KEY === 'string' ? window.VOCAB_GEMINI_API_KEY : '') ||
+                    (typeof localStorage !== 'undefined' ? (localStorage.getItem('VOCAB_GEMINI_API_KEY') || '') : '')
+                ).trim();
+            };
+
+            const setGeminiApiKey = (key) => {
+                const trimmed = safeReadString(key).trim();
+                if (typeof localStorage !== 'undefined') {
+                    if (trimmed) {
+                        localStorage.setItem('VOCAB_GEMINI_API_KEY', trimmed);
+                    } else {
+                        localStorage.removeItem('VOCAB_GEMINI_API_KEY');
+                    }
+                }
+                window.VOCAB_GEMINI_API_KEY = trimmed;
+                return trimmed;
+            };
+
+            const FIXED_AI_MODEL = 'gemini-3.8-flash';
             const isSupabaseConfigured =
                 Boolean(SUPABASE_URL) &&
                 Boolean(SUPABASE_ANON_KEY);
@@ -1137,22 +1157,43 @@
             };
 
             const fetchGeminiSupportedModels = async (apiKey) => {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(apiKey)}`);
-                if (!response.ok) return [];
-                const data = await response.json();
-                const models = Array.isArray(data?.models) ? data.models : [];
-                return models
-                    .filter(model => Array.isArray(model.supportedGenerationMethods) && model.supportedGenerationMethods.includes('generateContent'))
-                    .map(model => safeReadString(model.name).replace(/^models\//, ''))
-                    .filter(Boolean);
+                if (!apiKey) return [];
+                try {
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(apiKey)}`);
+                    if (!response.ok) return [];
+                    const data = await response.json();
+                    const models = Array.isArray(data?.models) ? data.models : [];
+                    return models
+                        .filter(model => Array.isArray(model.supportedGenerationMethods) && model.supportedGenerationMethods.includes('generateContent'))
+                        .map(model => safeReadString(model.name).replace(/^models\//, ''))
+                        .filter(Boolean);
+                } catch {
+                    return [];
+                }
             };
 
             const getGeminiModelCandidates = (preferredModel, supportedModels) => {
-                const fallbackDefaults = [FIXED_AI_MODEL, 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash', 'gemini-flash-latest'];
-                const all = [preferredModel, ...fallbackDefaults, ...(supportedModels || [])]
+                const fallbackDefaults = [
+                    FIXED_AI_MODEL,
+                    'gemini-3.8-flash',
+                    'gemini-3.8-flash-lite',
+                    'gemini-2.5-flash',
+                    'gemini-2.5-flash-lite'
+                ];
+                const cleanSupported = (supportedModels || [])
                     .map(item => safeReadString(item).replace(/^models\//, '').trim())
                     .filter(Boolean);
-                return [...new Set(all)];
+                const wishlist = [preferredModel, ...fallbackDefaults]
+                    .map(item => safeReadString(item).replace(/^models\//, '').trim())
+                    .filter(Boolean);
+
+                if (cleanSupported.length) {
+                    const supportedSet = new Set(cleanSupported);
+                    const prioritized = wishlist.filter(m => supportedSet.has(m));
+                    const remaining = cleanSupported.filter(m => !prioritized.includes(m));
+                    return [...new Set([...prioritized, ...remaining, ...wishlist])];
+                }
+                return [...new Set(wishlist)];
             };
 
             const updateTranslatorDirectionUI = () => {
@@ -1291,11 +1332,18 @@
                     return;
                 }
 
-                const apiKey = CONFIG_GEMINI_API_KEY;
+                let apiKey = getGeminiApiKey();
                 const model = FIXED_AI_MODEL;
 
                 if (!apiKey) {
-                    viTranslateStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Missing Gemini API key in config.js (`VOCAB_GEMINI_API_KEY`).</span>';
+                    const entered = prompt('Nhập Gemini API Key của bạn để sử dụng AI Rewrite (lưu trong trình duyệt):');
+                    if (entered && entered.trim()) {
+                        apiKey = setGeminiApiKey(entered.trim());
+                    }
+                }
+
+                if (!apiKey) {
+                    viTranslateStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Chưa có Gemini API key. Bấm nút "Gemini Key" phía trên để cài đặt.</span>';
                     return;
                 }
 
@@ -1322,7 +1370,12 @@
 
                         if (!response.ok) {
                             const errBody = await response.text();
-                            lastGeminiError = errBody;
+                            try {
+                                const errJson = JSON.parse(errBody);
+                                lastGeminiError = errJson?.error?.message || errBody;
+                            } catch {
+                                lastGeminiError = errBody;
+                            }
                             continue;
                         }
 
@@ -1334,6 +1387,9 @@
                     }
 
                     if (!improved) {
+                        if (lastGeminiError.includes('leaked') || lastGeminiError.includes('API key was reported as leaked')) {
+                            throw new Error('API key đã bị Google báo rò rỉ (Leaked key). Vui lòng tạo key mới trên Google AI Studio và cập nhật lại.');
+                        }
                         const modelHint = supportedModels.length
                             ? ` Available models: ${supportedModels.slice(0, 5).join(', ')}`
                             : '';
@@ -1831,8 +1887,15 @@
                     functionFetchStatus.textContent = 'Please enter a function first.';
                     return;
                 }
-                if (!CONFIG_GEMINI_API_KEY) {
-                    functionFetchStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Missing Gemini API key in config.js (`VOCAB_GEMINI_API_KEY`).</span>';
+                let apiKey = getGeminiApiKey();
+                if (!apiKey) {
+                    const entered = prompt('Nhập Gemini API Key của bạn để sử dụng AI Function Fetch (lưu trong trình duyệt):');
+                    if (entered && entered.trim()) {
+                        apiKey = setGeminiApiKey(entered.trim());
+                    }
+                }
+                if (!apiKey) {
+                    functionFetchStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Chưa có Gemini API key. Bấm nút "Gemini Key" phía trên để cài đặt.</span>';
                     return;
                 }
 
@@ -1840,20 +1903,26 @@
                 const prompt = `Create English learning content for the language function "${title}". Return only valid JSON with this shape: {"structures":["..."],"phrases":["..."],"examples":[{"parentType":"structure","parentText":"exact structure from structures","content":"example sentence or paragraph"},{"parentType":"phrase","parentText":"exact phrase from phrases","content":"example sentence or paragraph"}]}. Include at least 3 structures, at least 3 phrases, and at least 3 examples. Examples must link to an exact parentText from the returned structures or phrases.`;
 
                 try {
-                    const supportedModels = await fetchGeminiSupportedModels(CONFIG_GEMINI_API_KEY);
+                    const supportedModels = await fetchGeminiSupportedModels(apiKey);
                     const candidates = getGeminiModelCandidates(FIXED_AI_MODEL, supportedModels);
                     let responseText = '';
                     let lastGeminiError = '';
 
                     for (const candidate of candidates) {
-                        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(CONFIG_GEMINI_API_KEY)}`, {
+                        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
                         });
 
                         if (!response.ok) {
-                            lastGeminiError = await response.text();
+                            const errBody = await response.text();
+                            try {
+                                const errJson = JSON.parse(errBody);
+                                lastGeminiError = errJson?.error?.message || errBody;
+                            } catch {
+                                lastGeminiError = errBody;
+                            }
                             continue;
                         }
 
@@ -1862,7 +1931,12 @@
                         if (responseText) break;
                     }
 
-                    if (!responseText) throw new Error(lastGeminiError || 'No valid model response.');
+                    if (!responseText) {
+                        if (lastGeminiError.includes('leaked') || lastGeminiError.includes('API key was reported as leaked')) {
+                            throw new Error('API key đã bị Google báo rò rỉ (Leaked key). Vui lòng tạo key mới trên Google AI Studio và cập nhật lại.');
+                        }
+                        throw new Error(lastGeminiError || 'No valid model response.');
+                    }
 
                     const parsed = extractJsonObject(responseText);
                     const fetchedStructures = uniqueNormalizedList(parsed.structures || [], 20);
@@ -2434,8 +2508,15 @@
                     return;
                 }
 
-                if (!CONFIG_GEMINI_API_KEY) {
-                    fetchStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Missing Gemini API key in config.js (`VOCAB_GEMINI_API_KEY`).</span>';
+                let apiKey = getGeminiApiKey();
+                if (!apiKey) {
+                    const entered = prompt('Nhập Gemini API Key của bạn để sử dụng AI Word Fetch (lưu trong trình duyệt):');
+                    if (entered && entered.trim()) {
+                        apiKey = setGeminiApiKey(entered.trim());
+                    }
+                }
+                if (!apiKey) {
+                    fetchStatus.innerHTML = '<span class="text-amber-600"><i class="fas fa-key"></i> Chưa có Gemini API key. Bấm nút "Gemini Key" góc trên để cài đặt.</span>';
                     return;
                 }
 
@@ -2493,15 +2574,15 @@ Strict Quality Rules:
 6. "exampleSentence": High-quality, natural sentence illustrating "${word}".
 7. If any field is not applicable or not found, leave it empty ("" or []). Never make up placeholder or filler data.`;
 
-                    let candidates = [FIXED_AI_MODEL, 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
-                    candidates = [...new Set(candidates.filter(Boolean))];
+                    const supportedModels = await fetchGeminiSupportedModels(apiKey);
+                    const candidates = getGeminiModelCandidates(FIXED_AI_MODEL, supportedModels);
 
                     let responseText = '';
                     let lastGeminiError = '';
 
                     for (const candidate of candidates) {
                         try {
-                            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(CONFIG_GEMINI_API_KEY)}`, {
+                            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({
@@ -2514,7 +2595,13 @@ Strict Quality Rules:
                             });
 
                             if (!response.ok) {
-                                lastGeminiError = await response.text();
+                                const errText = await response.text();
+                                try {
+                                    const errJson = JSON.parse(errText);
+                                    lastGeminiError = errJson?.error?.message || errText;
+                                } catch {
+                                    lastGeminiError = errText;
+                                }
                                 continue;
                             }
 
@@ -2526,38 +2613,12 @@ Strict Quality Rules:
                         }
                     }
 
-                    // Fallback to supported models check if initial candidates fail
                     if (!responseText) {
-                        const supportedModels = await fetchGeminiSupportedModels(CONFIG_GEMINI_API_KEY);
-                        const dynamicCandidates = getGeminiModelCandidates(FIXED_AI_MODEL, supportedModels)
-                            .filter(m => !candidates.includes(m));
-
-                        for (const candidate of dynamicCandidates) {
-                            try {
-                                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent?key=${encodeURIComponent(CONFIG_GEMINI_API_KEY)}`, {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({
-                                        contents: [{ parts: [{ text: prompt }] }],
-                                        generationConfig: {
-                                            temperature: 0.1,
-                                            responseMimeType: 'application/json'
-                                        }
-                                    })
-                                });
-
-                                if (!response.ok) continue;
-
-                                const data = await response.json();
-                                responseText = safeReadString(data?.candidates?.[0]?.content?.parts?.[0]?.text).trim();
-                                if (responseText) break;
-                            } catch {
-                                // continue to next candidate
-                            }
+                        if (lastGeminiError.includes('leaked') || lastGeminiError.includes('API key was reported as leaked')) {
+                            throw new Error('API Key đã bị Google khóa do bị lộ công khai (Leaked key). Vui lòng tạo key mới tại Google AI Studio và bấm "Gemini Key" ở góc trên để cập nhật.');
                         }
+                        throw new Error(lastGeminiError || 'No valid response from AI models.');
                     }
-
-                    if (!responseText) throw new Error(lastGeminiError || 'No valid response from AI models.');
 
                     const wordData = extractJsonObject(responseText);
                     const audioUrl = await audioPromise;
@@ -2662,6 +2723,30 @@ Strict Quality Rules:
             });
 
             exportBackupBtn.addEventListener('click', () => runBackupExport());
+
+            const apiKeySettingsBtn = document.getElementById('apiKeySettingsBtn');
+            if (apiKeySettingsBtn) {
+                apiKeySettingsBtn.addEventListener('click', () => {
+                    const currentKey = getGeminiApiKey();
+                    const masked = currentKey
+                        ? `${currentKey.slice(0, 8)}...${currentKey.slice(-4)}`
+                        : '(Chưa thiết lập)';
+                    const entered = prompt(
+                        `Cấu hình Gemini API Key.\nKey hiện tại: ${masked}\n\nNhập Gemini API Key mới (hoặc để trống để xóa):`,
+                        currentKey || ''
+                    );
+                    if (entered !== null) {
+                        const trimmed = entered.trim();
+                        if (trimmed) {
+                            setGeminiApiKey(trimmed);
+                            alert('Đã lưu Gemini API Key thành công vào trình duyệt của bạn!');
+                        } else {
+                            setGeminiApiKey('');
+                            alert('Đã xóa Gemini API Key khỏi trình duyệt.');
+                        }
+                    }
+                });
+            }
 
             vocabNavBtn.addEventListener('click', () => {
                 currentView = 'all';

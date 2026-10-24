@@ -16,7 +16,6 @@ module.exports = (req, res) => {
   res.setHeader("Cache-Control", "no-store, max-age=0");
   res.status(200).send(
     `window.VOCAB_SUPABASE_URL = ${JSON.stringify(supabaseUrl)};
-window.VOCAB_SUPABASE_ANON_KEY = ${JSON.stringify(supabaseAnonKey)};
-window.VOCAB_GEMINI_API_KEY = ${JSON.stringify(geminiApiKey)};`
+window.VOCAB_SUPABASE_ANON_KEY = ${JSON.stringify(supabaseAnonKey)};`
   );
 };

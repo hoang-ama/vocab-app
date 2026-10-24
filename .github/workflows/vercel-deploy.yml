@@ -30,7 +30,6 @@ jobs:
           cat > config.runtime.js <<'EOF'
           window.VOCAB_SUPABASE_URL = "${{ secrets.SUPABASE_URL }}";
           window.VOCAB_SUPABASE_ANON_KEY = "${{ secrets.SUPABASE_ANON_KEY }}";
-          window.VOCAB_GEMINI_API_KEY = "${{ secrets.GEMINI_API_KEY }}";
           EOF
 
       - name: Pull Vercel Environment
@@ -65,7 +64,6 @@ jobs:
           cat > config.runtime.js <<'EOF'
           window.VOCAB_SUPABASE_URL = "${{ secrets.SUPABASE_URL }}";
           window.VOCAB_SUPABASE_ANON_KEY = "${{ secrets.SUPABASE_ANON_KEY }}";
-          window.VOCAB_GEMINI_API_KEY = "${{ secrets.GEMINI_API_KEY }}";
           EOF
 
       - name: Pull Vercel Environment
